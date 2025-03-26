@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@custom-variant hocus (&:hover, &:focus);
+@theme {
+  --color-primary-50: #e0d9fa;
+  --color-primary-100: #c3b6f7;
+  --color-primary-200: #a38df5;
+  --color-primary-300: #8363f2;
+  --color-primary-400: #6342ef;
+  --color-primary-500: #4730e4;
+  --color-primary-600: #3f2ace;
+  --color-primary-700: #3623b9;
+  --color-primary-800: #2e1c9e;
+  --color-primary-900: #251684;
+  --color-primary-950: #1d1372;
+
+  --color-secondary-50: #f5e4fa;
+  --color-secondary-100: #f0b9f5;
+  --color-secondary-200: #eb8ff0;
+  --color-secondary-300: #e65ce9;
+  --color-secondary-400: #e23ce5;
+  --color-secondary-500: #e54ee5;
+  --color-secondary-600: #d44cd4;
+  --color-secondary-700: #c24ab3;
+  --color-secondary-800: #a14892;
+  --color-secondary-900: #8e3471;
+  --color-secondary-950: #7c2360;
+
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-primary-50/75 gap-4 leading-relaxed lg:flex px-6 py-12 font-sans md:px-12 md:py-16 lg:px-32 lg:py-0;
+  }
+}
