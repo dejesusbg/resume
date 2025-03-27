@@ -20,6 +20,8 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "clsx": "^2.1.1",
+    "react-markdown": "^10.1.0",
+    "rehype-raw": "^7.0.0",
     "typescript": "5.8.2"
   }
 }

@@ -1,5 +1,8 @@
 @import "tailwindcss";
+
 @custom-variant hocus (&:hover, &:focus);
+@custom-variant grocus (.group:hover>&, .group:focus>&);
+
 @theme {
   --color-primary-50: #e0d9fa;
   --color-primary-100: #c3b6f7;
@@ -30,6 +33,6 @@
 
 @layer base {
   body {
-    @apply bg-gray-950 text-primary-50/75 gap-4 leading-relaxed lg:flex px-6 py-12 font-sans md:px-12 md:py-16 lg:px-32 lg:py-0;
+    @apply bg-gray-950 text-primary-50/70 selection:bg-secondary-100 selection:text-secondary-900 gap-4 leading-relaxed lg:flex px-6 py-12 font-sans md:px-12 md:py-16 xl:px-32 lg:py-0;
   }
 }

@@ -20,9 +20,9 @@ const NavItem = ({
       <span className="mr-2 text-secondary-200">_</span>
       <span
         className={clsx(
-          "group-hover:text-secondary-100 transition-colors font-medium tracking-tight group-hover:font-extrabold group-hover:tracking-tighter",
+          "grocus:text-secondary-100 transition-colors font-normal tracking-tight grocus:font-bold grocus:tracking-tighter",
           {
-            "text-white/90 !font-extrabold !tracking-tighter": isActive,
+            "text-white/90 !font-bold !tracking-tighter": isActive,
           }
         )}
       >
@@ -39,7 +39,9 @@ const Header = () => {
         <h1 className="text-4xl font-bold text-white/90 tracking-tight sm:text-5xl">
           Ricardo Barrios
         </h1>
-        <h2 className="mt-3 text-lg text-white/90">Full-Stack Engineer</h2>
+        <h2 className="mt-3 text-lg sm:text-xl text-white/90 font-normal">
+          Full-Stack Engineer
+        </h2>
         <p className="leading-normal mt-4 max-w-xs">
           I love to build experiences that help others.
         </p>
@@ -56,22 +58,24 @@ const Header = () => {
         </nav>
       </div>
 
-      <div className="ml-1 flex space-x-5 mt-8 items-center">
-        <a href="#" className="text-secondary-50 hover:text-secondary-200">
-          <FaGithub size={24} />
-        </a>
-        <a href="#" className="text-secondary-50 hover:text-secondary-200">
-          <FaLinkedin size={22} />
-        </a>
-        <a href="#" className="text-secondary-50 hover:text-secondary-200">
-          <FaInstagram size={24} />
-        </a>
-        <a href="#" className="text-secondary-50 hover:text-secondary-200">
-          <FaSpotify size={24} />
-        </a>
-        <a href="#" className="text-secondary-50 hover:text-secondary-200">
-          <FaEnvelope size={22} />
-        </a>
+      <div>
+        <div className="ml-1 flex space-x-5 mt-8 items-center">
+          <a href="#" className="text-secondary-50 hover:text-secondary-200">
+            <FaGithub size={24} />
+          </a>
+          <a href="#" className="text-secondary-50 hover:text-secondary-200">
+            <FaLinkedin size={22} />
+          </a>
+          <a href="#" className="text-secondary-50 hover:text-secondary-200">
+            <FaInstagram size={24} />
+          </a>
+          <a href="#" className="text-secondary-50 hover:text-secondary-200">
+            <FaSpotify size={24} />
+          </a>
+          <a href="#" className="text-secondary-50 hover:text-secondary-200">
+            <FaEnvelope size={22} />
+          </a>
+        </div>
       </div>
     </header>
   );
