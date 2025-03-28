@@ -49,7 +49,6 @@ const SocialLink = ({ icon: Icon, link, size }: SocialLinkProps) => (
 const Navigation = () => {
   const navItems = [
     { name: "about", isActive: true },
-    { name: "experience" },
     { name: "projects" },
     { name: "gallery" },
   ];

@@ -45,6 +45,7 @@
   --color-lilac: color-mix(in oklab, var(--color-primary-50) 70%, transparent);
   --color-cloud: color-mix(in oklab, var(--color-primary-100) 70%, transparent);
   --color-frost: color-mix(in oklab, var(--color-primary-300) 20%, white 90%);
+  --color-periw: var(--color-primary-400);
   --color-blush: var(--color-secondary-100);
   --color-lovie: var(--color-secondary-200);
   --color-berry: var(--color-secondary-900);
@@ -55,7 +56,6 @@
     @apply bg-ebony text-lilac selection:bg-blush selection:text-berry gap-4 leading-relaxed lg:flex px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0 mx-auto min-h-screen max-w-screen-xl scroll-smooth;
     font-feature-settings: "cv01", "cv02", "cv06", "cv11", "cv12", "cv13",
       "tnum";
-    font-variation-settings: "normal";
   }
 
   :hover {
@@ -63,6 +63,10 @@
   }
 
   :focus-visible {
-    @apply outline-none ring-2 ring-primary-400 ring-offset-2 ring-offset-ebony transition-all duration-100 ease-in-out;
+    @apply outline-none ring-2 ring-periw ring-offset-2 ring-offset-ebony transition-all duration-100 ease-in-out;
+  }
+
+  #song > a:hover {
+    @apply !text-teal-400 cursor-[url('/album_art.png'),_auto];
   }
 }
