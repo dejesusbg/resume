@@ -12,7 +12,14 @@ const MarkdownRaw = ({ children, classNames }: MarkdownProps) => {
       rehypePlugins={[rehypeRaw]}
       components={{
         p: ({ node, ...props }) => <p className={classNames?.p} {...props} />,
-        a: ({ node, ...props }) => <a className={classNames?.a} {...props} />,
+        a: ({ node, ...props }) => (
+          <a
+            className={classNames?.a}
+            target="_blank"
+            rel="noopener noreferrer"
+            {...props}
+          />
+        ),
       }}
     >
       {children}

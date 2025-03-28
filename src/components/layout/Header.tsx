@@ -1,23 +1,21 @@
 "use client";
 import { useState } from "react";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-  FaSpotify,
-  FaEnvelope,
-} from "react-icons/fa";
-import { IconType } from "react-icons";
+import Link from "next/link";
 import clsx from "clsx";
+import {
+  NavigationItemProps,
+  navigationItems,
+  SocialLinkProps,
+  socialLinks,
+  info,
+} from "@/data/Header";
 
-interface NavItemProps {
-  item: string;
-  isActive?: boolean;
-  onClick?: () => void;
-}
-
-const NavItem = ({ item, isActive = false, onClick }: NavItemProps) => (
-  <a
+const NavigationItem = ({
+  item,
+  isActive = false,
+  onClick,
+}: NavigationItemProps) => (
+  <Link
     href={`#${item}`}
     className="flex items-center group w-min px-1"
     onClick={onClick}
@@ -33,14 +31,8 @@ const NavItem = ({ item, isActive = false, onClick }: NavItemProps) => (
     >
       {item}
     </span>
-  </a>
+  </Link>
 );
-
-interface SocialLinkProps {
-  icon: IconType;
-  link: string;
-  size: number;
-}
 
 const SocialLink = ({ icon: Icon, link, size }: SocialLinkProps) => (
   <a
@@ -56,12 +48,10 @@ const SocialLink = ({ icon: Icon, link, size }: SocialLinkProps) => (
 const Navigation = () => {
   const [activeItem, setActiveItem] = useState("about");
 
-  const navItems = ["about", "projects", "gallery"];
-
   return (
     <nav className="mt-16 hidden lg:block space-y-2">
-      {navItems.map((name) => (
-        <NavItem
+      {navigationItems.map((name) => (
+        <NavigationItem
           key={name}
           item={name}
           isActive={activeItem === name}
@@ -71,15 +61,8 @@ const Navigation = () => {
     </nav>
   );
 };
-const SocialLinks = () => {
-  const socialLinks = [
-    { icon: FaGithub, link: "#gh", size: 24 },
-    { icon: FaLinkedin, link: "#li", size: 22 },
-    { icon: FaInstagram, link: "#ig", size: 24 },
-    { icon: FaSpotify, link: "#sp", size: 24 },
-    { icon: FaEnvelope, link: "#em", size: 22 },
-  ];
 
+const SocialLinks = () => {
   return (
     <div className="px-1 flex space-x-5 mt-8 items-center">
       {socialLinks.map((link) => (
@@ -89,23 +72,17 @@ const SocialLinks = () => {
   );
 };
 
-const Header: React.FC = () => {
+const Header = () => {
   return (
     <header className="flex flex-col justify-between lg:top-0 w-full lg:w-[48%] lg:max-h-screen lg:sticky lg:py-24">
       <div>
-        <h1 className="text-4xl font-bold text-frost tracking-tight sm:text-5xl">
-          Ricardo Barrios
+        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+          <a href="https://dejesusbg.netlify.app">{info.name}</a>
         </h1>
-        <h2 className="mt-3 text-lg sm:text-xl text-frost font-normal">
-          Full-Stack Engineer
-        </h2>
-        <p className="leading-normal mt-4 max-w-xs">
-          I love to build experiences that help others.
-        </p>
-
+        <h2 className="mt-3 text-lg sm:text-xl font-normal">{info.title}</h2>
+        <p className="leading-normal mt-4 max-w-xs">{info.description}</p>
         <Navigation />
       </div>
-
       <div>
         <SocialLinks />
       </div>

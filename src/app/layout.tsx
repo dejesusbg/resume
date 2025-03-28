@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Background from "@/components/ui/Background";
 
 const inter = localFont({ src: "../fonts/InterVariable.ttf" });
@@ -32,11 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
         <Background />
-        <Header />
-        <main className="lg:w-[52%] lg:py-24 pt-24 ">
-          {children}
-          <Footer />
-        </main>
+        {children}
       </body>
     </html>
   );

@@ -69,4 +69,9 @@
   #song > a:hover {
     @apply !text-teal-400 cursor-[url('/album_art.png'),_auto];
   }
+
+  h1,
+  h2 {
+    @apply text-frost;
+  }
 }
