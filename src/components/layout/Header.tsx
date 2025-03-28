@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import {
   FaGithub,
   FaLinkedin,
@@ -11,10 +13,15 @@ import clsx from "clsx";
 interface NavItemProps {
   item: string;
   isActive?: boolean;
+  onClick?: () => void;
 }
 
-const NavItem = ({ item, isActive = false }: NavItemProps) => (
-  <a href={`#${item}`} className="flex items-center group w-min px-1">
+const NavItem = ({ item, isActive = false, onClick }: NavItemProps) => (
+  <a
+    href={`#${item}`}
+    className="flex items-center group w-min px-1"
+    onClick={onClick}
+  >
     <span className="mr-2 text-lovie w-2.5 select-none font-medium">
       {isActive ? ">" : "_"}
     </span>
@@ -47,21 +54,23 @@ const SocialLink = ({ icon: Icon, link, size }: SocialLinkProps) => (
 );
 
 const Navigation = () => {
-  const navItems = [
-    { name: "about", isActive: true },
-    { name: "projects" },
-    { name: "gallery" },
-  ];
+  const [activeItem, setActiveItem] = useState("about");
+
+  const navItems = ["about", "projects", "gallery"];
 
   return (
     <nav className="mt-16 hidden lg:block space-y-2">
-      {navItems.map(({ name, isActive }) => (
-        <NavItem key={name} item={name} isActive={isActive} />
+      {navItems.map((name) => (
+        <NavItem
+          key={name}
+          item={name}
+          isActive={activeItem === name}
+          onClick={() => setActiveItem(name)}
+        />
       ))}
     </nav>
   );
 };
-
 const SocialLinks = () => {
   const socialLinks = [
     { icon: FaGithub, link: "#gh", size: 24 },

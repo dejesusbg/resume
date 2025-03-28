@@ -1,15 +1,16 @@
 import Section from "@/components/ui/Section";
+import Image from "next/image";
 
 const PROJECTS_INFO = [
   {
-    title: "Ingnova SAS Website",
+    title: "Ingnova's Website",
     description:
       "Corporate website for Ingnova SAS, built with Next.js and DecapCMS for content management.",
     link: "https://rdingnova.com.co/",
     imageSrc: "ingnova.png",
-    imageAlt: "INGNOVA SAS Website",
-    tags: ["next.js", "typescript", "tailwind", "decapcms"],
+    tags: ["Next.js", "TypeScript", "Tailwind", "Netlify"],
     featured: true,
+    year: 2025,
   },
   {
     title: "Mango Classification using AI",
@@ -17,84 +18,106 @@ const PROJECTS_INFO = [
       "Supervised ML models for classifying mangoes as ripe or rotten using image processing.",
     link: "https://github.com/dejesusbg/mangifera",
     imageSrc: "mangifera.png",
-    imageAlt: "AI Mango Classifier",
-    tags: ["python", "tensorflow", "scikit-learn"],
+    tags: ["Python", "TensorFlow", "Scikit-learn"],
     featured: true,
+    year: 2024,
   },
   {
     title: "Aura Habits",
     description:
       "Progressive Web App for offline habit tracking with gamification.",
     link: "https://auraby.netlify.app",
-    imageSrc: "aura.jpeg",
-    imageAlt: "Aura Habit Tracker",
-    tags: ["react", "javascript", "css", "pwa"],
+    imageSrc: "aura.png",
+    tags: ["React", "JavaScript", "CSS", "PWA"],
     featured: true,
+    year: 2024,
+  },
+  {
+    title: "Monet Colour Palettes",
+    description:
+      "Library for customizable Material You colour palettes with Tailwind V3 support",
+    link: "https://github.com/dejesusbg/monet",
+    imageSrc: "monet.png",
+    tags: ["JavaScript", "TypeScript", "CSS", "Tailwind"],
+    featured: true,
+    year: 2024,
+  },
+  {
+    title: "Legal Education Platform",
+    link: "#",
+    tags: ["Django", "Python", "CSS", "Google Cloud", "SQLite"],
+    year: 2023,
   },
   {
     title: "Electronic Voting System",
-    description:
-      "Secure school voting system with authentication and role-based access control.",
     link: "https://github.com/dejesusbg/acme",
-    imageSrc: "acme.png",
-    imageAlt: "ACME School Vote",
-    tags: ["php", "css", "mysql"],
-    featured: true,
+    tags: ["PHP", "CSS", "MySQL"],
+    year: 2023,
   },
   {
-    title: "MD3 Components",
-    description:
-      "Material Design 3 UI component library for modern web development.",
-    link: "",
-    imageSrc: "md3.png",
-    imageAlt: "MD3 Components",
-    tags: ["javascript", "css"],
+    title: "Wordflow Bot",
+    link: "https://github.com/dejesusbg/wordflow-bot",
+    tags: ["JavaScript"],
+    year: 2024,
   },
   {
-    title: "Monet Colors",
-    description:
-      "Library for generating and managing custom color palettes with light/dark mode support.",
-    link: "",
-    imageSrc: "monet.png",
-    imageAlt: "Monet Colors",
-    tags: ["javascript", "typescript", "css", "tailwind"],
+    title: "Bio-inspired Traveling Salesman Problem",
+    link: "https://github.com/dejesusbg/bioinsipired-tsp",
+    tags: ["Python"],
+    year: 2024,
   },
   {
-    title: "Educadata",
-    description:
-      "Educational software for tracking grades, lessons, and student progress.",
-    link: "",
-    imageSrc: "educadata.png",
-    imageAlt: "Educadata",
-    tags: ["spring boot", "java", "javascript", "css"],
+    title: "Simple notes app",
+    link: "https://notes-mui.netlify.app/",
+    tags: ["JavaScript", "CSS"],
+    year: 2022,
   },
   {
-    title: "RDparser",
-    description: "Recursive descent parser for arithmetic expressions in Java.",
-    link: "https://github.com/dejesusbg/rdparser",
-    imageSrc: "rdparser.png",
-    imageAlt: "RDparser",
-    tags: ["java"],
+    title: "Material Design 3 Components",
+    link: "https://github.com/dejesusbg/md3",
+    tags: ["JavaScript", "CSS"],
+    year: 2022,
   },
 
   {
-    title: "Legal Education Platform",
-    description:
-      "Django-based platform connecting law students with tutors for personalized learning.",
-    link: "",
-    imageSrc: "legal-education.png",
-    imageAlt: "Legal Education Platform",
-    tags: ["django", "python", "html", "css"],
+    title: "Educational tracking software",
+    link: "https://github.com/dejesusbg/data-structures",
+    tags: ["Java", "Spring Boot", "JavaScript", "CSS"],
+    year: 2023,
+  },
+  {
+    title: "Data Structures",
+    link: "https://github.com/dejesusbg/data-structures",
+    tags: ["Java", "C++"],
+    year: 2022,
+  },
+  {
+    title: "Recursive Descendant Parser",
+    link: "https://github.com/dejesusbg/rdparser",
+    tags: ["Java"],
+    year: 2023,
+  },
+  {
+    title: "Bulls & Cows",
+    link: "https://github.com/dejesusbg/bulls-and-cows",
+    tags: ["HTML", "JavaScript", "CSS"],
+    year: 2024,
+  },
+  {
+    title: "Deterministic Finite Automaton",
+    link: "https://github.com/dejesusbg/dfautomaton",
+    tags: ["Java"],
+    year: 2023,
   },
 ];
 
 interface ProjectCardProps {
   title: string;
-  description: string;
+  description?: string;
   link: string;
-  imageSrc: string;
-  imageAlt: string;
+  imageSrc?: string;
   tags: string[];
+  year: number;
 }
 
 const ProjectCard = ({
@@ -102,8 +125,8 @@ const ProjectCard = ({
   description,
   link,
   imageSrc,
-  imageAlt,
   tags,
+  year,
 }: ProjectCardProps) => {
   return (
     <li className="mb-12">
@@ -137,17 +160,14 @@ const ProjectCard = ({
           </h3>
           <p className="mt-2 text-sm leading-normal">{description}</p>
         </div>
-        <img
-          alt={imageAlt}
-          loading="lazy"
+        <Image
+          alt={title}
           width="200"
           height="48"
-          decoding="async"
-          data-nimg="1"
-          className="aspect-video object-cover rounded border-2 border-cloud/20 transition group-hover:border-cloud/40 sm:order-1 sm:col-span-2 sm:translate-y-1"
+          layout="intrinsic"
+          className="aspect-auto rounded border-2 border-cloud/20 transition group-hover:border-cloud/40 sm:order-1 sm:col-span-2 sm:translate-y-1"
           style={{ color: "transparent" }}
-          srcSet={`${imageSrc}?w=256&q=75 1x, ${imageSrc}?w=640&q=75 2x`}
-          src={`${imageSrc}?w=640&q=75`}
+          src={`/${imageSrc}`}
         />
       </div>
     </li>
