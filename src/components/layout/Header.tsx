@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FaGithub,
   FaLinkedin,
@@ -6,76 +5,101 @@ import {
   FaSpotify,
   FaEnvelope,
 } from "react-icons/fa";
+import { IconType } from "react-icons";
 import clsx from "clsx";
 
-const NavItem = ({
-  item,
-  isActive = false,
-}: {
+interface NavItemProps {
   item: string;
   isActive?: boolean;
-}) => {
+}
+
+const NavItem = ({ item, isActive = false }: NavItemProps) => (
+  <a href={`#${item}`} className="flex items-center group w-min px-1">
+    <span className="mr-2 text-lovie w-2.5 select-none font-medium">
+      {isActive ? ">" : "_"}
+    </span>
+    <span
+      className={clsx(
+        "font-normal text-lg tracking-tight grocus:font-bold grocus:tracking-tighter grocus:text-frost",
+        { "text-frost !font-bold !tracking-tighter": isActive }
+      )}
+    >
+      {item}
+    </span>
+  </a>
+);
+
+interface SocialLinkProps {
+  icon: IconType;
+  link: string;
+  size: number;
+}
+
+const SocialLink = ({ icon: Icon, link, size }: SocialLinkProps) => (
+  <a
+    href={link}
+    className="hover:text-frost"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Icon size={size} />
+  </a>
+);
+
+const Navigation = () => {
+  const navItems = [
+    { name: "about", isActive: true },
+    { name: "experience" },
+    { name: "projects" },
+    { name: "gallery" },
+  ];
+
   return (
-    <a href={`#${item}`} className="flex items-center group">
-      <span className="mr-2 text-secondary-200">_</span>
-      <span
-        className={clsx(
-          "grocus:text-secondary-100 transition-colors font-normal tracking-tight grocus:font-bold grocus:tracking-tighter",
-          {
-            "text-white/90 !font-bold !tracking-tighter": isActive,
-          }
-        )}
-      >
-        {item}
-      </span>
-    </a>
+    <nav className="mt-16 hidden lg:block space-y-2">
+      {navItems.map(({ name, isActive }) => (
+        <NavItem key={name} item={name} isActive={isActive} />
+      ))}
+    </nav>
   );
 };
 
-const Header = () => {
+const SocialLinks = () => {
+  const socialLinks = [
+    { icon: FaGithub, link: "#gh", size: 24 },
+    { icon: FaLinkedin, link: "#li", size: 22 },
+    { icon: FaInstagram, link: "#ig", size: 24 },
+    { icon: FaSpotify, link: "#sp", size: 24 },
+    { icon: FaEnvelope, link: "#em", size: 22 },
+  ];
+
+  return (
+    <div className="px-1 flex space-x-5 mt-8 items-center">
+      {socialLinks.map((link) => (
+        <SocialLink key={link.link} {...link} />
+      ))}
+    </div>
+  );
+};
+
+const Header: React.FC = () => {
   return (
     <header className="flex flex-col justify-between lg:top-0 w-full lg:w-[48%] lg:max-h-screen lg:sticky lg:py-24">
       <div>
-        <h1 className="text-4xl font-bold text-white/90 tracking-tight sm:text-5xl">
+        <h1 className="text-4xl font-bold text-frost tracking-tight sm:text-5xl">
           Ricardo Barrios
         </h1>
-        <h2 className="mt-3 text-lg sm:text-xl text-white/90 font-normal">
+        <h2 className="mt-3 text-lg sm:text-xl text-frost font-normal">
           Full-Stack Engineer
         </h2>
         <p className="leading-normal mt-4 max-w-xs">
           I love to build experiences that help others.
         </p>
 
-        <nav className="mt-16 hidden lg:block space-y-2">
-          {[
-            { name: "about", isActive: true },
-            { name: "experience" },
-            { name: "projects" },
-            { name: "gallery" },
-          ].map(({ name, isActive }) => (
-            <NavItem key={name} item={name} isActive={isActive} />
-          ))}
-        </nav>
+        <Navigation />
       </div>
 
       <div>
-        <div className="ml-1 flex space-x-5 mt-8 items-center">
-          <a href="#" className="text-secondary-50 hover:text-secondary-200">
-            <FaGithub size={24} />
-          </a>
-          <a href="#" className="text-secondary-50 hover:text-secondary-200">
-            <FaLinkedin size={22} />
-          </a>
-          <a href="#" className="text-secondary-50 hover:text-secondary-200">
-            <FaInstagram size={24} />
-          </a>
-          <a href="#" className="text-secondary-50 hover:text-secondary-200">
-            <FaSpotify size={24} />
-          </a>
-          <a href="#" className="text-secondary-50 hover:text-secondary-200">
-            <FaEnvelope size={22} />
-          </a>
-        </div>
+        <SocialLinks />
       </div>
     </header>
   );

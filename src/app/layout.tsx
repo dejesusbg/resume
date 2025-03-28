@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import Background from "@/components/ui/Background";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  adjustFontFallback: false,
-  display: "swap",
-});
+const inter = localFont({ src: "../fonts/InterVariable.ttf" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dejesusbg.netlify.app.com"),
@@ -34,8 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>
-        <Header></Header>
+      <body className={`${inter.className} antialiased`}>
+        <Background />
+        <Header />
         <main className="lg:w-[52%] lg:py-24 pt-24 ">
           {children}
           <Footer />
