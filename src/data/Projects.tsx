@@ -43,7 +43,7 @@ export const projects = [
     tags: ["Python", "TensorFlow", "scikit-learn"],
     stats: { icon: "accuracy", value: "+95 accuracy" },
     featured: true,
-    date: "11/24",
+    date: "10/24",
   },
   {
     title: "Wordflow Bot",
@@ -65,7 +65,7 @@ export const projects = [
     imageSrc: "aura.png",
     tags: ["React", "JavaScript", "CSS"],
     featured: true,
-    date: "09/24",
+    date: "08/24",
   },
   {
     title: "Educational Tracking Software",
