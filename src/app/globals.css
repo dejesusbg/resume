@@ -29,6 +29,9 @@
   --color-secondary-950: #7c2360;
 
   --font-sans: "Inter", sans-serif;
+  --font-weight-normal: 350;
+  --tracking-normal: 0.006em;
+  --tracking-tight: -0.01em;
 }
 
 @theme inline {
@@ -57,7 +60,7 @@
   }
 
   body {
-    @apply bg-ebony text-lilac selection:bg-blush selection:text-berry gap-4 leading-relaxed lg:flex px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0 mx-auto min-h-screen max-w-screen-xl;
+    @apply bg-ebony text-lilac selection:bg-blush font-normal selection:text-berry gap-4 leading-relaxed lg:flex tracking-normal px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0 mx-auto min-h-screen max-w-screen-xl;
     font-feature-settings: "cv01", "cv02", "cv06", "cv11", "cv12", "cv13",
       "tnum";
   }

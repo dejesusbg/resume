@@ -23,13 +23,12 @@ export const navigationItems = ["about", "projects", "gallery"];
 export const socialLinks = [
   { icon: FaGithub, link: "https://github.com/dejesusbg", size: 24 },
   { icon: FaLinkedin, link: "https://linkedin.com/in/dejesusbg", size: 22 },
-  { icon: FaInstagram, link: "#instagram", size: 24 },
-  { icon: FaSpotify, link: "#spotify", size: 24 },
-  { icon: FaEnvelope, link: "#email", size: 22 },
+  { icon: FaSpotify, link: "#spotify", size: 22 },
+  { icon: FaInstagram, link: "#instagram", size: 25 },
 ];
 
 export const info = {
   name: "Ricardo Barrios",
-  title: "Full-Stack Engineer",
+  title: "Full Stack Engineer",
   description: "I love to build experiences that help others.",
 };
