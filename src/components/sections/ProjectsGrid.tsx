@@ -1,16 +1,10 @@
 import Section from "@/components/ui/Section";
 import { projects } from "@/data/Projects";
-import Link from "next/link";
 import ProjectCard from "@/components/ui/ProjectsCard";
 
-const Projects = () => {
+const ProjectsGrid = () => {
   return (
     <Section id="projects">
-      <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-        <h3 className="text-sm font-bold uppercase tracking-widest text-frost lg:sr-only">
-          Projects
-        </h3>
-      </div>
       <div>
         <ul className="group/list">
           {projects
@@ -21,7 +15,7 @@ const Projects = () => {
         </ul>
       </div>
       <div className="mt-12">
-        <Link
+        <a
           className="inline-flex items-center font-medium leading-tight text-frost font-semibold group"
           aria-label="View Full Project"
           href="/archive"
@@ -46,10 +40,10 @@ const Projects = () => {
               </svg>
             </span>
           </span>
-        </Link>
+        </a>
       </div>
     </Section>
   );
 };
 
-export default Projects;
+export default ProjectsGrid;
