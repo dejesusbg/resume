@@ -31,7 +31,7 @@ const Background = () => {
 
   return (
     <div
-      className="pointer-events-none fixed top-0 left-0 right-0 bottom-0 -z-10 inset-0 transition-all transition duration-300 ease-in-out"
+      className="pointer-events-none fixed top-0 left-0 right-0 bottom-0 z-30 inset-0 transition-all transition duration-300 ease-in-out"
       style={{
         background: `radial-gradient(600px at ${x}px ${y}px, var(--color-misty), transparent 80%)`,
       }}

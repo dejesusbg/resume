@@ -1,6 +1,5 @@
 "use client";
-import { useState } from "react";
-import Link from "next/link";
+import { useEffect, useState } from "react";
 import clsx from "clsx";
 import {
   NavigationItemProps,
@@ -15,12 +14,20 @@ const NavigationItem = ({
   isActive = false,
   onClick,
 }: NavigationItemProps) => (
-  <Link
+  <a
     href={`#${item}`}
     className="flex items-center group w-min px-1"
     onClick={onClick}
   >
-    <span className="mr-2 text-lovie w-2.5 select-none font-medium">
+    <span
+      className={clsx(
+        "mr-2 text-lovie w-2.5 select-none font-medium transition-all duration-300",
+        {
+          "text-frost scale-125 opacity-100": isActive,
+          "scale-100 opacity-60": !isActive,
+        }
+      )}
+    >
       {isActive ? ">" : "_"}
     </span>
     <span
@@ -31,7 +38,7 @@ const NavigationItem = ({
     >
       {item}
     </span>
-  </Link>
+  </a>
 );
 
 const SocialLink = ({ icon: Icon, link, size }: SocialLinkProps) => (
@@ -47,10 +54,29 @@ const SocialLink = ({ icon: Icon, link, size }: SocialLinkProps) => (
 
 const Navigation = () => {
   const [activeItem, setActiveItem] = useState("about");
+  const sections = navigationItems;
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActiveItem(entry.target.id);
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    sections.forEach((section) => {
+      const element = document.getElementById(section);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, [sections]);
 
   return (
     <nav className="mt-16 hidden lg:block space-y-2">
-      {navigationItems.map((name) => (
+      {sections.map((name) => (
         <NavigationItem
           key={name}
           item={name}
