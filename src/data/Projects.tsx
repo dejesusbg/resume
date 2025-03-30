@@ -18,7 +18,7 @@ export const projects = [
     title: "Blind-First Navigation App",
     description:
       "Accessible mobile app with real-time voice feedback, designed  to assist visually impaired users in navigating urban environments.",
-    link: "#",
+    link: "https://github.com/dejesusbg/truenavi",
     imageSrc: "navigation.png",
     tags: ["React Native", "Spring Boot", "Expo"],
     featured: true,
