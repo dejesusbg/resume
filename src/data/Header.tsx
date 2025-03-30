@@ -23,8 +23,12 @@ export const navigationItems = ["about", "projects", "gallery"];
 export const socialLinks = [
   { icon: FaGithub, link: "https://github.com/dejesusbg", size: 24 },
   { icon: FaLinkedin, link: "https://linkedin.com/in/dejesusbg", size: 22 },
-  { icon: FaSpotify, link: "#spotify", size: 22 },
-  { icon: FaInstagram, link: "#instagram", size: 25 },
+  {
+    icon: FaSpotify,
+    link: "https://open.spotify.com/user/31zwlj7mwcvu3w2oklmyhna4s62a?si=46e92cc8ce5f49ac",
+    size: 22,
+  },
+  { icon: FaInstagram, link: "https://www.instagram.com/dejesusbg", size: 25 },
 ];
 
 export const info = {

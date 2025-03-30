@@ -1,5 +1,5 @@
 import { projects } from "@/data/Projects";
-import ProjectsTableRow from "../ui/ProjectsRow";
+import ProjectsTableRow from "@/components/ui/ProjectsRow";
 
 const ProjectsTable = () => {
   const sortedProjects = [...projects].sort((a, b) => {
