@@ -11,7 +11,7 @@ export default function Home() {
       <main className="lg:py-24 pt-24 lg:w-[52%]">
         <About />
         <ProjectsGrid />
-        <Gallery />
+        {/* <Gallery /> */}
         <Footer />
       </main>
     </>
