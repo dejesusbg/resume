@@ -20,7 +20,7 @@ export const projects = [
       "Accessible mobile app with real-time voice feedback, designed  to assist visually impaired users in navigating urban environments.",
     link: "https://github.com/dejesusbg/truenavi",
     imageSrc: "navigation.png",
-    tags: ["React Native", "Spring Boot", "Expo"],
+    tags: ["React Native", "Node.js", "MongoDB"],
     featured: true,
     date: "03/25",
   },
