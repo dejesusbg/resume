@@ -19,10 +19,12 @@ const ProjectsTableRow = ({ title, link, tags, date }: ProjectProps) => {
     ? link.replace(/^https?:\/\//, "").replace(/\/$/, "")
     : link;
 
+  const yearDisplay = "20" + date.split("/")[1];
+
   return (
     <tr className="border-b border-cloud/20 last:border-none">
       <td className="py-4 pr-4 align-top text-sm">
-        <div className="translate-y-px text-frost/60">{date}</div>
+        <div className="translate-y-px text-frost/60">{yearDisplay}</div>
       </td>
       <td className="py-4 pr-4 align-top font-semibold leading-snug text-frost">
         <div>
@@ -61,7 +63,7 @@ const ProjectsTableRow = ({ title, link, tags, date }: ProjectProps) => {
           <div className="hidden sm:block">{title}</div>
         </div>
       </td>
-      <td className="hidden py-4 pr-4 align-top lg:table-cell">
+      <td className="hidden py-4 px-8 align-top lg:table-cell">
         <ul className="flex -translate-y-1.5 flex-wrap">
           {tags.map((tag, index) => (
             <ProjectsTableTag key={index} name={tag} />

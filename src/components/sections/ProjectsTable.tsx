@@ -20,7 +20,7 @@ const ProjectsTable = () => {
           <th className="py-4 pr-8 text-sm font-semibold text-frost">
             Project
           </th>
-          <th className="hidden py-4 pr-8 text-sm font-semibold text-frost lg:table-cell">
+          <th className="hidden py-4 px-8 text-sm font-semibold text-frost lg:table-cell">
             Built with
           </th>
           <th className="hidden py-4 pr-8 text-sm font-semibold text-frost sm:table-cell">
