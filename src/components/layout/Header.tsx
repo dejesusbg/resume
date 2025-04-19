@@ -105,7 +105,7 @@ const Header = () => {
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
           <a href="https://dejesusbg.netlify.app">{info.name}</a>
         </h1>
-        <h2 className="mt-3 text-lg sm:text-xl font-normal">{info.title}</h2>
+        <h2 className="mt-3 text-lg sm:text-xl font-medium">{info.title}</h2>
         <p className="leading-normal mt-4 max-w-xs">{info.description}</p>
         <Navigation />
       </div>
