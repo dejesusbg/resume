@@ -43,7 +43,7 @@
   );
   --color-ebony: color-mix(
     in oklab,
-    var(--color-primary-950) 20%,
+    var(--color-primary-900) 20%,
     var(--color-gray-950) 90%
   );
   --color-lilac: color-mix(in oklab, var(--color-primary-50) 70%, transparent);
