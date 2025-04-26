@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Section from "@/components/ui/Section";
 import { description, playlist } from "@/data/Gallery";
-import MarkdownRaw from "../ui/MarkdownRaw";
+import MarkdownRaw from "@/components/ui/MarkdownRaw";
 
 const Gallery = () => {
   const [loaded, setLoaded] = useState(false);
