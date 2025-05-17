@@ -1,8 +1,8 @@
 import { ProjectProps } from '@/data/Projects';
 import Image from 'next/image';
-import { ProjectsCardTag } from './ProjectsTag';
+import { ProjectsCardTag, ProjectsStatTag } from './ProjectsTag';
 
-const ProjectCard = ({ title, description, link, imageSrc, tags, date }: ProjectProps) => {
+const ProjectCard = ({ title, description, link, imageSrc, stats, tags, date }: ProjectProps) => {
 	return (
 		<li className="mb-12">
 			<div className="relative grid gap-4 pb-1 transition-all duration-300 group sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:opacity-100 lg:group-hover/list:opacity-50">
@@ -33,6 +33,7 @@ const ProjectCard = ({ title, description, link, imageSrc, tags, date }: Project
 						</a>
 					</h3>
 					<p className="mt-2 text-sm leading-normal">{description}</p>
+					{stats && <ProjectsStatTag {...stats} />}
 					<ul className="flex flex-wrap mt-2">
 						{tags.map((tag, index) => (
 							<ProjectsCardTag key={index} name={tag} />

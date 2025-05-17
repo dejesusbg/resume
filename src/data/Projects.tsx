@@ -1,7 +1,8 @@
-import { description } from '@/data/Gallery';
+import { IconType } from 'react-icons';
+import { FaStar } from 'react-icons/fa';
 
 export interface StatsProps {
-	icon: string;
+	icon: IconType;
 	value: string;
 }
 
@@ -54,7 +55,7 @@ export const projects = [
 		link: 'https://github.com/dejesusbg/mangifera',
 		imageSrc: 'mangifera.png',
 		tags: ['Python', 'TensorFlow', 'scikit-learn'],
-		stats: { icon: 'accuracy', value: '+95 accuracy' },
+		stats: { icon: FaStar, value: '95%+ accuracy' },
 		featured: true,
 		date: '10/24',
 	},
