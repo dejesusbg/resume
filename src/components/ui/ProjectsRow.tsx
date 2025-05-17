@@ -7,10 +7,7 @@ const ProjectsTableRow = ({ title, description, link, tags, date }: ProjectProps
 
 	const isGithub = isLink && link.includes('github.com');
 	const githubRepoName = isGithub
-		? link
-				.replace(/^https?:\/\/github\.com\//, '')
-				.replace(/\/$/, '')
-				.replace('dejesusbg/', '')
+		? link.replace(/^https?:\/\/github\.com\/dejesusbg\//, '').replace(/\/$/, '')
 		: null;
 
 	const linkDisplay = isGithub
