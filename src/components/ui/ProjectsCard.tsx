@@ -45,7 +45,7 @@ const ProjectCard = ({ title, description, link, imageSrc, stats, tags, date }: 
 					width="200"
 					height="48"
 					layout="intrinsic"
-					className="object-cover transition border-2 rounded aspect-video border-cloud/20 group-hover:border-cloud/80 sm:order-1 sm:col-span-2 sm:translate-y-1 brightness-75"
+					className="object-cover transition border-2 rounded aspect-video border-cloud/20 lg:group-hover:border-cloud/80 sm:order-1 sm:col-span-2 sm:translate-y-1 brightness-75"
 					style={{ color: 'transparent' }}
 					src={`/${imageSrc}`}
 				/>
