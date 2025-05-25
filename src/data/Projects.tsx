@@ -120,7 +120,7 @@ export const projects = [
 	{
 		title: 'Legal Education Platform',
 		link: '#',
-		tags: ['Django', 'Python', 'CSS', 'Google Cloud', 'SQLite'],
+		tags: ['Flask', 'Python', 'CSS', 'Google Cloud', 'SQLite'],
 		date: '04/23',
 	},
 	{
