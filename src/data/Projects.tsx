@@ -14,9 +14,30 @@ export interface ProjectProps {
 	tags: string[];
 	stats?: StatsProps;
 	date: string;
+	featured?: boolean;
 }
 
 export const projects = [
+	{
+		title: 'Conversational Influence Analysis',
+		description:
+			'A smart conversation analysis tool to uncover patterns of influence, emotional tone, manipulation tactics, and reasoning flaws.',
+		link: 'https://github.com/dejesusbg/convolens',
+		tags: [
+			'Next.js',
+			'React',
+			'TypeScript',
+			'Tailwind',
+			'Flask',
+			'Python',
+			'Docker',
+			'Hugging Face',
+			'TensorFlow',
+			'Keras',
+		],
+		date: '05/25',
+		ongoing: true,
+	},
 	{
 		title: 'Blind-First Navigation App',
 		description:
@@ -54,7 +75,7 @@ export const projects = [
 			'Machine learning models for automated mango ripeness classification, helping optimize agricultural processes.',
 		link: 'https://github.com/dejesusbg/mangifera',
 		imageSrc: 'mangifera.png',
-		tags: ['Python', 'TensorFlow', 'scikit-learn'],
+		tags: ['Python', 'TensorFlow', 'scikit-learn', 'Keras'],
 		stats: { icon: FaStar, value: '95%+ accuracy' },
 		featured: true,
 		date: '10/24',
