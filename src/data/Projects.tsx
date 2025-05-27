@@ -60,6 +60,25 @@ export const projects = [
 		date: '03/25',
 	},
 	{
+		title: 'eCommerce',
+		description:
+			'System built with microservices architecture, featuring order, inventory, payment management and processing, with API gateway caching.',
+		link: 'https://github.com/dejesusbg/e-commerce',
+		tags: [
+			'Spring Boot',
+			'Java',
+			'Spring Cloud',
+			'Docker',
+			'Keycloak',
+			'Eureka',
+			'PostgreSQL',
+			'MongoDB',
+			'Grafana',
+			'Prometheus',
+		],
+		date: '02/25',
+	},
+	{
 		title: 'Corporate Website for Engineering Firm',
 		description:
 			'Fast, modern, and content-managed website for INGNOVA SAS, improving its online presence.',
