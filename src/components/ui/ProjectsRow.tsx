@@ -2,7 +2,14 @@ import { ProjectProps } from '@/data/Projects';
 import { FaGithub } from 'react-icons/fa';
 import { ProjectsTableTag } from './ProjectsTag';
 
-const ProjectsTableRow = ({ title, description, link, tags, date }: ProjectProps) => {
+const ProjectsTableRow = ({
+	title,
+	description,
+	link,
+	tags,
+	date,
+	ongoing = false,
+}: ProjectProps) => {
 	const isLink = link !== '#';
 
 	const isGithub = isLink && link.includes('github.com');
@@ -23,7 +30,7 @@ const ProjectsTableRow = ({ title, description, link, tags, date }: ProjectProps
 	return (
 		<tr className="border-b border-cloud/20 last:border-none">
 			<td className="py-4 pr-4 text-sm align-top">
-				<div className="translate-y-px text-frost/60">{yearDisplay}</div>
+				<div className="translate-y-px text-frost/60">{ongoing ? 'New' : yearDisplay}</div>
 			</td>
 			<td className="py-4 pr-8 font-semibold leading-snug align-top">
 				<div>

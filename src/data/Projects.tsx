@@ -15,14 +15,15 @@ export interface ProjectProps {
 	stats?: StatsProps;
 	date: string;
 	featured?: boolean;
+	ongoing?: boolean;
 }
 
 export const projects = [
 	{
 		title: 'Conversational Influence Analysis',
 		description:
-			'A smart conversation analysis tool to uncover patterns of influence, emotional tone, manipulation tactics, and reasoning flaws.',
-		link: 'https://github.com/dejesusbg/convolens',
+			'AI conversation analysis tool to uncover patterns of influence, emotional tone, manipulation tactics, and reasoning flaws.',
+		link: '#',
 		tags: [
 			'Next.js',
 			'React',
@@ -60,10 +61,10 @@ export const projects = [
 		date: '03/25',
 	},
 	{
-		title: 'eCommerce',
+		title: 'Microservices Store',
 		description:
-			'System built with microservices architecture, featuring order, inventory, payment management and processing, with API gateway caching.',
-		link: 'https://github.com/dejesusbg/e-commerce',
+			'System built with microservices architecture, featuring order, inventory, payment management and processing, with API gateway caching and security.',
+		link: 'https://github.com/dejesusbg/ecommerce',
 		tags: [
 			'Spring Boot',
 			'Java',
