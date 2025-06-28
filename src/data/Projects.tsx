@@ -20,28 +20,6 @@ export interface ProjectProps {
 
 export const projects = [
 	{
-		title: 'Conversational Influence Analysis',
-		description:
-			'AI conversation analysis tool to uncover patterns of influence, emotional tone, manipulation tactics, and reasoning flaws.',
-		link: 'https://github.com/dejesusbg/convolens',
-		tags: [
-			'Next.js',
-			'React',
-			'TypeScript',
-			'Tailwind',
-			'Flask',
-			'Python',
-			'Docker',
-			'Redis',
-			'Celery',
-			'Hugging Face',
-			'TensorFlow',
-			// 'Keras',
-		],
-		date: '05/25',
-		ongoing: true,
-	},
-	{
 		title: 'Blind-First Navigation App',
 		description:
 			'Accessible mobile app with real-time voice feedback, designed to assist visually impaired users in navigating urban environments.',
