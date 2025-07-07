@@ -13,7 +13,7 @@ export interface SocialLinkProps {
 	size: number;
 }
 
-export const navigationItems = ['about', 'projects', 'gallery'];
+export const navigationItems = ['about', 'experience', 'projects'];
 
 export const socialLinks = [
 	{ icon: FaGithub, link: 'https://github.com/dejesusbg', size: 24 },
