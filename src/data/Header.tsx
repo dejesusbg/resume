@@ -1,5 +1,5 @@
 import { IconType } from 'react-icons';
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export interface NavigationItemProps {
 	item: string;
@@ -16,9 +16,9 @@ export interface SocialLinkProps {
 export const navigationItems = ['about', 'experience', 'projects'];
 
 export const socialLinks = [
+	{ icon: FaEnvelope, link: 'mailto:dejesusbg5@gmail.com', size: 22 },
 	{ icon: FaGithub, link: 'https://github.com/dejesusbg', size: 24 },
 	{ icon: FaLinkedin, link: 'https://linkedin.com/in/dejesusbg', size: 22 },
-	{ icon: FaInstagram, link: 'https://www.instagram.com/dejesusbg/', size: 25 },
 ];
 
 export const info = {
