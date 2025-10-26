@@ -1,9 +1,33 @@
 export const bio = `
-  I'm a developer passionate about building scalable, high-performance applications that seamlessly integrate frontend and backend technologies. I thrive at the intersection of software engineering and user experience, ensuring every project I work on is both functional and well-crafted.
+Who's building the future of tech? That's me, a Colombian developer obsessed with crafting scalable, high-performance apps that fill the gap between sleek frontends and robust backends.
 
-  Currently, I'm finishing Systems Engineering at [University of Magdalena](https://www.unimagdalena.edu.co/) while working on freelance, academic, and personal software projects ranging from an [AI-powered mango classifier](https://github.com/dejesusbg/mangifera/blob/main/notebooks/mangifera.ipynb) leveraging computer vision and machine learning to a [navigation app for the visually impaired](https://github.com/dejesusbg/truenavi), showcasing my ability to create impactful real-world applications.
+I live where code meets UX, delivering projects that work & shine.
 
-  I'm proficient in technologies like React, TypeScript, Node.js, Python, TensorFlow, and Docker, focusing on clean architecture and maintainable code. Whether it's building a [modern corporate site](https://rdingnova.com.co/) or an [offline-first habit tracker](https://auraby.netlify.app/), I enjoy crafting solutions that enhance user engagement and actual value.
+I'm finishing Systems Engineering at [Universidad del Magdalena](https://www.unimagdalena.edu.co/), working on freelance, academic, and personal passion challenges.
 
-  In my spare time, I'm usually <span id="song">[listening to music](https://open.spotify.com/track/3siwsiaEoU4Kuuc9WKMUy5)</span>, exercising, or diving into emerging tech to stay ahead of the curve and fuel my next [software project](/resume.pdf).
+Why just code when you can change lives?
+
+From an [AI-powered mango classifier](https://github.com/dejesusbg/mangifera/blob/main/notebooks/mangifera.ipynb) using computer vision and machine learning to a [blind-first navigation app](https://github.com/dejesusbg/truenavi), I build solutions that make a real impact.  
+
+My stack? React, TypeScript, Node.js, Python, TensorFlow, Docker.
+
+I'm all about clean architecture and code that lasts. 
+
+Whether it's a [modern corporate site](https://rdingnova.com.co/) or an [offline-first habit tracker](https://auraby.netlify.app/), creating tools that engage users and deliver value.  
+
+Every line of code is a chance to make things better.
+
+In my downtime, I'm <span id="song">[lost in music](https://open.spotify.com/track/3siwsiaEoU4Kuuc9WKMUy5)</span>, exercising, or diving into the latest tech.  
+
+What's a developer without curiosity? 
+
+Why follow the curve when you can stay ahead of it?
+
+The tech world moves fast. 
+
+I move *faster*.  
+
+Ready to build the next big thing? 
+
+[Let's make it happen](./resume.pdf).
 `;

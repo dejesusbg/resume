@@ -1,3 +1,4 @@
+import { features } from 'process';
 import { IconType } from 'react-icons';
 import { FaStar } from 'react-icons/fa';
 
@@ -24,7 +25,7 @@ export const projects = [
 		description:
 			'Accessible mobile app with real-time voice feedback, designed to assist visually impaired users in navigating urban environments.',
 		link: 'https://github.com/dejesusbg/truenavi',
-		imageSrc: 'navigation.png',
+		imageSrc: 'maps_logo.webp',
 		tags: [
 			'React Native',
 			'Next.js',
@@ -60,21 +61,21 @@ export const projects = [
 		date: '02/25',
 	},
 	{
-		title: 'Corporate Website for Engineering Firm',
+		title: 'Engineering Corporate Website',
 		description:
 			'Fast, modern, and content-managed website for INGNOVA SAS, improving its online presence.',
 		link: 'https://rdingnova.com.co/',
-		imageSrc: 'ingnova.png',
+		imageSrc: 'pages_logo.webp',
 		tags: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Netlify'],
 		featured: true,
 		date: '02/25',
 	},
 	{
-		title: 'Mango Classification using AI',
+		title: 'AI-Powered Mango Classifier',
 		description:
 			'Machine learning models for automated mango ripeness classification, helping optimize agricultural processes.',
 		link: 'https://github.com/dejesusbg/mangifera',
-		imageSrc: 'mangifera.png',
+		imageSrc: 'photos_logo.webp',
 		tags: ['Python', 'TensorFlow', 'scikit-learn', 'Keras'],
 		stats: { icon: FaStar, value: '95%+ accuracy' },
 		featured: true,
@@ -98,9 +99,8 @@ export const projects = [
 		description:
 			'PWA for habit tracking, offering offline support and gamification features to enhance user motivation and progress.',
 		link: 'https://auraby.netlify.app',
-		imageSrc: 'aura.png',
+		imageSrc: 'reminders_logo.webp',
 		tags: ['React', 'JavaScript', 'CSS'],
-		featured: true,
 		date: '08/24',
 	},
 	{
@@ -120,15 +120,19 @@ export const projects = [
 		description:
 			'Library for customizable Material You colour palettes with full Tailwind V3 support, helping developers create beautiful UIs.',
 		link: 'https://github.com/dejesusbg/monet',
-		imageSrc: 'monet.png',
+		imageSrc: 'freeform_logo.webp',
 		tags: ['TypeScript', 'JavaScript', 'CSS', 'Tailwind'],
 		featured: true,
 		date: '03/24',
 	},
 	{
 		title: 'Electronic Voting System',
+		description:
+			'School election system with secure authentication and real-time results tallying.',
 		link: 'https://github.com/dejesusbg/acme-voting',
+		imageSrc: 'health_logo.webp',
 		tags: ['PHP', 'CSS', 'MySQL', 'Apache'],
+		featured: true,
 		date: '03/24',
 	},
 	{
