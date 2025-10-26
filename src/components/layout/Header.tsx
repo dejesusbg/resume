@@ -1,101 +1,56 @@
 'use client';
-import {
-	info,
-	NavigationItemProps,
-	navigationItems,
-	SocialLinkProps,
-	socialLinks,
-} from '@/data/Header';
+import { SocialLinkProps, socialLinks } from '@/data/Header';
 import clsx from 'clsx';
-import { useEffect, useState } from 'react';
-
-const NavigationItem = ({ item, isActive = false, onClick }: NavigationItemProps) => (
-	<a
-		href={`#${item}`}
-		className={clsx(
-			'block w-min font-normal text-lg tracking-tight transition-all duration-300 hocus:font-bold hocus:tracking-tighter hocus:text-frost',
-			{ 'translate-x-0 text-frost !font-bold !tracking-tighter': isActive }
-		)}
-		onClick={() => setTimeout(onClick, 300)}>
-		{item}
-	</a>
-);
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 
 const SocialLink = ({ icon: Icon, link, size }: SocialLinkProps) => (
-	<a href={link} className="hover:text-frost" target="_blank" rel="noopener noreferrer">
+	<a
+		href={link}
+		className="p-2 rounded-full text-cloud hocus:text-berry"
+		target="_blank"
+		rel="noopener noreferrer">
 		<Icon size={size} />
 	</a>
 );
 
-const Navigation = () => {
-	const [activeIndex, setActiveIndex] = useState(0);
-	const sections = navigationItems;
-
-	useEffect(() => {
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) setActiveIndex(sections.indexOf(entry.target.id));
-				});
-			},
-			{ threshold: 0.5 }
-		);
-
-		sections.forEach((section, index) => {
-			const element = document.getElementById(section);
-			if (element) {
-				observer.observe(element);
-				if (index === sections.indexOf(section)) setActiveIndex(index);
-			}
-		});
-
-		return () => observer.disconnect();
-	}, [sections]);
-
+const SocialLinks = ({ isHidden }: { isHidden: boolean }) => {
 	return (
-		<nav className="relative hidden gap-3 mt-16 select-none lg:flex">
-			<span
-				className="text-xl font-semibold transition-all duration-100 ease-in-out h-9 text-lovie"
-				style={{ transform: `translateY(${activeIndex * 100}%)` }}>
-				{'>'}
-			</span>
-			<div className="space-y-2">
-				{sections.map((name, index) => (
-					<NavigationItem
-						key={name}
-						item={name}
-						isActive={activeIndex === index}
-						onClick={() => setActiveIndex(index)}
-					/>
+		<div
+			className={clsx('flex space-x-2 py-2 border-misty flow', {
+				'max-w-0 px-0 border-none opacity-0 pointer-events-none overflow-hidden': isHidden,
+				'max-w-[150px] px-2 border-r-2 opacity-100': !isHidden,
+			})}>
+			<div className="flex space-x-2">
+				{socialLinks.map((link) => (
+					<SocialLink key={link.link} {...link} />
 				))}
 			</div>
-		</nav>
-	);
-};
-
-const SocialLinks = () => {
-	return (
-		<div className="flex items-center px-1 mt-8 space-x-5">
-			{socialLinks.map((link) => (
-				<SocialLink key={link.link} {...link} />
-			))}
 		</div>
 	);
 };
 
 const Header = () => {
+	const pathname = usePathname();
+	if (pathname !== '/') return null;
+
+	const [isBtnHovered, setBtnHovered] = useState(false);
+
 	return (
-		<header className="flex flex-col justify-between lg:top-0 w-full lg:w-[48%] lg:max-h-screen lg:sticky lg:py-24">
-			<div>
-				<h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-					<a href="https://dejesusbg.netlify.app">{info.name}</a>
-				</h1>
-				<h2 className="mt-3 text-lg font-medium sm:text-xl">{info.title}</h2>
-				<p className="max-w-xs mt-4 leading-normal">{info.description}</p>
-				<Navigation />
-			</div>
-			<div>
-				<SocialLinks />
+		<header className="fixed top-0 flex w-screen">
+			<div className="absolute w-full h-full blur-to-t"></div>
+			<div className="z-50 flex mx-auto my-8 overflow-hidden border-2 rounded-full border-misty bg-lilac backdrop-blur">
+				<SocialLinks isHidden={isBtnHovered} />
+				<a
+					href="mailto:dejesusbg5@gmail.com?subject=Let's build something!"
+					className={clsx('py-2 font-medium cursor-pointer self-center flow', {
+						'px-[93px] ': isBtnHovered,
+						'px-4': !isBtnHovered,
+					})}
+					onMouseEnter={() => setBtnHovered(true)}
+					onMouseLeave={() => setBtnHovered(false)}>
+					<span>Book a call</span>
+				</a>
 			</div>
 		</header>
 	);

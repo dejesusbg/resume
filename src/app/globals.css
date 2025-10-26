@@ -1,84 +1,102 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @custom-variant hocus (&:hover, &:focus, &:focus-visible);
 @custom-variant grocus (.group:hover>&, .group:focus>&);
 
 @theme {
-  --color-primary-50: #e0d9fa;
-  --color-primary-100: #c3b6f7;
-  --color-primary-200: #a38df5;
-  --color-primary-300: #8363f2;
-  --color-primary-400: #6342ef;
-  --color-primary-500: #4730e4;
-  --color-primary-600: #3f2ace;
-  --color-primary-700: #3623b9;
-  --color-primary-800: #2e1c9e;
-  --color-primary-900: #251684;
-  --color-primary-950: #1d1372;
+	--color-primary-50: #e0d9fa;
+	--color-primary-100: #c3b6f7;
+	--color-primary-200: #a38df5;
+	--color-primary-300: #8363f2;
+	--color-primary-400: #6342ef;
+	--color-primary-500: #4730e4;
+	--color-primary-600: #3f2ace;
+	--color-primary-700: #3623b9;
+	--color-primary-800: #2e1c9e;
+	--color-primary-900: #251684;
+	--color-primary-950: #1d1372;
 
-  --color-secondary-50: #f5e4fa;
-  --color-secondary-100: #f0b9f5;
-  --color-secondary-200: #eb8ff0;
-  --color-secondary-300: #e65ce9;
-  --color-secondary-400: #e23ce5;
-  --color-secondary-500: #e54ee5;
-  --color-secondary-600: #d44cd4;
-  --color-secondary-700: #c24ab3;
-  --color-secondary-800: #a14892;
-  --color-secondary-900: #8e3471;
-  --color-secondary-950: #7c2360;
+	--color-secondary-50: #f5e4fa;
+	--color-secondary-100: #f0b9f5;
+	--color-secondary-200: #eb8ff0;
+	--color-secondary-300: #e65ce9;
+	--color-secondary-400: #e23ce5;
+	--color-secondary-500: #e54ee5;
+	--color-secondary-600: #d44cd4;
+	--color-secondary-700: #c24ab3;
+	--color-secondary-800: #a14892;
+	--color-secondary-900: #8e3471;
+	--color-secondary-950: #7c2360;
 
-  --font-sans: "Inter", sans-serif;
-  --font-weight-normal: 350;
-  --font-weight-medium: 450;
-  --tracking-normal: 0.008em;
-  --tracking-tight: -0.01em;
+	--font-sans: 'Inter', sans-serif;
+	--font-serif: 'Instrument Serif', serif;
+	--font-weight-normal: 350;
+	--font-weight-medium: 450;
+	--tracking-normal: 0.008em;
+	--tracking-tight: -0.01em;
 }
 
 @theme inline {
-  --color-misty: color-mix(
-    in oklab,
-    var(--color-primary-500) 6.5%,
-    var(--color-secondary-500) 6.5%
-  );
-  --color-ebony: color-mix(
-    in oklab,
-    var(--color-primary-900) 20%,
-    var(--color-gray-950) 90%
-  );
-  --color-lilac: color-mix(in oklab, var(--color-primary-50) 70%, transparent);
-  --color-cloud: color-mix(in oklab, var(--color-primary-100) 70%, transparent);
-  --color-frost: color-mix(in oklab, var(--color-primary-300) 20%, white 90%);
-  --color-periw: var(--color-primary-400);
-  --color-blush: var(--color-secondary-100);
-  --color-lovie: var(--color-secondary-200);
-  --color-berry: var(--color-secondary-900);
+	--color-misty: color-mix(
+		in oklab,
+		var(--color-primary-500) 6.5%,
+		var(--color-secondary-500) 6.5%
+	);
+	--color-ebony: color-mix(in oklab, var(--color-primary-900) 20%, var(--color-gray-950) 90%);
+	--color-lilac: color-mix(in oklab, var(--color-primary-50) 70%, transparent);
+	--color-cloud: color-mix(in oklab, var(--color-primary-950) 80%, transparent);
+	--color-frost: color-mix(in oklab, var(--color-primary-300) 10%, white 90%);
+	--color-periw: var(--color-primary-400);
+	--color-blush: var(--color-secondary-100);
+	--color-lovie: var(--color-secondary-200);
+	--color-berry: var(--color-secondary-900);
+}
+
+@layer utilities {
+	.blur-to-t {
+		mask: linear-gradient(
+			to top,
+			rgba(0, 0, 0, 0) 0%,
+			rgba(0, 0, 0, 0.8) 50%,
+			rgba(0, 0, 0, 1) 100%
+		);
+		@apply backdrop-blur;
+	}
+}
+
+@layer components {
+	.flow {
+		@apply transition-all duration-150 ease-[cubic-bezier(.4,0,.2,1)];
+	}
+
+	.title-img {
+		@apply inline-block aspect-square lg:w-[108px] md:w-[96px] sm:w-[72px] w-[54px] rounded-[12.0234375px] sm:rounded-[16.03125px] md:rounded-[21.375px] lg:rounded-[24.046875px] shadow-2xl sm:mx-0.5 md:mx-1 lg:mx-2 align-baseline last:hidden last:sm:inline-block;
+	}
+
+	#song > a:hover {
+		@apply !text-teal-400 cursor-[url('/album_art.png'),_auto];
+	}
 }
 
 @layer base {
-  html {
-    @apply scroll-smooth;
-  }
+	html {
+		@apply scroll-smooth;
+	}
 
-  body {
-    @apply bg-ebony text-lilac selection:bg-blush font-normal selection:text-berry gap-4 leading-relaxed lg:flex tracking-normal px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0 mx-auto min-h-screen max-w-screen-xl;
-    font-feature-settings: "cv01", "cv02", "cv06", "cv11";
-  }
+	body {
+		@apply bg-misty text-cloud selection:bg-blush font-normal selection:text-berry gap-4 leading-relaxed tracking-tight font-sans min-h-screen max-w-screen-xl;
+		font-feature-settings: 'cv01', 'cv02', 'cv06', 'cv11';
+	}
 
-  a {
-    @apply transition-colors duration-150 ease-[cubic-bezier(.4,0,.2,1)];
-  }
+	a {
+		@apply transition-all duration-150 ease-[cubic-bezier(.4,0,.2,1)];
+	}
 
-  :focus-visible {
-    @apply outline-none ring-2 ring-periw ring-offset-2 ring-offset-ebony transition-all duration-100 ease-in-out;
-  }
+	:focus-visible {
+		@apply outline-none ring-4 ring-periw transition-all duration-150 ease-[cubic-bezier(.4,0,.2,1)];
+	}
 
-  #song > a:hover {
-    @apply !text-teal-400 cursor-[url('/album_art.png'),_auto];
-  }
-
-  h1,
-  h2 {
-    @apply text-frost;
-  }
+	h1 {
+		@apply font-serif text-ebony font-bold text-center text-7xl sm:text-8xl md:text-9xl lg:text-[144px];
+	}
 }
