@@ -1,31 +1,53 @@
-import ProjectsTable from "@/components/sections/ProjectsTable";
+import { LinkArrowBack } from '@/components/ui/LinkArrow';
+import ProjectsTableRow from '@/components/ui/ProjectsRow';
+import Section from '@/components/ui/Section';
+import { projects } from '@/data/Projects';
+
+const ProjectsTable = () => {
+	const sortedProjects = [...projects].sort((a, b) => {
+		const [monthA, yearA] = a.date.split('/');
+		const [monthB, yearB] = b.date.split('/');
+
+		const dateA = `20${yearA}-${monthA.padStart(2, '0')}`;
+		const dateB = `20${yearB}-${monthB.padStart(2, '0')}`;
+
+		return new Date(dateB).getTime() - new Date(dateA).getTime();
+	});
+
+	return (
+		<table className="w-full mt-12 text-left border-collapse">
+			<thead className="px-6 py-5 border-b-2 border-misty">
+				<tr>
+					<th className="py-4 pr-8 text-sm font-semibold text-periw">Year</th>
+					<th className="py-4 pr-8 text-sm font-semibold text-periw">Project</th>
+					<th className="hidden py-4 pr-8 text-sm font-semibold text-periw lg:table-cell">
+						Built with
+					</th>
+					<th className="hidden py-4 pr-8 text-sm font-semibold text-periw sm:table-cell">Link</th>
+				</tr>
+			</thead>
+			<tbody>
+				{sortedProjects.map((project, index) => (
+					<ProjectsTableRow key={index} {...project} />
+				))}
+			</tbody>
+		</table>
+	);
+};
 
 export default function Archive() {
-  return (
-    <main className="lg:py-24 w-full">
-      <a
-        className="group mb-2 inline-flex items-center font-semibold leading-tight text-lovie"
-        href="/"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          className="mr-1 h-4 w-4 rotate-180 transition-transform group-hover:-translate-x-2"
-          aria-hidden="true"
-        >
-          <path
-            fillRule="evenodd"
-            d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
-            clipRule="evenodd"
-          ></path>
-        </svg>
-        Ricardo Barrios
-      </a>
-      <h1 className="text-4xl font-bold tracking-tight text-frost sm:text-5xl">
-        All Projects
-      </h1>
-      <ProjectsTable />
-    </main>
-  );
+	return (
+		<Section id="archive">
+			<div className="flex flex-col items-center pt-24 space-y-4">
+				<a
+					className="flex items-center font-semibold cursor-pointer text-periw focus:text-berry hover:underline hover:underline-offset-4"
+					href="/">
+					<LinkArrowBack />
+					Ricardo Barrios
+				</a>
+				<h1>All Projects</h1>
+				<ProjectsTable />
+			</div>
+		</Section>
+	);
 }
