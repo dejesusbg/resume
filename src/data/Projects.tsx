@@ -1,6 +1,6 @@
 import { features } from 'process';
 import { IconType } from 'react-icons';
-import { FaStar } from 'react-icons/fa';
+import { FaStar, FaGoogle } from 'react-icons/fa';
 
 export interface StatsProps {
 	icon: IconType;
@@ -45,6 +45,7 @@ export const projects = [
 		title: 'Microservices Store',
 		description:
 			'System built with microservices architecture, featuring order, inventory, payment management and processing, with API gateway caching and security.',
+  imageSrc: 'health_logo.webp',
 		link: 'https://github.com/dejesusbg/ecommerce',
 		tags: [
 			'Spring Boot',
@@ -58,6 +59,7 @@ export const projects = [
 			'Grafana',
 			'Prometheus',
 		],
+  featured: true
 		date: '02/25',
 	},
 	{
@@ -67,6 +69,7 @@ export const projects = [
 		link: 'https://rdingnova.com.co/',
 		imageSrc: 'pages_logo.webp',
 		tags: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Netlify'],
+  stats: { icon: FaGoogle, value: 'Top results' },
 		featured: true,
 		date: '02/25',
 	},
@@ -130,9 +133,7 @@ export const projects = [
 		description:
 			'School election system with secure authentication and real-time results tallying.',
 		link: 'https://github.com/dejesusbg/acme-voting',
-		imageSrc: 'health_logo.webp',
 		tags: ['PHP', 'CSS', 'MySQL', 'Apache'],
-		featured: true,
 		date: '03/24',
 	},
 	{
