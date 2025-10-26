@@ -7,7 +7,7 @@ import localFont from 'next/font/local';
 import './globals.css';
 
 const inter = localFont({ src: '../fonts/InterVariable.ttf' });
-const instrument = Instrument_Serif({ weight: '400' });
+const instrument = Instrument_Serif({ weight: '400', subsets: ['latin'] });
 
 export const metadata: Metadata = {
 	metadataBase: new URL('https://dejesusbg.netlify.app.com'),
