@@ -59,7 +59,7 @@ export const projects = [
 			'Grafana',
 			'Prometheus',
 		],
-  featured: true
+  featured: true,
 		date: '02/25',
 	},
 	{
