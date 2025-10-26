@@ -5,10 +5,20 @@ import { credits } from '@/data/Footer';
 import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 
-const colours = ['ebony', 'cloud', 'periw', 'berry', 'lovie', 'blush', 'misty', 'lilac', 'frost'];
+const colours = [
+	'bg-ebony',
+	'bg-cloud',
+	'bg-periw',
+	'bg-berry',
+	'bg-lovie',
+	'bg-blush',
+	'bg-misty',
+	'bg-lilac',
+	'bg-frost',
+];
 
-const ColourCircle = ({ colourClass }: { colourClass: string }) => (
-	<div className={clsx('w-4 h-4 rounded-full', 'bg-' + colourClass)}></div>
+const ColourCircle = ({ className }: { className: string }) => (
+	<div className={clsx('w-4 h-4 rounded-full', className)}></div>
 );
 
 const Footer = () => {
@@ -22,8 +32,9 @@ const Footer = () => {
 					{credits}
 				</MarkdownRaw>
 				<div className="flex flex-wrap -space-x-1">
-					{colours.map((colour, i) => (
-						<ColourCircle key={i} colourClass={colour} />
+					{/* Pass the full class name to the component */}
+					{colours.map((className, i) => (
+						<ColourCircle key={i} className={className} />
 					))}
 				</div>
 			</footer>
