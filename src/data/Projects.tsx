@@ -1,6 +1,5 @@
-import { features } from 'process';
 import { IconType } from 'react-icons';
-import { FaStar, FaGoogle } from 'react-icons/fa';
+import { LuStar } from 'react-icons/lu';
 
 export interface StatsProps {
 	icon: IconType;
@@ -20,6 +19,16 @@ export interface ProjectProps {
 }
 
 export const projects = [
+	{
+		title: 'Ecological Smart Robot',
+		description: 'Recycled-material robot assistant delivering verbal eco-friendly facts.',
+		link: 'https://github.com/dejesusbg/ecobot',
+		imageSrc: 'notes_logo.webp',
+		tags: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Gemini API'],
+		stats: { icon: LuStar, value: 'Won 1st place' },
+		featured: true,
+		date: '10/25',
+	},
 	{
 		title: 'Blind-First Navigation App',
 		description:
@@ -45,7 +54,7 @@ export const projects = [
 		title: 'Microservices Store',
 		description:
 			'System built with microservices architecture, featuring order, inventory, payment management and processing, with API gateway caching and security.',
-  imageSrc: 'health_logo.webp',
+		imageSrc: 'files_logo.webp',
 		link: 'https://github.com/dejesusbg/ecommerce',
 		tags: [
 			'Spring Boot',
@@ -59,7 +68,7 @@ export const projects = [
 			'Grafana',
 			'Prometheus',
 		],
-  featured: true,
+		featured: true,
 		date: '02/25',
 	},
 	{
@@ -67,10 +76,8 @@ export const projects = [
 		description:
 			'Fast, modern, and content-managed website for INGNOVA SAS, improving its online presence.',
 		link: 'https://rdingnova.com.co/',
-		imageSrc: 'pages_logo.webp',
-		tags: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Netlify'],
-  stats: { icon: FaGoogle, value: 'Top results' },
-		featured: true,
+		tags: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Netlify', 'Decap CMS'],
+		stats: { icon: LuStar, value: 'Top Google result' },
 		date: '02/25',
 	},
 	{
@@ -80,7 +87,7 @@ export const projects = [
 		link: 'https://github.com/dejesusbg/mangifera',
 		imageSrc: 'photos_logo.webp',
 		tags: ['Python', 'TensorFlow', 'scikit-learn', 'Keras'],
-		stats: { icon: FaStar, value: '95%+ accuracy' },
+		stats: { icon: LuStar, value: '95%+ accuracy' },
 		featured: true,
 		date: '10/24',
 	},
@@ -102,7 +109,6 @@ export const projects = [
 		description:
 			'PWA for habit tracking, offering offline support and gamification features to enhance user motivation and progress.',
 		link: 'https://auraby.netlify.app',
-		imageSrc: 'reminders_logo.webp',
 		tags: ['React', 'JavaScript', 'CSS'],
 		date: '08/24',
 	},
@@ -123,9 +129,7 @@ export const projects = [
 		description:
 			'Library for customizable Material You colour palettes with full Tailwind V3 support, helping developers create beautiful UIs.',
 		link: 'https://github.com/dejesusbg/monet',
-		imageSrc: 'freeform_logo.webp',
 		tags: ['TypeScript', 'JavaScript', 'CSS', 'Tailwind'],
-		featured: true,
 		date: '03/24',
 	},
 	{
