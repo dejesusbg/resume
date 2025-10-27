@@ -14,7 +14,7 @@ export const socialLinks = [
 ];
 
 export const info = {
-	name: `# <img src="./me.webp" alt="Animal Crossing Profile Picture" class="title-img" /> [Ricardo <br/> Barrios](https://dejesusbg.netlify.app) <img src="./maps_logo.webp" alt="Maps Logo" class="title-img" /> <img src="./pages_logo.webp" alt="Pages Logo" class="title-img" /> <img src="./photos_logo.webp" alt="Photos Logo" class="title-img" />`,
+	name: `# <img src="./me.webp" alt="Animal Crossing Profile Picture" class="h1-logo" /> [Ricardo <br/> Barrios](https://dejesusbg.netlify.app) <img src="./maps_logo.webp" alt="Maps Logo" class="h1-logo" /> <img src="./pages_logo.webp" alt="Pages Logo" class="h1-logo" /> <img src="./photos_logo.webp" alt="Photos Logo" class="h1-logo" />`,
 	title: 'Full Stack Engineer',
 	description: 'I love to build experiences that help others.',
 };

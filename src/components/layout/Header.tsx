@@ -1,13 +1,12 @@
 'use client';
 import { SocialLinkProps, socialLinks } from '@/data/Info';
 import clsx from 'clsx';
-import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 const SocialLink = ({ icon: Icon, link, size }: SocialLinkProps) => (
 	<a
 		href={link}
-		className="p-2 rounded-full text-cloud hocus:text-berry"
+		className="px-2 py-1 rounded-full text-cloud hocus:text-berry"
 		target="_blank"
 		rel="noopener noreferrer">
 		<Icon size={size} />
@@ -31,18 +30,16 @@ const SocialLinks = ({ isHidden }: { isHidden: boolean }) => {
 };
 
 const Header = () => {
-	const pathname = usePathname();
-	if (pathname !== '/') return null;
-
 	const [isBtnHovered, setBtnHovered] = useState(false);
 
 	return (
 		<header className="fixed top-0 flex w-screen">
-			<div className="z-50 flex mx-auto my-8 overflow-hidden border-2 rounded-full border-misty bg-lilac backdrop-blur">
+			<div className="absolute w-full h-full blur-to-t" />
+			<div className="z-50 flex mx-auto my-4 overflow-hidden border-2 rounded-full shadow border-misty bg-lilac backdrop-blur">
 				<SocialLinks isHidden={isBtnHovered} />
 				<a
 					href="mailto:dejesusbg5@gmail.com?subject=Let's build something!"
-					className={clsx('py-2 mx-2 font-medium rounded-full cursor-pointer self-center flow', {
+					className={clsx('py-1 mx-2 font-medium rounded-full cursor-pointer self-center flow', {
 						'px-[91px] ': isBtnHovered,
 						'px-4': !isBtnHovered,
 					})}

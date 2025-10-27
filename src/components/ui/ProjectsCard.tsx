@@ -11,7 +11,7 @@ const ProjectCard = ({ title, description, link, imageSrc, stats, tags, date }: 
 				target="_blank"
 				rel="noreferrer noopener">
 				<div className="flex flex-col items-center space-y-2">
-					<img alt={title} src={`/${imageSrc}`} className="min-w-[54px] max-w-[54px]" />
+					<img alt={title} src={`/${imageSrc}`} className="logo" />
 					<div className="text-xs font-medium tracking-wide text-cloud/50">{date}</div>
 				</div>
 				<div className="flex flex-col space-y-2 md:text-lg">
@@ -20,7 +20,7 @@ const ProjectCard = ({ title, description, link, imageSrc, stats, tags, date }: 
 						<LinkArrowOut />
 					</h3>
 					<p className="leading-tight text-center md:text-start">{description}</p>
-					<ul className="flex flex-wrap gap-2 mt-2">
+					<ul className="flex flex-wrap justify-center gap-2 mt-2 md:justify-start">
 						{stats && <ProjectsStat {...stats} />}
 						{tags.map((tag, index) => (
 							<ProjectsTech key={index} name={tag} />

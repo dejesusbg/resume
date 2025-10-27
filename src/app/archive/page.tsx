@@ -36,7 +36,7 @@ const ProjectsTable = () => {
 export default function Archive() {
 	return (
 		<Section id="archive">
-			<div className="flex flex-col items-center pt-12 space-y-4">
+			<div className="flex flex-col items-center pt-32 space-y-4">
 				<a
 					className="flex items-center font-semibold cursor-pointer text-periw focus:text-berry hover:underline hover:underline-offset-4"
 					href="/">

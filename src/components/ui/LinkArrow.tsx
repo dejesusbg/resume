@@ -4,7 +4,7 @@ const LinkArrowOut = () => {
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 20 20"
 			fill="currentColor"
-			className="inline-block w-4 h-4 ml-1"
+			className="inline-block w-4 h-4 ml-1 -z-10"
 			aria-hidden="true">
 			<path
 				fillRule="evenodd"
@@ -20,7 +20,7 @@ const LinkArrowBack = () => {
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 20 20"
 			fill="currentColor"
-			className="inline-block w-4 h-4 mr-1 -rotate-[135deg]"
+			className="inline-block w-4 h-4 mr-1 -rotate-[135deg] -z-10"
 			aria-hidden="true">
 			<path
 				fillRule="evenodd"
@@ -36,7 +36,7 @@ const LinkArrowNext = () => {
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 20 20"
 			fill="currentColor"
-			className="inline-block w-4 h-4 ml-1 rotate-[45deg]"
+			className="inline-block w-4 h-4 ml-1 rotate-[45deg] -z-10"
 			aria-hidden="true">
 			<path
 				fillRule="evenodd"
