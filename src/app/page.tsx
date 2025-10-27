@@ -42,7 +42,7 @@ const Projects = () => {
 						<ProjectCard key={index} {...project} />
 					))}
 			</ul>
-			<div className="flex justify-end mt-8">
+			<div className="flex justify-center mt-8">
 				<a
 					className="flex items-center font-semibold cursor-pointer flow text-periw hocus:text-berry hover:underline hover:underline-offset-4"
 					href="/archive">
