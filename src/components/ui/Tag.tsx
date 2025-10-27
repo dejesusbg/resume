@@ -1,21 +1,21 @@
-import { IconType } from 'react-icons';
+import { LuStar } from 'react-icons/lu';
 
-export const ProjectsStat = ({ icon: Icon, value }: { icon: IconType; value: string }) => {
+export const StatTag = ({ stat }: { stat: string }) => {
 	return (
 		<li>
 			<div className="flex items-center gap-1.5 px-3 py-1 text-xs font-medium leading-5 rounded-full text-berry bg-blush">
-				<Icon size={10} />
-				{value}
+				<LuStar size={10} />
+				{stat}
 			</div>
 		</li>
 	);
 };
 
-export const ProjectsTech = ({ name }: { name: string }) => {
+export const TechTag = ({ tech }: { tech: string }) => {
 	return (
 		<li>
 			<div className="flex items-center px-3 py-1 text-xs font-medium leading-5 rounded-full text-berry bg-blush">
-				{name}
+				{tech}
 			</div>
 		</li>
 	);

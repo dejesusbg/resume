@@ -1,9 +1,15 @@
 import { LinkArrowBack } from '@/components/ui/LinkArrow';
-import ProjectsTableRow from '@/components/ui/ProjectsRow';
+import { ProjectProps, ProjectRow } from '@/components/ui/Project';
 import Section from '@/components/ui/Section';
-import { archive, projects } from '@/data/Projects';
+import { useTranslations } from 'next-intl';
 
 const ProjectsTable = () => {
+	const tLayout = useTranslations('layout');
+	const headers: string[] = tLayout.raw('table');
+
+	const tData = useTranslations('data');
+	const projects: ProjectProps[] = tData.raw('projects');
+
 	const sortedProjects = [...projects].sort((a, b) => {
 		const [monthA, yearA] = a.date.split('/');
 		const [monthB, yearB] = b.date.split('/');
@@ -18,19 +24,19 @@ const ProjectsTable = () => {
 		<table className="w-full mt-12 text-left border-collapse">
 			<thead className="border-b-2 border-misty">
 				<tr>
-					<th className="p-4 text-sm font-semibold text-periw">{archive.headers[0]}</th>
-					<th className="p-4 text-sm font-semibold text-periw">{archive.headers[1]}</th>
+					<th className="p-4 text-sm font-semibold text-periw">{headers[0]}</th>
+					<th className="p-4 text-sm font-semibold text-periw">{headers[1]}</th>
 					<th className="hidden p-4 text-sm font-semibold text-periw lg:table-cell">
-						{archive.headers[2]}
+						{headers[2]}
 					</th>
 					<th className="hidden p-4 text-sm font-semibold text-periw sm:table-cell">
-						{archive.headers[3]}
+						{headers[3]}
 					</th>
 				</tr>
 			</thead>
 			<tbody>
 				{sortedProjects.map((project, index) => (
-					<ProjectsTableRow key={index} {...project} />
+					<ProjectRow key={index} {...project} />
 				))}
 			</tbody>
 		</table>
@@ -38,6 +44,7 @@ const ProjectsTable = () => {
 };
 
 export default function Archive() {
+	const tLayout = useTranslations('layout');
 	return (
 		<Section id="archive">
 			<div className="flex flex-col items-center pt-32 space-y-4">
@@ -47,7 +54,7 @@ export default function Archive() {
 					<LinkArrowBack />
 					Ricardo Barrios
 				</a>
-				<h1>{archive.title}</h1>
+				<h1>{tLayout('projects')}</h1>
 				<ProjectsTable />
 			</div>
 		</Section>

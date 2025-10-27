@@ -2,6 +2,7 @@ import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import Background from '@/components/ui/Background';
 import type { Metadata } from 'next';
+import { NextIntlClientProvider } from 'next-intl';
 import { Instrument_Serif } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
 	},
 };
 
-export default function RootLayout({
+export default async function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
@@ -33,12 +34,14 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${inter.className} antialiased`}>
-				<Background />
-				<Header />
-				<main className="w-screen">
-					{children}
-					<Footer />
-				</main>
+				<NextIntlClientProvider>
+					<Background />
+					<Header />
+					<main className="w-screen">
+						{children}
+						<Footer />
+					</main>
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	);

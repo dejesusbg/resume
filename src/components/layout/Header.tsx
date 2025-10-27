@@ -1,7 +1,21 @@
 'use client';
-import { bookText, SocialLinkProps, socialLinks } from '@/data/Info';
 import clsx from 'clsx';
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
+import { IconType } from 'react-icons';
+import { LuGithub, LuLinkedin, LuMail } from 'react-icons/lu';
+
+interface SocialLinkProps {
+	icon: IconType;
+	link: string;
+	size: number;
+}
+
+const socialLinks = [
+	{ icon: LuMail, link: 'mailto:dejesusbg5@gmail.com', size: 22 },
+	{ icon: LuGithub, link: 'https://github.com/dejesusbg', size: 24 },
+	{ icon: LuLinkedin, link: 'https://linkedin.com/in/dejesusbg', size: 22 },
+];
 
 const SocialLink = ({ icon: Icon, link, size }: SocialLinkProps) => (
 	<a
@@ -30,6 +44,7 @@ const SocialLinks = ({ isHidden }: { isHidden: boolean }) => {
 };
 
 const Header = () => {
+	const tLayout = useTranslations('layout');
 	const [isBtnHovered, setBtnHovered] = useState(false);
 
 	return (
@@ -45,7 +60,7 @@ const Header = () => {
 					})}
 					onMouseEnter={() => setBtnHovered(true)}
 					onMouseLeave={() => setBtnHovered(false)}>
-					<span>{bookText}</span>
+					<span>{tLayout('book')}</span>
 				</a>
 			</div>
 		</header>
