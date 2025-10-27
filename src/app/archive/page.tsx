@@ -1,7 +1,7 @@
 import { LinkArrowBack } from '@/components/ui/LinkArrow';
 import ProjectsTableRow from '@/components/ui/ProjectsRow';
 import Section from '@/components/ui/Section';
-import { projects } from '@/data/Projects';
+import { archive, projects } from '@/data/Projects';
 
 const ProjectsTable = () => {
 	const sortedProjects = [...projects].sort((a, b) => {
@@ -18,10 +18,14 @@ const ProjectsTable = () => {
 		<table className="w-full mt-12 text-left border-collapse">
 			<thead className="border-b-2 border-misty">
 				<tr>
-					<th className="p-4 text-sm font-semibold text-periw">Year</th>
-					<th className="p-4 text-sm font-semibold text-periw">Project</th>
-					<th className="hidden p-4 text-sm font-semibold text-periw lg:table-cell">Tags</th>
-					<th className="hidden p-4 text-sm font-semibold text-periw sm:table-cell">Link</th>
+					<th className="p-4 text-sm font-semibold text-periw">{archive.headers[0]}</th>
+					<th className="p-4 text-sm font-semibold text-periw">{archive.headers[1]}</th>
+					<th className="hidden p-4 text-sm font-semibold text-periw lg:table-cell">
+						{archive.headers[2]}
+					</th>
+					<th className="hidden p-4 text-sm font-semibold text-periw sm:table-cell">
+						{archive.headers[3]}
+					</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -43,7 +47,7 @@ export default function Archive() {
 					<LinkArrowBack />
 					Ricardo Barrios
 				</a>
-				<h1>All Projects</h1>
+				<h1>{archive.title}</h1>
 				<ProjectsTable />
 			</div>
 		</Section>

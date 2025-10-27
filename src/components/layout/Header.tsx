@@ -1,5 +1,5 @@
 'use client';
-import { SocialLinkProps, socialLinks } from '@/data/Info';
+import { bookText, SocialLinkProps, socialLinks } from '@/data/Info';
 import clsx from 'clsx';
 import { useState } from 'react';
 
@@ -40,12 +40,12 @@ const Header = () => {
 				<a
 					href="mailto:dejesusbg5@gmail.com?subject=Let's build something!"
 					className={clsx('py-1 mx-2 font-medium rounded-full cursor-pointer self-center flow', {
-						'px-[91px] ': isBtnHovered,
+						'px-[91px]': isBtnHovered,
 						'px-4': !isBtnHovered,
 					})}
 					onMouseEnter={() => setBtnHovered(true)}
 					onMouseLeave={() => setBtnHovered(false)}>
-					<span>Book a call</span>
+					<span>{bookText}</span>
 				</a>
 			</div>
 		</header>

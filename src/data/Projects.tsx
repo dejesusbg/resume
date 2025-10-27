@@ -18,6 +18,14 @@ export interface ProjectProps {
 	ongoing?: boolean;
 }
 
+export const archive = {
+	title: 'All Projects',
+	text: 'View Full Project Archive',
+	headers: ['Year', 'Project', 'Tags', 'Link'],
+	source: 'Source code',
+	demo: 'Live demo',
+};
+
 export const projects = [
 	{
 		title: 'Ecological AI Assistant',

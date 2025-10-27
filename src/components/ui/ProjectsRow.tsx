@@ -1,6 +1,6 @@
 import { LinkArrowOut } from '@/components/ui/LinkArrow';
 import { ProjectsStat, ProjectsTech } from '@/components/ui/ProjectsTag';
-import { ProjectProps } from '@/data/Projects';
+import { archive, ProjectProps } from '@/data/Projects';
 import clsx from 'clsx';
 import { LuGithub } from 'react-icons/lu';
 
@@ -15,8 +15,7 @@ const ProjectsTableRow = ({
 }: ProjectProps) => {
 	const isLink = link !== '#';
 	const isGithub = isLink && link.includes('github.com');
-	const linkDisplay = isGithub ? 'Source code' : isLink ? 'Live demo' : '';
-
+	const linkDisplay = isGithub ? archive.source : isLink ? archive.demo : '';
 	const yearDisplay = '20' + date.split('/')[1];
 
 	const LinkElement = ({ isHidden }: { isHidden: boolean }) => {

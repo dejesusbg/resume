@@ -18,3 +18,5 @@ export const info = {
 	title: 'Full Stack Engineer',
 	description: 'I love to build experiences that help others.',
 };
+
+export const bookText = 'Book a call';

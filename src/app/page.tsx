@@ -4,7 +4,7 @@ import ProjectCard from '@/components/ui/ProjectsCard';
 import Section from '@/components/ui/Section';
 import { bio } from '@/data/About';
 import { info } from '@/data/Info';
-import { projects } from '@/data/Projects';
+import { archive, projects } from '@/data/Projects';
 
 const Hero = () => {
 	return (
@@ -46,7 +46,7 @@ const Projects = () => {
 				<a
 					className="flex items-center font-semibold cursor-pointer flow text-periw hocus:text-berry hover:underline hover:underline-offset-4"
 					href="/archive">
-					View Full Project Archive
+					{archive.text}
 					<LinkArrowNext />
 				</a>
 			</div>
