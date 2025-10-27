@@ -18,7 +18,7 @@ const colours = [
 ];
 
 const ColourCircle = ({ className }: { className: string }) => (
-	<div className={clsx('w-4 h-4 rounded-full', className)}></div>
+	<div className={clsx('w-4 h-4 rounded-full mx-0.5 border-2', className)}></div>
 );
 
 const Footer = () => {
@@ -26,13 +26,12 @@ const Footer = () => {
 	if (pathname !== '/') return null;
 
 	return (
-		<Section id="footer">
-			<footer className="flex flex-col justify-center max-w-md space-y-4 text-sm text-cloud">
+		<Section id="footer" className="!max-w-sm">
+			<footer className="flex flex-col items-center justify-center space-y-8 text-sm text-center">
 				<MarkdownRaw classNames={{ a: 'font-semibold text-periw hocus:text-berry' }}>
 					{credits}
 				</MarkdownRaw>
-				<div className="flex flex-wrap -space-x-1">
-					{/* Pass the full class name to the component */}
+				<div className="flex">
 					{colours.map((className, i) => (
 						<ColourCircle key={i} className={className} />
 					))}

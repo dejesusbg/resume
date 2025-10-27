@@ -35,7 +35,7 @@ export default function RootLayout({
 			<body className={`${inter.className} antialiased`}>
 				<Background />
 				<Header />
-				<main className="w-screen px-8">
+				<main className="w-screen">
 					{children}
 					<Footer />
 				</main>

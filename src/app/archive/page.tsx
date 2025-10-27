@@ -16,14 +16,12 @@ const ProjectsTable = () => {
 
 	return (
 		<table className="w-full mt-12 text-left border-collapse">
-			<thead className="px-6 py-5 border-b-2 border-misty">
+			<thead className="border-b-2 border-misty">
 				<tr>
-					<th className="py-4 pr-8 text-sm font-semibold text-periw">Year</th>
-					<th className="py-4 pr-8 text-sm font-semibold text-periw">Project</th>
-					<th className="hidden py-4 pr-8 text-sm font-semibold text-periw lg:table-cell">
-						Built with
-					</th>
-					<th className="hidden py-4 pr-8 text-sm font-semibold text-periw sm:table-cell">Link</th>
+					<th className="p-4 text-sm font-semibold text-periw">Year</th>
+					<th className="p-4 text-sm font-semibold text-periw">Project</th>
+					<th className="hidden p-4 text-sm font-semibold text-periw lg:table-cell">Tags</th>
+					<th className="hidden p-4 text-sm font-semibold text-periw sm:table-cell">Link</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -38,7 +36,7 @@ const ProjectsTable = () => {
 export default function Archive() {
 	return (
 		<Section id="archive">
-			<div className="flex flex-col items-center pt-24 space-y-4">
+			<div className="flex flex-col items-center pt-12 space-y-4">
 				<a
 					className="flex items-center font-semibold cursor-pointer text-periw focus:text-berry hover:underline hover:underline-offset-4"
 					href="/">

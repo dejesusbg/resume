@@ -3,18 +3,18 @@ import MarkdownRaw from '@/components/ui/MarkdownRaw';
 import ProjectCard from '@/components/ui/ProjectsCard';
 import Section from '@/components/ui/Section';
 import { bio } from '@/data/About';
-import { info } from '@/data/Header';
+import { info } from '@/data/Info';
 import { projects } from '@/data/Projects';
 
 const Hero = () => {
 	return (
-		<div className="flex flex-col items-center justify-center w-full pt-0 space-y-8 h-svh">
+		<Section className="flex flex-col justify-center space-y-8 h-svh">
 			<MarkdownRaw>{info.name}</MarkdownRaw>
 			<div className="flex flex-col space-y-2 text-lg text-center md:text-2xl">
 				<h2 className="font-semibold">{info.title}</h2>
 				<p>{info.description}</p>
 			</div>
-		</div>
+		</Section>
 	);
 };
 
@@ -23,8 +23,8 @@ const About = () => {
 		<Section id="about">
 			<MarkdownRaw
 				classNames={{
-					p: 'text-ebony text-2xl not-first:mt-[32px] md:not-first:mt-[48px] md:text-4xl leading-[125%]',
-					a: 'font-semibold text-periw hocus:text-berry hover:underline underline-offset-4',
+					p: 'text-ebony text-2xl not-first:mt-[36px] md:not-first:mt-[48px] md:text-4xl leading-[120%]',
+					a: 'font-semibold text-periw hocus:text-berry hover:underline hover:underline-offset-4',
 				}}>
 				{bio}
 			</MarkdownRaw>

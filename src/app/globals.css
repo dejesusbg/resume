@@ -52,18 +52,6 @@
 	--color-berry: var(--color-secondary-900);
 }
 
-@layer utilities {
-	.blur-to-t {
-		mask: linear-gradient(
-			to top,
-			rgba(0, 0, 0, 0) 0%,
-			rgba(0, 0, 0, 0.8) 50%,
-			rgba(0, 0, 0, 1) 100%
-		);
-		@apply backdrop-blur;
-	}
-}
-
 @layer components {
 	.flow {
 		@apply transition-all duration-150 ease-[cubic-bezier(.4,0,.2,1)];

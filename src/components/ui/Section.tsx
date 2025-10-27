@@ -11,7 +11,7 @@ const Section = ({ children, id, className = '' }: SectionProps) => {
 	return (
 		<section
 			id={id}
-			className={clsx('mx-[6px] sm:mx-[24px] md:mx-[48px] lg:mx-[72px] mb-32', className)}>
+			className={clsx('mx-auto max-w-5xl px-4 not-first:mb-32 last:mb-24', className)}>
 			{children}
 		</section>
 	);

@@ -1,6 +1,6 @@
 import { LinkArrowOut } from '@/components/ui/LinkArrow';
 import { ProjectProps } from '@/data/Projects';
-import { ProjectsCardTag, ProjectsStatTag } from './ProjectsTag';
+import { ProjectsStat, ProjectsTech } from './ProjectsTag';
 
 const ProjectCard = ({ title, description, link, imageSrc, stats, tags, date }: ProjectProps) => {
 	return (
@@ -11,7 +11,7 @@ const ProjectCard = ({ title, description, link, imageSrc, stats, tags, date }: 
 				target="_blank"
 				rel="noreferrer noopener">
 				<div className="flex flex-col items-center space-y-2">
-					<img alt={title} width={54} height={54} src={`/${imageSrc}`} />
+					<img alt={title} src={`/${imageSrc}`} className="min-w-[54px] max-w-[54px]" />
 					<div className="text-xs font-medium tracking-wide text-cloud/50">{date}</div>
 				</div>
 				<div className="flex flex-col space-y-2 md:text-lg">
@@ -20,10 +20,10 @@ const ProjectCard = ({ title, description, link, imageSrc, stats, tags, date }: 
 						<LinkArrowOut />
 					</h3>
 					<p className="leading-tight text-center md:text-start">{description}</p>
-					<ul className="flex flex-wrap justify-center mt-2 font-semibold md:justify-start">
-						{stats && <ProjectsStatTag {...stats} />}
+					<ul className="flex flex-wrap gap-2 mt-2">
+						{stats && <ProjectsStat {...stats} />}
 						{tags.map((tag, index) => (
-							<ProjectsCardTag key={index} name={tag} />
+							<ProjectsTech key={index} name={tag} />
 						))}
 					</ul>
 				</div>
