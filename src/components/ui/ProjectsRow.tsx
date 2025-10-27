@@ -46,7 +46,7 @@ const ProjectsTableRow = ({
 			</td>
 			<td className="flex flex-col gap-4 p-4 text-sm">
 				<div className="font-semibold leading-[120%]">{title}</div>
-				{description && <p className="font-normal sm:max-w-sm">{description}</p>}
+				<p className="font-normal sm:max-w-sm">{description}</p>
 				<LinkElement isHidden={true} />
 			</td>
 			<td className="hidden p-4 align-top lg:table-cell">
