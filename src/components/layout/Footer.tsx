@@ -17,25 +17,27 @@ const colours = [
 	'bg-frost',
 ];
 
-const ColourCircle = ({ className }: { className: string }) => (
-	<div className={clsx('w-4 h-4 rounded-full mx-0.5 border-2', className)}></div>
-);
+const ColourBar = () => {
+	return (
+		<div className="flex mx-auto mb-4 border-2 rounded-full shadow border-misty h-min w-min overflow-clip">
+			{colours.map((className, i) => (
+				<div className={clsx('w-6 h-6', className)} key={i}></div>
+			))}
+		</div>
+	);
+};
 
 const Footer = () => {
 	const pathname = usePathname();
 	if (pathname !== '/') return null;
 
 	return (
-		<Section id="footer" className="!max-w-sm">
-			<footer className="flex flex-col items-center justify-center space-y-8 text-sm text-center">
+		<Section id="footer">
+			<footer className="flex flex-col max-w-xs gap-6 mx-auto text-sm text-center sm:max-w-lg lg:max-w-2xl">
 				<MarkdownRaw classNames={{ a: 'font-semibold text-periw hocus:text-berry' }}>
 					{credits}
 				</MarkdownRaw>
-				<div className="flex">
-					{colours.map((className, i) => (
-						<ColourCircle key={i} className={className} />
-					))}
-				</div>
+				<ColourBar />
 			</footer>
 		</Section>
 	);
