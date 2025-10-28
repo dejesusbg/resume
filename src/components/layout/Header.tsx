@@ -1,5 +1,5 @@
 'use client';
-import { locales } from '@/i18n/locale';
+import { emojiLocale, languageLocale, locales } from '@/i18n/locale';
 import { useLocale, useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { useTransition } from 'react';
@@ -25,9 +25,6 @@ const LanguageButton = () => {
 		});
 	};
 
-	const emojiDisplay: Record<string, string> = { EN: '🇬🇧', ES: '🇨🇴', FR: '🇫🇷' };
-	const languageDisplay: Record<string, string> = { EN: 'English', ES: 'Español', FR: 'Français' };
-
 	return (
 		<HeaderContainer>
 			<button className="header-btn" tabIndex={1}>
@@ -38,8 +35,8 @@ const LanguageButton = () => {
 					className="absolute w-full h-full text-transparent cursor-pointer header-btn">
 					{locales.map((loc) => (
 						<option key={loc} value={loc}>
-							<span>{emojiDisplay[loc.toUpperCase()]}</span>
-							<span>{languageDisplay[loc.toUpperCase()]}</span>
+							<span>{emojiLocale[loc.toUpperCase()]}</span>
+							<span>{languageLocale[loc.toUpperCase()]}</span>
 						</option>
 					))}
 				</select>
