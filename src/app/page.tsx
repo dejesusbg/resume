@@ -11,7 +11,7 @@ const Hero = () => {
 			<MarkdownRaw>{tAbout.raw('name')}</MarkdownRaw>
 			<div className="flex flex-col space-y-2 text-lg text-center md:text-2xl">
 				<h2 className="font-semibold">{tAbout('title')}</h2>
-				<p>{tAbout('description')}</p>
+				<p className="max-w-xs mx-auto sm:max-w-lg lg:max-w-2xl">{tAbout('description')}</p>
 			</div>
 		</Section>
 	);
