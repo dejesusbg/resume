@@ -1,67 +1,85 @@
 'use client';
-import clsx from 'clsx';
-import { useTranslations } from 'next-intl';
-import { useState } from 'react';
-import { IconType } from 'react-icons';
-import { LuGithub, LuLinkedin, LuMail } from 'react-icons/lu';
+import { locales } from '@/i18n/locale';
+import { useLocale, useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
+import { useTransition } from 'react';
+import { LuGithub, LuLanguages, LuLinkedin } from 'react-icons/lu';
 
-interface SocialLinkProps {
-	icon: IconType;
-	link: string;
-	size: number;
-}
-
-const socialLinks = [
-	{ icon: LuMail, link: 'mailto:dejesusbg5@gmail.com', size: 22 },
-	{ icon: LuGithub, link: 'https://github.com/dejesusbg', size: 24 },
-	{ icon: LuLinkedin, link: 'https://linkedin.com/in/dejesusbg', size: 22 },
-];
-
-const SocialLink = ({ icon: Icon, link, size }: SocialLinkProps) => (
-	<a
-		href={link}
-		className="px-2 py-1 rounded-full text-cloud hocus:text-berry"
-		target="_blank"
-		rel="noopener noreferrer">
-		<Icon size={size} />
-	</a>
-);
-
-const SocialLinks = ({ isHidden }: { isHidden: boolean }) => {
+const HeaderContainer = ({ children }: { children: React.ReactNode }) => {
 	return (
-		<div
-			className={clsx('flex space-x-2 py-2 border-misty flow', {
-				'max-w-0 px-0 border-none opacity-0 pointer-events-none overflow-hidden': isHidden,
-				'max-w-[150px] px-2 border-r-2 opacity-100': !isHidden,
-			})}>
-			<div className="flex space-x-2">
-				{socialLinks.map((link) => (
-					<SocialLink key={link.link} {...link} />
-				))}
-			</div>
+		<div className="flex border-2 rounded-full shadow border-misty bg-lilac backdrop-blur">
+			{children}
 		</div>
+	);
+};
+
+const LanguageButton = () => {
+	const locale = useLocale();
+	const router = useRouter();
+	const [isPending, startTransition] = useTransition();
+
+	const handleLocaleChange = (newLocale: string) => {
+		startTransition(() => {
+			document.cookie = `locale=${newLocale}; path=/; max-age=${60 * 60 * 24 * 365}`;
+			router.refresh();
+		});
+	};
+
+	const emojiDisplay: Record<string, string> = { EN: '🇬🇧', ES: '🇨🇴', FR: '🇫🇷' };
+	const languageDisplay: Record<string, string> = { EN: 'English', ES: 'Español', FR: 'Français' };
+
+	return (
+		<HeaderContainer>
+			<button className="header-btn" tabIndex={1}>
+				<select
+					value={locale}
+					onChange={(e: any) => handleLocaleChange(e.target.value)}
+					disabled={isPending}
+					className="absolute w-full h-full text-transparent cursor-pointer header-btn">
+					{locales.map((loc) => (
+						<option key={loc} value={loc}>
+							<span>{emojiDisplay[loc.toUpperCase()]}</span>
+							<span>{languageDisplay[loc.toUpperCase()]}</span>
+						</option>
+					))}
+				</select>
+				<LuLanguages size={20} />
+			</button>
+		</HeaderContainer>
 	);
 };
 
 const Header = () => {
 	const tLayout = useTranslations('layout');
-	const [isBtnHovered, setBtnHovered] = useState(false);
 
 	return (
 		<header className="fixed top-0 flex w-screen">
 			<div className="absolute w-full h-full blur-to-t" />
-			<div className="z-50 flex mx-auto my-4 overflow-hidden border-2 rounded-full shadow border-misty bg-lilac backdrop-blur">
-				<SocialLinks isHidden={isBtnHovered} />
-				<a
-					href="mailto:dejesusbg5@gmail.com?subject=Let's build something!"
-					className={clsx('py-1 mx-2 font-medium rounded-full cursor-pointer self-center flow', {
-						'px-[91px]': isBtnHovered,
-						'px-4': !isBtnHovered,
-					})}
-					onMouseEnter={() => setBtnHovered(true)}
-					onMouseLeave={() => setBtnHovered(false)}>
-					<span>{tLayout('book')}</span>
-				</a>
+			<div className="z-50 flex gap-2 mx-auto my-4">
+				<HeaderContainer>
+					<a
+						href="https://github.com/dejesusbg"
+						target="blank"
+						rel="noopener noreferer"
+						className="header-btn">
+						<LuGithub size={20} />
+					</a>
+					<a
+						href="https://linkedin.com/in/dejesusbg"
+						target="blank"
+						rel="noopener noreferer"
+						className="header-btn">
+						<LuLinkedin size={20} />
+					</a>
+				</HeaderContainer>
+				<HeaderContainer>
+					<a
+						href="mailto:dejesusbg5@gmail.com?subject=Let's build something!"
+						className={'header-btn font-medium rounded-full leading-[100%] px-4'}>
+						{tLayout('book')}
+					</a>
+				</HeaderContainer>
+				<LanguageButton />
 			</div>
 		</header>
 	);
