@@ -1,6 +1,6 @@
 {
 	"about": {
-		"name": "# <img src='./me.webp' alt='Animal Crossing -profiilikuva' class='h1-logo' /> <a href='/' target='_self'>Ricardo <br/> Barrios</a> <img src='./maps_logo.webp' alt='Kartat-logo' class='h1-logo' /> <img src='./pages_logo.webp' alt='Sivut-logo' class='h1-logo' /> <img src='./photos_logo.webp' alt='Kuvat-logo' class='h1-logo' />",
+		"name": "# <img src='./me.webp' alt='Animal Crossing -profiilikuva' class='h1-logo' /> <a href='/' target='_self'>Ricardo <br/> Barrios</a> <img src='./logo/maps.webp' alt='Kartat-logo' class='h1-logo' /> <img src='./logo/pages.webp' alt='Sivut-logo' class='h1-logo' /> <img src='./logo/photos.webp' alt='Kuvat-logo' class='h1-logo' />",
 		"title": "Full Stack -kehittäjä",
 		"description": "Rakastan rakentaa kokemuksia, jotka auttavat muita.",
 		"manifest": "Kuka rakentaa teknologian tulevaisuutta? Minä, kolumbialainen kehittäjä, joka on pakkomielle luoda skaalautuvia ja suorituskykyisiä sovelluksia, jotka täyttävät kuilun tyylikkäiden frontendien ja vankkojen backendien välillä.\n\nElän siellä, missä koodi kohtaa käyttökokemuksen, toimittaen projekteja, jotka toimivat ja *loistavat*.\n\nViimeistelen järjestelmäinsinööriopintojani [Universidad del Magdalenassa](https://www.unimagdalena.edu.co/), työskennellen freelance-, akateemisten ja henkilökohtaisten intohimoprojektien parissa.\n\nMiksi vain koodata, kun voi muuttaa elämiä?\n\n[Tekoälypohjaisesta mangoluokittelijasta](https://github.com/dejesusbg/mangifera/blob/main/notebooks/mangifera.ipynb), joka käyttää tietokonenäköä ja koneoppimista, [sokeiden navigointisovellukseen](https://github.com/dejesusbg/truenavi), rakennan ratkaisuja, joilla on todellinen vaikutus.\n\nOma stackini? React, TypeScript, Node.js, Python, TensorFlow, Docker.\n\nKeskityn puhtaaseen arkkitehtuuriin ja kestävään koodiin.\n\nOlipa kyseessä [moderni yrityssivusto](https://rdingnova.com.co/) tai [offline-ensimmäinen tapa-seuranta](https://auraby.netlify.app/), luon työkaluja, jotka sitouttavat käyttäjiä ja tuovat arvoa.\n\nJokainen koodirivi on mahdollisuus parantaa maailmaa.\n\nVapaa-ajalla <span id=\"song\">[hukkaan musiikkiin](https://open.spotify.com/track/3siwsiaEoU4Kuuc9WKMUy5)</span>, liikun tai sukellan uusimpaan teknologiaan.\n\nMikä on kehittäjä ilman uteliaisuutta?\n\nMiksi seurata käyrää, kun voi olla *edellä* sitä?\n\nTeknologian maailma etenee nopeasti.\n\nMinä etenen *nopeammin*.\n\nValmis rakentamaan seuraavan suuren jutun?\n\n[Tehdään se todeksi.](./resume.pdf)"
@@ -8,7 +8,7 @@
 	"layout": {
 		"book": "Varaa tapaaminen",
 		"archive": "Näytä kaikki projektit",
-		"projects": "Arkisto",
+		"projects": "Kaikki projektit",
 		"table": ["Vuosi", "Projekti", "Tunnisteet", "Linkki"],
 		"source": "Lähdekoodi",
 		"demo": "Live-demo",
@@ -17,13 +17,30 @@
 	"data": {
 		"projects": [
 			{
-				"title": "Ekologinen tekoälyavustaja",
-				"description": "Älykäs ekologiavustaja, joka esitetään kierrätysmateriaaleista tehdyn robotin kautta ja tarjoaa suullisia kestävyystietoja.",
+				"slug": "mello",
+				"title": "Opiskelijoiden markkinapaikka kaikelle",
+				"description": "Paikallisesti ensisijainen markkinapaikka, joka on rakennettu keskeiseksi opiskelijataloudeksi yliopistoissa, yhdistäen ainutlaatuisesti freelance-palvelut ja verkkokauppatuotteet yhdellä alustalla.",
+				"link": "https://mello.work",
+				"imageSrc": "logo/shortcuts.webp",
+				"tags": [
+					"Next.js",
+					"React",
+					"TypeScript",
+					"Tailwind CSS",
+					"Shadcn",
+					"Supabase",
+					"PostgreSQL",
+					"Vercel"
+				],
+				"featured": true,
+				"date": "11/25"
+			},
+			{
+				"title": "Ekologinen AI-avustaja",
+				"description": "Tekorobotti rakennettu kierrätetystä pahvista, muovipulloista ja vanhasta puhelimen näytöstä, joka antaa ääneen kestävän kehityksen faktoja.",
 				"link": "https://github.com/dejesusbg/ecobot",
-				"imageSrc": "notes_logo.webp",
 				"tags": ["Next.js", "React", "TypeScript", "Tailwind", "Gemini API"],
 				"stat": "Opiskelijoiden ihailema",
-				"featured": true,
 				"date": "10/25"
 			},
 			{
@@ -31,13 +48,15 @@
 				"description": "Videogeneraattori yksinkertaisesta JSON-tiedostosta, joka parantaa ääniraidan käsikirjoituksia, luo taustoja ja musiikkia.",
 				"link": "https://github.com/dejesusbg/shorts",
 				"tags": ["Python", "Docker", "FFmpeg", "Gemini API"],
+				"stat": ["< 5 min generointi"],
 				"date": "09/25"
 			},
 			{
+				"slug": "truenavi",
 				"title": "Sokeiden navigointisovellus",
 				"description": "Esteetön mobiilisovellus reaaliaikaisella äänipalautteella, suunniteltu auttamaan näkövammaisia käyttäjiä kaupunkiympäristöissä.",
 				"link": "https://github.com/dejesusbg/truenavi",
-				"imageSrc": "maps_logo.webp",
+				"imageSrc": "logo/maps.webp",
 				"tags": [
 					"React Native",
 					"Next.js",
@@ -54,9 +73,10 @@
 				"date": "03/25"
 			},
 			{
+				"slug": "ecommerce",
 				"title": "Mikropalvelukauppa",
 				"description": "Mikropalveluarkkitehtuurilla rakennettu järjestelmä, joka sisältää tilausten, varaston, maksujen hallinnan ja käsittelyn API-yhdyskäytävän välimuistilla ja tietoturvalla.",
-				"imageSrc": "files_logo.webp",
+				"imageSrc": "logo/files.webp",
 				"link": "https://github.com/dejesusbg/ecommerce",
 				"tags": [
 					"Spring Boot",
@@ -82,9 +102,10 @@
 				"date": "02/25"
 			},
 			{
+				"slug": "mangifera",
 				"title": "Tekoälypohjainen mangoluokittelija",
 				"description": "Koneoppimismallit mangojen kypsyyden automaattiseen luokitteluun, optimoiden maatalousprosesseja.",
-				"imageSrc": "photos_logo.webp",
+				"imageSrc": "logo/photos.webp",
 				"link": "https://github.com/dejesusbg/mangifera",
 				"tags": ["Python", "TensorFlow", "scikit-learn", "Keras"],
 				"stat": "Yli 95 % tarkkuus",

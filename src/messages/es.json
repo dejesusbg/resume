@@ -1,6 +1,6 @@
 {
 	"about": {
-		"name": "# <img src='./me.webp' alt='Foto de perfil de Animal Crossing' class='h1-logo' /> <a href='/' target='_self'>Ricardo <br/> Barrios</a> <img src='./maps_logo.webp' alt='Logo de Mapas' class='h1-logo' /> <img src='./pages_logo.webp' alt='Logo de Páginas' class='h1-logo' /> <img src='./photos_logo.webp' alt='Logo de Fotos' class='h1-logo' />",
+		"name": "# <img src='./me.webp' alt='Foto de perfil de Animal Crossing' class='h1-logo' /> <a href='/' target='_self'>Ricardo <br/> Barrios</a> <img src='./logo/maps.webp' alt='Logo de Mapas' class='h1-logo' /> <img src='./logo/pages.webp' alt='Logo de Páginas' class='h1-logo' /> <img src='./logo/photos.webp' alt='Logo de Fotos' class='h1-logo' />",
 		"title": "Desarrollador Full Stack",
 		"description": "Me apasiona construir experiencias que ayuden a otros.",
 		"manifest": "¿Quién ayuda a construir el futuro? Yo, un ingeniero colombiano obsesionado por crear aplicaciones escalables y de alto rendimiento que cierren la brecha entre frontends elegantes y backends sólidos.\n\nVivo donde el código se encuentra con la experiencia de usuario, con proyectos que funcionan y *brillan*.\n\nEstoy finalizando Ingeniería de Sistemas en la [Unimagdalena](https://www.unimagdalena.edu.co/), y metido en retos freelance, académicos y personales.\n\n¿Por qué solo programar cuando puedes cambiar vidas?\n\nDesde un [clasificador de mangos con IA](https://github.com/dejesusbg/mangifera/blob/main/notebooks/mangifera.ipynb) usando visión por computadora y machine learning, hasta una app de [navegación para personas con ceguera](https://github.com/dejesusbg/truenavi), construyo soluciones que impactan de verdad.\n\n¿Mi stack? React, TypeScript, Node.js, Python, TensorFlow, Docker.\n\nMe enfoco en arquitectura limpia y código que perdura.\n\nYa sea un [sitio corporativo moderno](https://rdingnova.com.co/) o un [rastreador de hábitos offline](https://auraby.netlify.app/), creo herramientas que enganchan a los usuarios y aportan valor.\n\nCada línea de código es una chance para mejorar el mundo.\n\nComo pasatiempos, me <span id=\"song\">[pierdo en la música](https://open.spotify.com/track/3siwsiaEoU4Kuuc9WKMUy5)</span>, hago ejercicio o me sumerjo en lo último de la tecnología.\n\n¿Qué es un desarrollador sin curiosidad?\n\n¿Por qué seguir la curva cuando puedes estar *adelante* de ella?\n\nEl mundo tech avanza rápido.\n\nYo avanzo *más rápido*.\n\n¿Listo para construir algo grande?\n\n[Hagámoslo realidad.](./resume.pdf)"
@@ -8,7 +8,7 @@
 	"layout": {
 		"book": "Contáctame",
 		"archive": "Ver todos los proyectos",
-		"projects": "Archivo",
+		"projects": "Todos los proyectos",
 		"table": ["Año", "Proyecto", "Etiquetas", "Enlace"],
 		"source": "Código fuente",
 		"demo": "Demo en vivo",
@@ -17,13 +17,30 @@
 	"data": {
 		"projects": [
 			{
-				"title": "Asistente Inteligente de Ecología",
-				"description": "Ecoasistente con IA presentado a través de un robot hecho de materiales reciclados, que proporciona datos curiosos sobre sostenibilidad.",
+				"slug": "mello",
+				"title": "Mercado Estudiantil para todo",
+				"description": "Economía central para estudiantes universitarios, donde los estudiantes ofrecen servicios freelance, monitorias, alimentos, manualidades y más en una plataforma confiable.",
+				"link": "https://mello.work",
+				"imageSrc": "logo/shortcuts.webp",
+				"tags": [
+					"Next.js",
+					"React",
+					"TypeScript",
+					"Tailwind CSS",
+					"Shadcn",
+					"Supabase",
+					"PostgreSQL",
+					"Vercel"
+				],
+				"featured": true,
+				"date": "11/25"
+			},
+			{
+				"title": "Ecoasistente Inteligente",
+				"description": "Robot falso hecho con cartón reciclado, botellas de plástico y una pantalla vieja de teléfono, que proporciona datos curiosos sobre sostenibilidad.",
 				"link": "https://github.com/dejesusbg/ecobot",
-				"imageSrc": "notes_logo.webp",
 				"tags": ["Next.js", "React", "TypeScript", "Tailwind", "Gemini API"],
 				"stat": "Admirado por estudiantes",
-				"featured": true,
 				"date": "10/25"
 			},
 			{
@@ -31,13 +48,15 @@
 				"description": "Generador de videos a partir de un JSON simple, mejorando guiones de voz en off, creando fondos y música.",
 				"link": "https://github.com/dejesusbg/shorts",
 				"tags": ["Python", "Docker", "FFmpeg", "API de Gemini"],
+				"stat": "Generación en menos de 3 minutos",
 				"date": "09/25"
 			},
 			{
-				"title": "Navegación Accesible",
+				"slug": "truenavi",
+				"title": "Navegación para Personas con Discapacidad Visual",
 				"description": "Aplicaación móvil accesible con retroalimentación de voz en tiempo real, diseñada para ayudar a usuarios con discapacidad visual a navegar en entornos urbanos.",
 				"link": "https://github.com/dejesusbg/truenavi",
-				"imageSrc": "maps_logo.webp",
+				"imageSrc": "logo/maps.webp",
 				"tags": [
 					"React Native",
 					"Next.js",
@@ -54,9 +73,10 @@
 				"date": "03/25"
 			},
 			{
+				"slug": "ecommerce",
 				"title": "Tienda de Microservicios",
 				"description": "Sistema construido con arquitectura de microservicios, que incluye gestión de pedidos, inventario, pagos y procesamiento, con caché y seguridad en API Gateway.",
-				"imageSrc": "files_logo.webp",
+				"imageSrc": "logo/files.webp",
 				"link": "https://github.com/dejesusbg/ecommerce",
 				"tags": [
 					"Spring Boot",
@@ -82,9 +102,10 @@
 				"date": "02/25"
 			},
 			{
+				"slug": "mangifera",
 				"title": "Clasificador de Mangos con IA",
 				"description": "Modelos de machine learning para la clasificación automática de la madurez de mangos, optimizando procesos agrícolas.",
-				"imageSrc": "photos_logo.webp",
+				"imageSrc": "logo/photos.webp",
 				"link": "https://github.com/dejesusbg/mangifera",
 				"tags": ["Python", "TensorFlow", "scikit-learn", "Keras"],
 				"stat": "Precisión superior al 95%",
