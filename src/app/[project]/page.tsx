@@ -2,17 +2,17 @@ import { LinkArrowBack, LinkArrowOut } from '@/components/ui/LinkArrow';
 import { ProjectProps } from '@/components/ui/Project';
 import Section from '@/components/ui/Section';
 import { StatTag, TechTag } from '@/components/ui/Tag';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { LuGithub } from 'react-icons/lu';
 
 export default async function ProjectPage({ params }: { params: Promise<{ project: string }> }) {
 	const { project } = await params;
 
-	const tLayout = useTranslations('layout');
-	const tData = useTranslations('data');
+	const tLayout = await getTranslations('layout');
+	const tData = await getTranslations('data');
 
-	const projects: ProjectProps[] = tData.raw('projects') || [];
+	const projects: ProjectProps[] = (await tData.raw('projects')) || [];
 	const projectData = projects.find((p) => p.slug === project);
 
 	if (!projectData) return notFound();
