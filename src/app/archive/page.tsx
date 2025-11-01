@@ -45,16 +45,17 @@ const ProjectsTable = () => {
 
 export default function Archive() {
 	const tLayout = useTranslations('layout');
+
 	return (
 		<Section id="archive">
 			<div className="flex flex-col items-center pt-32 space-y-4">
 				<a
-					className="flex items-center font-semibold cursor-pointer text-periw focus:text-berry hover:underline hover:underline-offset-4"
+					className="font-semibold text-center cursor-pointer text-periw focus:text-berry hover:underline hover:underline-offset-4"
 					href="/">
 					<LinkArrowBack />
 					Ricardo Barrios
 				</a>
-				<h1>{tLayout('projects')}</h1>
+				<h2>{tLayout('projects')}</h2>
 				<ProjectsTable />
 			</div>
 		</Section>

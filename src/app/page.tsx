@@ -6,11 +6,12 @@ import { useTranslations } from 'next-intl';
 
 const Hero = () => {
 	const tAbout = useTranslations('about');
+
 	return (
 		<Section className="flex flex-col justify-center space-y-8 h-svh">
 			<MarkdownRaw>{tAbout.raw('name')}</MarkdownRaw>
 			<div className="flex flex-col space-y-2 text-lg text-center md:text-2xl">
-				<h2 className="font-semibold">{tAbout('title')}</h2>
+				<h3 className="font-semibold">{tAbout('title')}</h3>
 				<p className="max-w-xs mx-auto sm:max-w-lg lg:max-w-2xl">{tAbout('description')}</p>
 			</div>
 		</Section>
@@ -50,7 +51,7 @@ const Projects = () => {
 			</ul>
 			<div className="flex justify-center mt-8">
 				<a
-					className="flex items-center font-semibold cursor-pointer flow text-periw hocus:text-berry hover:underline hover:underline-offset-4"
+					className="font-semibold text-center cursor-pointer flow text-periw hocus:text-berry hover:underline hover:underline-offset-4"
 					href="/archive">
 					{tLayout('archive')}
 					<LinkArrowNext />
