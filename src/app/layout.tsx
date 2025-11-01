@@ -11,18 +11,32 @@ const inter = localFont({ src: '../fonts/InterVariable.ttf' });
 const instrument = Instrument_Serif({ weight: '400', subsets: ['latin'] });
 
 export const metadata: Metadata = {
+	metadataBase: new URL('https://dejesusbg.netlify.app/'),
 	title: 'Ricardo Barrios',
 	description:
 		'Ricardo Barrios is a systems engineer and software developer that loves to build experiences that help others.',
-	metadataBase: new URL('https://dejesusbg.netlify.app'),
 	keywords:
 		'Ricardo Barrios, dejesusbg, software developer, systems engineer, web developer, ux design, full stack developer, colombia',
 	openGraph: {
 		title: 'Ricardo Barrios',
-		description:
-			'Ricardo Barrios is a systems engineer and software developer that loves to build experiences that help others.',
+		description: 'Systems engineer & software developer building helpful digital experiences..',
 		type: 'website',
 		url: 'https://dejesusbg.netlify.app.com',
+		siteName: 'Ricardo Barrios',
+		images: [
+			{
+				url: '/thumbnail.png', // Automatically served from /public
+				width: 1169,
+				height: 589,
+				alt: 'Ricardo Barrios - Software Developer',
+			},
+		],
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: 'Ricardo Barrios',
+		description: 'Systems engineer & software developer building helpful digital experiences.',
+		images: ['/thumbnail.png'],
 	},
 };
 

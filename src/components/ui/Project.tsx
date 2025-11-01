@@ -35,10 +35,10 @@ const ProjectCard = ({ slug, title, description, imageSrc, stat, tags, date }: P
 					<div className="text-xs font-medium tracking-wide text-cloud/80">{date}</div>
 				</div>
 				<div className="flex flex-col space-y-2 md:text-lg">
-					<h3 className="font-semibold text-center md:text-start text-periw">
+					<span className="font-semibold text-center md:text-start text-periw">
 						{title}
 						<LinkArrowNext />
-					</h3>
+					</span>
 					<p className="leading-tight text-center md:text-start">{description}</p>
 					<ul className="flex flex-wrap justify-center gap-2 mt-2 md:justify-start">
 						{stat && <StatTag stat={stat} />}
