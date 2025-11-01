@@ -27,8 +27,12 @@ const LanguageButton = () => {
 
 	return (
 		<HeaderContainer>
-			<button className="header-btn" tabIndex={1}>
+			<button className="header-btn" tabIndex={-1}>
+				<label htmlFor="language" className="sr-only">
+					Language
+				</label>
 				<select
+					id="language"
 					value={locale}
 					onChange={(e: any) => handleLocaleChange(e.target.value)}
 					disabled={isPending}
@@ -60,6 +64,7 @@ const Header = () => {
 						rel="noopener noreferer"
 						className="header-btn">
 						<LuGithub size={20} />
+						<span className="sr-only">Github</span>
 					</a>
 					<a
 						href="https://linkedin.com/in/dejesusbg"
@@ -67,6 +72,7 @@ const Header = () => {
 						rel="noopener noreferer"
 						className="header-btn">
 						<LuLinkedin size={20} />
+						<span className="sr-only">Linkedin</span>
 					</a>
 				</HeaderContainer>
 				<HeaderContainer>

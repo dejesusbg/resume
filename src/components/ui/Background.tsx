@@ -27,13 +27,13 @@ const Background = () => {
 	return (
 		<>
 			<div
-				className="fixed inset-0 top-0 bottom-0 left-0 right-0 z-30 block pointer-events-none lg:hidden flow"
+				className="fixed inset-0 top-0 bottom-0 left-0 right-0 z-30 block pointer-events-none lg:hidden transition-all duration-150 ease-[cubic-bezier(.4,0,.2,1)]"
 				style={{
 					background: `radial-gradient(600px at 0 0, var(--color-misty), transparent 80%)`,
 				}}
 			/>
 			<div
-				className="fixed inset-0 top-0 bottom-0 left-0 right-0 z-30 hidden pointer-events-none lg:block flow"
+				className="fixed inset-0 top-0 bottom-0 left-0 right-0 z-30 hidden pointer-events-none lg:block transition-all duration-150 ease-[cubic-bezier(.4,0,.2,1)]"
 				style={{
 					background: `radial-gradient(600px at ${x}px ${y}px, var(--color-misty), transparent 80%)`,
 				}}
