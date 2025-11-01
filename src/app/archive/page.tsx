@@ -5,9 +5,9 @@ import { useTranslations } from 'next-intl';
 
 const ProjectsTable = () => {
 	const tLayout = useTranslations('layout');
-	const headers: string[] = tLayout.raw('table');
-
 	const tData = useTranslations('data');
+
+	const headers: string[] = tLayout.raw('table');
 	const projects: ProjectProps[] = tData.raw('projects');
 
 	const sortedProjects = [...projects].sort((a, b) => {

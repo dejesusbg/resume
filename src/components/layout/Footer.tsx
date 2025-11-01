@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 
-const colours = [
+const COLOURS = [
 	'bg-ebony',
 	'bg-cloud',
 	'bg-periw',
@@ -18,9 +18,9 @@ const colours = [
 ];
 
 const Footer = () => {
+	const pathname = usePathname();
 	const tLayout = useTranslations('layout');
 
-	const pathname = usePathname();
 	if (pathname !== '/') return null;
 
 	return (
@@ -30,8 +30,8 @@ const Footer = () => {
 					{tLayout('credits')}
 				</MarkdownRaw>
 				<div className="flex mx-auto border-2 rounded-full shadow border-misty h-min w-min overflow-clip">
-					{colours.map((className, i) => (
-						<div className={clsx('w-6 h-6', className)} key={i}></div>
+					{COLOURS.map((className, index) => (
+						<div className={clsx('w-6 h-6', className)} key={index}></div>
 					))}
 				</div>
 			</footer>

@@ -6,16 +6,18 @@ import { useTranslations } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { LuGithub } from 'react-icons/lu';
 
-export default function ProjectPage({ params }: { params: { project: string } }) {
+export default async function ProjectPage({ params }: { params: Promise<{ project: string }> }) {
+	const { project } = await params;
+
 	const tLayout = useTranslations('layout');
-
 	const tData = useTranslations('data');
+
 	const projects: ProjectProps[] = tData.raw('projects') || [];
-	const project = projects.find((p) => p.slug === params.project);
+	const projectData = projects.find((p) => p.slug === project);
 
-	if (!project) return notFound();
+	if (!projectData) return notFound();
 
-	const isGithub = project.link?.includes('github.com');
+	const isGithub = projectData.link?.includes('github.com');
 	const linkText = isGithub ? tLayout('source') : tLayout('demo');
 
 	return (
@@ -27,21 +29,21 @@ export default function ProjectPage({ params }: { params: { project: string } })
 					<LinkArrowBack />
 					Ricardo Barrios
 				</a>
-				<h2>{project.title}</h2>
+				<h2>{projectData.title}</h2>
 				<div className="flex flex-col items-center mt-8 space-y-8 text-center">
 					<ul className="flex flex-wrap justify-center gap-2">
-						{project.stat && <StatTag stat={project.stat} />}
-						{project.tags.map((tag, index) => (
+						{projectData.stat && <StatTag stat={projectData.stat} />}
+						{projectData.tags.map((tag, index) => (
 							<TechTag key={index} tech={tag} />
 						))}
 					</ul>
-					<p className="mx-auto text-lg md:text-2xl">{project.description}</p>
-					{project.link && (
+					<p className="mx-auto text-lg md:text-2xl">{projectData.description}</p>
+					{projectData.link && (
 						<a
-							href={project.link}
+							href={projectData.link}
 							target="_blank"
 							rel="noreferrer noopener"
-							aria-label={project.title}
+							aria-label={projectData.title}
 							className="text-sm font-semibold text-periw whitespace-nowrap hocus:text-berry hover:underline hover:underline-offset-4">
 							{linkText}
 							{isGithub ? <LuGithub className="inline-block ml-1.5" size={14} /> : <LinkArrowOut />}

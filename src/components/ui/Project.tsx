@@ -20,8 +20,8 @@ const ProjectCard = ({ slug, title, description, imageSrc, stat, tags, date }: P
 	return (
 		<li>
 			<a
-				className="flex flex-col justify-center px-4 py-4 space-y-4 flow border-2 md:justify-start md:flex-row md:space-x-4 rounded-2xl border-misty hocus:shadow-md hocus:scale-[100.5%]"
-				href={`./${slug}`}>
+				href={`./${slug}`}
+				className="flex flex-col justify-center px-4 py-4 space-y-4 flow border-2 md:justify-start md:flex-row md:space-x-4 rounded-2xl border-misty hocus:shadow-md hocus:scale-[100.5%]">
 				<div className="flex flex-col items-center space-y-2">
 					<img alt={title} src={`/${imageSrc}`} className="logo" />
 					<div className="text-xs font-medium tracking-wide text-cloud/50">{date}</div>

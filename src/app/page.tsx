@@ -36,23 +36,22 @@ const About = () => {
 
 const Projects = () => {
 	const tLayout = useTranslations('layout');
-
 	const tData = useTranslations('data');
+
 	const projects: ProjectProps[] = tData.raw('projects');
+	const featuredProjects = projects.filter((project) => project.featured);
 
 	return (
 		<Section id="projects">
 			<ul className="space-y-4">
-				{projects
-					.filter((project) => project.featured)
-					.map((project, index) => (
-						<ProjectCard key={index} {...project} />
-					))}
+				{featuredProjects.map((project, index) => (
+					<ProjectCard key={index} {...project} />
+				))}
 			</ul>
 			<div className="flex justify-center mt-8">
 				<a
-					className="font-semibold text-center cursor-pointer flow text-periw hocus:text-berry hover:underline hover:underline-offset-4"
-					href="/archive">
+					href="/archive"
+					className="font-semibold text-center cursor-pointer flow text-periw hocus:text-berry hover:underline hover:underline-offset-4">
 					{tLayout('archive')}
 					<LinkArrowNext />
 				</a>
