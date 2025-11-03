@@ -27,7 +27,7 @@ const ProjectCard = ({ slug, title, description, imageSrc, stat, tags, date }: P
 					<Image
 						alt={title}
 						src={`/${imageSrc}`}
-						className="rounded-[12.0234375px] shadow min-w-[54px] max-w-[54px]"
+						className="drop-shadow min-w-[54px] max-w-[54px]"
 						width={512}
 						height={512}
 						unoptimized

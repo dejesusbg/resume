@@ -20,7 +20,7 @@ const MarkdownRaw = ({ children, classNames }: MarkdownProps) => {
 				img: ({ node, ...props }) => (
 					<Image
 						className={clsx({
-							'inline-block aspect-square lg:w-[108px] md:w-[96px] sm:w-[72px] w-[54px] rounded-[12.0234375px] sm:rounded-[16.03125px] md:rounded-[21.375px] lg:rounded-[24.046875px] shadow-2xl sm:mx-0.5 md:mx-1 lg:mx-2 align-baseline last:hidden last:sm:inline-block':
+							'inline-block aspect-square lg:w-[108px] md:w-[96px] sm:w-[72px] w-[54px] drop-shadow-2xl sm:mx-0.5 md:mx-1 lg:mx-2 align-baseline last:hidden last:sm:inline-block':
 								props?.className == 'logo',
 						})}
 						src={props.src || ''}

@@ -80,7 +80,7 @@
 	}
 
 	body {
-		@apply bg-misty text-cloud selection:bg-blush font-normal selection:text-berry gap-4 leading-relaxed tracking-tight font-sans min-h-screen max-w-screen-xl;
+		@apply bg-frost text-cloud selection:bg-blush font-normal selection:text-berry gap-4 leading-relaxed tracking-tight font-sans min-h-screen max-w-screen-xl;
 		font-feature-settings: 'cv01', 'cv02', 'cv06', 'cv11';
 	}
 

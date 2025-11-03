@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 		siteName: 'Ricardo Barrios',
 		images: [
 			{
-				url: '/thumbnail.png', // Automatically served from /public
+				url: '/thumbnail.png',
 				width: 1169,
 				height: 589,
 				alt: 'Ricardo Barrios - Software Developer',
