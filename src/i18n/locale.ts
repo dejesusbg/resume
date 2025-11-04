@@ -1,21 +1,10 @@
 import { ProjectProps } from '@/components/ui/Project';
 
-export const locales = ['en', 'es', 'fr', 'fi'];
+export const locales = ['en', 'es'];
 export const defaultLocale = 'en';
 
-export const emojiLocale: Record<string, string> = {
-	EN: '🇬🇧',
-	ES: '🇨🇴',
-	FR: '🇫🇷',
-	FI: '🇫🇮',
-};
-
-export const languageLocale: Record<string, string> = {
-	EN: 'English',
-	ES: 'Español',
-	FR: 'Français',
-	FI: 'Suomi',
-};
+export const emojiLocale: Record<string, string> = { EN: '🇬🇧', ES: '🇨🇴' };
+export const languageLocale: Record<string, string> = { EN: 'English', ES: 'Español' };
 
 export interface Messages {
 	about: {
