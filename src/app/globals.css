@@ -50,18 +50,7 @@
 	--color-blush: var(--color-secondary-100);
 	--color-lovie: var(--color-secondary-200);
 	--color-berry: var(--color-secondary-900);
-}
-
-@layer utilities {
-	.blur-to-t {
-		mask-image: linear-gradient(
-			to top,
-			rgba(0, 0, 0, 0) 0%,
-			rgba(0, 0, 0, 0.8) 50%,
-			rgba(0, 0, 0, 1) 100%
-		);
-		@apply backdrop-blur-xs h-[115%];
-	}
+	--drop-shadow-2xl: 0 25px 25px var(--color-misty);
 }
 
 @layer components {
@@ -75,16 +64,21 @@
 }
 
 @layer base {
+	* {
+		@apply shadow-misty;
+	}
+
 	html {
 		@apply scroll-smooth;
 	}
 
 	body {
-		@apply bg-frost text-cloud selection:bg-blush font-normal selection:text-berry gap-4 leading-relaxed tracking-tight font-sans min-h-screen max-w-screen-xl;
+		@apply bg-frost text-cloud selection:bg-blush font-normal selection:text-berry gap-4 leading-relaxed tracking-tight font-sans min-h-screen max-w-screen-xl overflow-x-hidden;
 		font-feature-settings: 'cv01', 'cv02', 'cv06', 'cv11';
 	}
 
-	a {
+	a,
+	img {
 		@apply transition-all duration-150 ease-[cubic-bezier(.4,0,.2,1)];
 	}
 
@@ -97,7 +91,7 @@
 	}
 
 	h2 {
-		@apply font-serif text-ebony font-bold text-center text-5xl sm:text-6xl md:text-7xl lg:text-8xl;
+		@apply font-serif text-ebony font-bold text-center text-4xl text-balance sm:text-5xl md:text-6xl lg:text-7xl;
 	}
 
 	select {
