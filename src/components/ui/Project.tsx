@@ -1,4 +1,5 @@
 import { LinkArrowNext, LinkArrowOut } from '@/components/ui/LinkArrow';
+import Motion from '@/components/ui/Motion';
 import { StatTag, TechTag } from '@/components/ui/Tag';
 import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
@@ -11,6 +12,7 @@ export interface ProjectProps {
 	description: string;
 	link?: string;
 	imageSrc?: string;
+	images?: string[];
 	tags: string[];
 	stat?: string;
 	date: string;
@@ -22,12 +24,12 @@ const ProjectCard = ({ slug, title, description, imageSrc, stat, tags, date }: P
 		<li>
 			<a
 				href={`./${slug}`}
-				className="flex flex-col justify-center px-4 py-4 space-y-4 border-2 md:justify-start md:flex-row md:space-x-4 rounded-2xl border-misty hocus:shadow-md hocus:scale-[100.5%]">
+				className="flex flex-col justify-center px-4 py-4 space-y-4 border-2 md:justify-start md:flex-row md:space-x-4 rounded-2xl border-misty group hocus:scale-101 hocus:shadow">
 				<div className="flex flex-col items-center space-y-2">
 					<Image
 						alt={title}
 						src={`/${imageSrc}`}
-						className="drop-shadow min-w-[54px] max-w-[54px]"
+						className="drop-shadow min-w-[54px] max-w-[54px]  group-hocus:brightness-105"
 						width={512}
 						height={512}
 						unoptimized

@@ -1,3 +1,4 @@
+import Motion from '@/components/ui/Motion';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Markdown from 'react-markdown';
@@ -13,7 +14,11 @@ const MarkdownRaw = ({ children, classNames }: MarkdownProps) => {
 		<Markdown
 			rehypePlugins={[rehypeRaw]}
 			components={{
-				p: ({ node, ...props }) => <p className={classNames?.p} {...props} />,
+				p: ({ node, ...props }) => (
+					<Motion focus className={classNames?.p}>
+						<p {...props} />
+					</Motion>
+				),
 				a: ({ node, ...props }) => (
 					<a className={classNames?.a} target="_blank" rel="noopener noreferrer" {...props} />
 				),
@@ -25,8 +30,8 @@ const MarkdownRaw = ({ children, classNames }: MarkdownProps) => {
 						})}
 						src={props.src || ''}
 						alt={props.alt || ''}
-						width={512}
-						height={512}
+						width={12}
+						height={12}
 						unoptimized
 						priority
 					/>

@@ -1,4 +1,5 @@
 import { LinkArrowBack } from '@/components/ui/LinkArrow';
+import Motion from '@/components/ui/Motion';
 import { ProjectProps, ProjectRow } from '@/components/ui/Project';
 import Section from '@/components/ui/Section';
 import { useTranslations } from 'next-intl';
@@ -21,7 +22,7 @@ const ProjectsTable = () => {
 	});
 
 	return (
-		<table className="w-full mt-12 text-left border-collapse">
+		<table className="w-full text-left border-collapse">
 			<thead className="border-b-2 border-misty">
 				<tr>
 					<th className="p-4 text-sm font-semibold text-periw">{headers[0]}</th>
@@ -48,7 +49,7 @@ export default function Archive() {
 
 	return (
 		<Section id="archive">
-			<div className="flex flex-col items-center pt-32 space-y-4">
+			<Motion className="flex flex-col items-center pt-24 space-y-8">
 				<a
 					className="font-semibold text-center cursor-pointer text-periw focus:text-berry hover:underline hover:underline-offset-4"
 					href="/">
@@ -57,7 +58,7 @@ export default function Archive() {
 				</a>
 				<h2>{tLayout('projects')}</h2>
 				<ProjectsTable />
-			</div>
+			</Motion>
 		</Section>
 	);
 }

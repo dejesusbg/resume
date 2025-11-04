@@ -54,8 +54,7 @@ const Header = () => {
 	const tLayout = useTranslations('layout');
 
 	return (
-		<header className="fixed top-0 z-50 flex w-screen">
-			<div className="absolute w-full h-full blur-to-t" />
+		<header className="fixed top-0 z-50 flex w-screen ">
 			<div className="flex gap-2 mx-auto my-4">
 				<HeaderContainer>
 					<a
