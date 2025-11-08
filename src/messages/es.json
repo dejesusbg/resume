@@ -28,12 +28,10 @@
 					"React",
 					"TypeScript",
 					"Tailwind CSS",
-					"Shadcn",
 					"Supabase",
 					"PostgreSQL",
 					"Vercel"
 				],
-				"featured": true,
 				"date": "11/25"
 			},
 			{
