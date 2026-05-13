@@ -62,7 +62,7 @@ export default function Carousel({ slug, images, speed = 100 }: CarouselProps) {
 							width={512}
 							height={512}
 							unoptimized
-							className="object-contain w-auto h-full border-2 border-misty rounded-2xl"
+							className="object-contain w-auto h-full border-2 border-misty rounded-2xl hover:scale-101 hover:border-berry hover:shadow"
 							priority={i < imagePaths.length}
 						/>
 					</div>
