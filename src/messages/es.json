@@ -1,9 +1,9 @@
 {
 	"about": {
-		"name": "# <img src='./me.webp' alt='Foto de perfil de Animal Crossing' class='logo' /> <a href='/' target='_self'>Ricardo <br/> Barrios</a> <img src='./logo/maps.webp' alt='Logo de Mapas' class='logo' /> <img src='./logo/pages.webp' alt='Logo de Páginas' class='logo' /> <img src='./logo/photos.webp' alt='Logo de Fotos' class='logo' />",
-		"title": "Desarrollador Full Stack",
+		"name": "# <img src='./me.png' alt='Foto de perfil' class='pfp' /> <a href='/' target='_self'>Ricardo <br/> Barrios</a> <img src='./logo/maps.webp' alt='Logo de Mapas' class='logo' /> <img src='./logo/pages.webp' alt='Logo de Páginas' class='logo' /> <img src='./logo/photos.webp' alt='Logo de Fotos' class='logo' />",
+		"title": "Ingeniero Full Stack",
 		"description": "Me apasiona construir experiencias que ayuden a otros.",
-		"manifest": "¿Quién ayuda a construir el futuro? Yo, un ingeniero colombiano obsesionado por crear aplicaciones escalables y de alto rendimiento que cierren la brecha entre frontends elegantes y backends sólidos.\n\nVivo donde el código se encuentra con la experiencia de usuario, con proyectos que funcionan y *brillan*.\n\nActualmente soy pasante de investigación UX en la [Unimagdalena](https://www.unimagdalena.edu.co/), mientras termino Ingeniería de Sistemas y trabajo en retos freelance o personales.\n\n¿Por qué solo programar cuando puedes cambiar vidas?\n\nDesde un [clasificador de mangos con IA](https://github.com/dejesusbg/mangifera/blob/main/notebooks/mangifera.ipynb) usando visión por computadora y machine learning, hasta una app de [navegación para personas con ceguera](https://github.com/dejesusbg/truenavi), construyo soluciones que impactan de verdad.\n\n¿Mi stack? React, TypeScript, Node.js, Python, TensorFlow, Docker.\n\nMe enfoco en arquitectura limpia y código que perdura.\n\nYa sea un [sitio corporativo moderno](https://rdingnova.com.co/) o un [rastreador de hábitos offline](https://auraby.netlify.app/), creo herramientas que enganchan a los usuarios y aportan valor.\n\nCada línea de código es una chance para mejorar el mundo.\n\nComo pasatiempos, me <span id=\"song\">[pierdo en la música](https://open.spotify.com/track/3siwsiaEoU4Kuuc9WKMUy5)</span>, hago ejercicio o me sumerjo en lo último de la tecnología.\n\n¿Qué es un desarrollador sin curiosidad?\n\n¿Por qué seguir la curva cuando puedes estar *adelante* de ella?\n\nEl mundo tech avanza rápido.\n\nYo avanzo *más rápido*.\n\n¿Listo para construir algo grande?\n\n[Hagámoslo realidad.](./resume.pdf)"
+		"manifest": "¿Quién ayuda a construir el futuro? Ese soy yo, un ingeniero colombiano obsesionado por crear aplicaciones escalables y de alto rendimiento que disminuyan la brecha entre un diseño elegante y una arquitectura sólida.\n\nMe desenvuelvo entre el código y la experiencia de usuario, mediante proyectos que funcionan y *destacan*.\n\nActualmente, soy pasante de investigación UX en la [Unimagdalena](https://www.unimagdalena.edu.co/), mientras termino Ingeniería de Sistemas y trabajo en retos freelance o personales.\n\n¿Por qué solo programar cuando se pueden cambiar vidas?\n\nDesde un [clasificador de mangos con IA](https://github.com/dejesusbg/mangifera/blob/main/notebooks/mangifera.ipynb) usando visión por computadora y machine learning, hasta una app de [navegación para personas con ceguera](https://github.com/dejesusbg/truenavi), construyo soluciones que impactan realmente.\n\nEscríbeme si necesitas apoyo con Figma, React, TypeScript, Node.js, Python, TensorFlow o Docker.\n\nMe enfoco en hacer código limpio y duradero.\n\nYa sea un [sitio corporativo moderno](https://rdingnova.com.co/) o un [gestor de hábitos offline](https://auraby.netlify.app/), busco crear herramientas que enganchen a los usuarios y aporten valor.\n\nCada línea de código es una oportunidad para mejorar el mundo.\n\nComo pasatiempos, me <span id=\"song\">[pierdo en la música](https://open.spotify.com/track/3siwsiaEoU4Kuuc9WKMUy5)</span>, hago ejercicio o me sumerjo en lo último de la tecnología.\n\n¿Qué es un desarrollador sin curiosidad?\n\n¿Para qué seguir la curva si puedes *adelantarte* a ella?\n\nEl mundo tech avanza rápido.\n\nYo avanzo *aún más rápido*.\n\n¿Estás listo para construir algo grande?\n\n[Hagámoslo realidad.](./resume.pdf)"
 	},
 	"layout": {
 		"book": "Contáctame",
@@ -17,22 +17,15 @@
 	"data": {
 		"projects": [
 			{
-				"slug": "ganso",
-				"title": "Mercado Estudiantil para todo",
-				"description": "Economía central para estudiantes universitarios, donde los estudiantes ofrecen servicios freelance, monitorias, alimentos, manualidades y más en una plataforma confiable.",
-				"link": "https://ganso.work",
-				"imageSrc": "logo/shortcuts.webp",
-				"images": ["01.png", "02.png", "03.png"],
-				"tags": [
-					"Next.js",
-					"React",
-					"TypeScript",
-					"Tailwind CSS",
-					"Supabase",
-					"PostgreSQL",
-					"Vercel"
-				],
-				"date": "11/25"
+				"slug": "progux",
+				"title": "Rediseño de Programación Académica",
+				"description": "Transformando un sistema universitario de nivel empresarial en una experiencia moderna, accesible y utilizable que apoya la toma de decisiones.",
+				"link": "https://figma.com",
+				"imageSrc": "logo/calendar.webp",
+				"images": ["01.png", "02.png", "03.png", "04.png", "05.png"],
+				"tags": ["Figma", "Investigación", "UX", "Accesibilidad"],
+				"featured": true,
+				"date": "03/26"
 			},
 			{
 				"title": "Ecoasistente Inteligente",
