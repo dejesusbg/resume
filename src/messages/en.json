@@ -17,13 +17,13 @@
 	"data": {
 		"projects": [
 			{
-				"slug": "progux",
+				"slug": "unimag-ux",
 				"title": "Academic Scheduling Redesign",
 				"description": "Transforming an enterprise-level university system into a modern, accessible, usable experience that supports decision making.",
 				"link": "https://figma.com",
 				"imageSrc": "logo/calendar.webp",
 				"images": ["01.png", "02.png", "03.png", "04.png", "05.png"],
-				"tags": ["Figma", "Research", "UX", "Accessibility"],
+				"tags": ["Figma", "Research", "UX", "Accessibility", "React", "TypeScript", "Tailwind"],
 				"featured": true,
 				"date": "03/26"
 			},
@@ -69,8 +69,6 @@
 				"slug": "ecommerce",
 				"title": "Microservices Store",
 				"description": "System built with microservices architecture, featuring order, inventory, payment management and processing, with API gateway caching and security.",
-				"imageSrc": "logo/files.webp",
-				"images": ["01.png", "02.png", "03.png", "04.png", "05.png", "06.png"],
 				"link": "https://github.com/dejesusbg/ecommerce",
 				"tags": [
 					"Spring Boot",
@@ -84,7 +82,6 @@
 					"Grafana",
 					"Prometheus"
 				],
-				"featured": true,
 				"date": "02/25"
 			},
 			{
@@ -100,11 +97,8 @@
 				"title": "AI-Powered Mango Classifier",
 				"description": "Machine learning models for automated mango ripeness classification, helping optimize agricultural processes.",
 				"link": "https://github.com/dejesusbg/mangifera",
-				"imageSrc": "logo/photos.webp",
-				"images": ["01.png", "02.png", "03.png", "04.png"],
 				"tags": ["Python", "TensorFlow", "scikit-learn", "Keras"],
 				"stat": "95%+ accuracy",
-				"featured": true,
 				"date": "10/24"
 			},
 			{
