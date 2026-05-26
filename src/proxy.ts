@@ -1,7 +1,7 @@
 import { defaultLocale, locales } from '@/i18n/locale';
 import { NextRequest, NextResponse } from 'next/server';
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
 	const cookieLocale = request.cookies.get('locale')?.value;
 	let locale = cookieLocale;
 
