@@ -3,7 +3,7 @@
 		"name": "# <img src='/me.png' alt='Profile Picture' class='pfp' /> <a href='/' target='_self'>Ricardo <br/> Barrios</a> <img src='/logo/maps.webp' alt='Maps Logo' class='logo' /> <img src='/logo/pages.webp' alt='Pages Logo' class='logo' /> <img src='/logo/photos.webp' alt='Photos Logo' class='logo' />",
 		"title": "Full Stack Engineer",
 		"description": "I love to build experiences that help others.",
-		"manifest": "Who's building the future of tech? That's me, a Colombian engineer obsessed with crafting scalable, high-performance apps that fill the gap between elegant design and robust architecture.\n\nI live where code meets UX, delivering projects that work & *shine*.\n\nCurrently as a UX Research Intern at [Universidad del Magdalena](https://www.unimagdalena.edu.co/), I'm finishing my Systems Engineering degree while tackling freelance and personal passion challenges.\n\nWhy just code when you can change lives?\n\nFrom an [AI-powered mango classifier](https://github.com/dejesusbg/mangifera/blob/main/notebooks/mangifera.ipynb) using computer vision and machine learning to a [blind-first navigation app](https://github.com/dejesusbg/truenavi), I build solutions that make a real impact.\n\nReach out if you need an expert hand with Figma, React, TypeScript, Node.js, Python, TensorFlow or Docker.\n\nI'm all about clean architecture and code that lasts.\n\nWhether it's a [modern corporate site](https://rdingnova.com.co/) or an [offline-first habit tracker](https://auraby.netlify.app/), creating tools that engage users and deliver value.\n\nEvery line of code is a chance to make things better.\n\nIn my spare time, I'm <span id=\"song\">[lost in music](https://open.spotify.com/track/3siwsiaEoU4Kuuc9WKMUy5)</span>, exercising, or diving into the latest tech.\n\nWhat's a developer without curiosity?\n\nWhy follow the curve when you can stay *ahead* of it?\n\nThe tech world moves fast.\n\nI move *faster*.\n\nReady to build the next big thing?\n\n[Let's make it happen.](./resume.pdf)"
+		"manifest": "Who's building the future of tech? That's me, a Colombian engineer obsessed with crafting scalable, high-performance apps that fill the gap between elegant design and robust architecture.\n\nI live where code meets UX, delivering projects that work & *shine*.\n\nCurrently as a UX Research Intern at [Universidad del Magdalena](https://www.unimagdalena.edu.co/), I'm finishing my Systems Engineering degree while tackling freelance and personal passion challenges.\n\nWhy just code when you can change lives?\n\nFrom a [privacy-first desktop agent](https://getwade.netlify.app/) using temporal knowledge graphs and LLMs to a [blind-first navigation app](https://github.com/dejesusbg/truenavi), I build solutions that make a real impact.\n\nReach out if you need an expert hand with Figma, React, TypeScript, Rust, Python, TensorFlow, or Docker.\n\nI'm all about clean architecture and code that lasts.\n\nWhether it's a [modern corporate site](https://rdingnova.com.co/) or an [offline-first habit tracker](https://auraby.netlify.app/), creating tools that engage users and deliver value.\n\nEvery line of code is a chance to make things better.\n\nIn my spare time, I'm <span id=\"song\">[lost in music](https://open.spotify.com/track/3siwsiaEoU4Kuuc9WKMUy5)</span>, exercising, or diving into the latest tech.\n\nWhat's a developer without curiosity?\n\nWhy follow the curve when you can stay *ahead* of it?\n\nThe tech world moves fast.\n\nI move *faster*.\n\nReady to build the next big thing?\n\n[Let's make it happen.](./resume.pdf)"
 	},
 	"layout": {
 		"book": "Contact me",
@@ -17,13 +17,44 @@
 	"data": {
 		"projects": [
 			{
+				"slug": "wade",
+				"title": "AI-Native Desktop Agent",
+				"description": "A privacy-first, local-first contextual assistant that appears exactly when the user needs it, based on system context and all with a single keystroke.",
+				"link": "getwade.netlify.app",
+				"imageSrc": "logo/pages.webp",
+				"images": [],
+				"tags": [
+					"Rust",
+					"TypeScript",
+					"Docker",
+					"Python",
+					"FastAPI",
+					"Neo4j",
+					"Tauri",
+					"React",
+					"Vite",
+					"Ollama CLI",
+					"Qwen AI"
+				],
+				"featured": true,
+				"date": "05/26"
+			},
+			{
 				"slug": "unimag-ux",
 				"title": "Academic Scheduling Redesign",
 				"description": "Transforming an enterprise-level university system into a modern, accessible, usable experience that supports decision making.",
-				"link": "https://figma.com",
-				"imageSrc": "logo/calendar.webp",
+				"imageSrc": "logo/photos.webp",
 				"images": ["01.png", "02.png", "03.png", "04.png", "05.png"],
-				"tags": ["Figma", "Research", "UX", "Accessibility", "React", "TypeScript", "Tailwind"],
+				"tags": [
+					"Figma",
+					"Research",
+					"UX",
+					"Accessibility",
+					"React",
+					"TypeScript",
+					"Tailwind",
+					"Vite"
+				],
 				"featured": true,
 				"date": "03/26"
 			},

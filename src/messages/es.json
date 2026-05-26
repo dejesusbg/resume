@@ -3,7 +3,7 @@
 		"name": "# <img src='./me.png' alt='Foto de perfil' class='pfp' /> <a href='/' target='_self'>Ricardo <br/> Barrios</a> <img src='./logo/maps.webp' alt='Logo de Mapas' class='logo' /> <img src='./logo/pages.webp' alt='Logo de Páginas' class='logo' /> <img src='./logo/photos.webp' alt='Logo de Fotos' class='logo' />",
 		"title": "Ingeniero Full Stack",
 		"description": "Me apasiona construir experiencias que ayuden a otros.",
-		"manifest": "¿Quién ayuda a construir el futuro? Ese soy yo, un ingeniero colombiano obsesionado por crear aplicaciones escalables y de alto rendimiento que disminuyan la brecha entre un diseño elegante y una arquitectura sólida.\n\nMe desenvuelvo entre el código y la experiencia de usuario, mediante proyectos que funcionan y *destacan*.\n\nActualmente, soy pasante de investigación UX en la [Unimagdalena](https://www.unimagdalena.edu.co/), mientras termino Ingeniería de Sistemas y trabajo en retos freelance o personales.\n\n¿Por qué solo programar cuando se pueden cambiar vidas?\n\nDesde un [clasificador de mangos con IA](https://github.com/dejesusbg/mangifera/blob/main/notebooks/mangifera.ipynb) usando visión por computadora y machine learning, hasta una app de [navegación para personas con ceguera](https://github.com/dejesusbg/truenavi), construyo soluciones que impactan realmente.\n\nEscríbeme si necesitas apoyo con Figma, React, TypeScript, Node.js, Python, TensorFlow o Docker.\n\nMe enfoco en hacer código limpio y duradero.\n\nYa sea un [sitio corporativo moderno](https://rdingnova.com.co/) o un [gestor de hábitos offline](https://auraby.netlify.app/), busco crear herramientas que enganchen a los usuarios y aporten valor.\n\nCada línea de código es una oportunidad para mejorar el mundo.\n\nComo pasatiempos, me <span id=\"song\">[pierdo en la música](https://open.spotify.com/track/3siwsiaEoU4Kuuc9WKMUy5)</span>, hago ejercicio o me sumerjo en lo último de la tecnología.\n\n¿Qué es un desarrollador sin curiosidad?\n\n¿Para qué seguir la curva si puedes *adelantarte* a ella?\n\nEl mundo tech avanza rápido.\n\nYo avanzo *aún más rápido*.\n\n¿Estás listo para construir algo grande?\n\n[Hagámoslo realidad.](./resume.pdf)"
+		"manifest": "¿Quién ayuda a construir el futuro? Ese soy yo, un ingeniero colombiano obsesionado por crear aplicaciones escalables y de alto rendimiento que disminuyan la brecha entre un diseño elegante y una arquitectura sólida.\n\nMe desenvuelvo entre el código y la experiencia de usuario, mediante proyectos que funcionan y *destacan*.\n\nActualmente, soy pasante de investigación UX en la [Unimagdalena](https://www.unimagdalena.edu.co/), mientras termino Ingeniería de Sistemas y trabajo en retos freelance o personales.\n\n¿Por qué solo programar cuando se pueden cambiar vidas?\n\nDesde un [agente local para escritorio](https://getwade.netlify.app/) usando LLMs, hasta una app de [navegación para personas con ceguera](https://github.com/dejesusbg/truenavi), construyo soluciones que impactan realmente.\n\nEscríbeme si necesitas apoyo con Figma, React, TypeScript, Rust, Python, TensorFlow o Docker.\n\nMe enfoco en hacer código limpio y duradero.\n\nYa sea un [sitio corporativo moderno](https://rdingnova.com.co/) o un [gestor de hábitos offline](https://auraby.netlify.app/), busco crear herramientas que enganchen a los usuarios y aporten valor.\n\nCada línea de código es una oportunidad para mejorar el mundo.\n\nComo pasatiempos, me <span id=\"song\">[pierdo en la música](https://open.spotify.com/track/3siwsiaEoU4Kuuc9WKMUy5)</span>, hago ejercicio o me sumerjo en lo último de la tecnología.\n\n¿Qué es un desarrollador sin curiosidad?\n\n¿Para qué seguir la curva si puedes *adelantarte* a ella?\n\nEl mundo tech avanza rápido.\n\nYo avanzo *aún más rápido*.\n\n¿Estás listo para construir algo grande?\n\n[Hagámoslo realidad.](./resume.pdf)"
 	},
 	"layout": {
 		"book": "Contáctame",
@@ -17,13 +17,44 @@
 	"data": {
 		"projects": [
 			{
+				"slug": "wade",
+				"title": "Agente Inteligente para Escritorio",
+				"description": "Asistente contextual enfocado en la privacidad que aparece justo cuando el usuario lo necesita, basado en el contexto del sistema y con solo presionar una tecla.",
+				"link": "getwade.netlify.app",
+				"imageSrc": "logo/pages.webp",
+				"images": [],
+				"tags": [
+					"Rust",
+					"Tauri",
+					"React",
+					"TypeScript",
+					"Vite",
+					"Docker",
+					"Python",
+					"FastAPI",
+					"Neo4j",
+					"Ollama CLI",
+					"Qwen AI"
+				],
+				"featured": true,
+				"date": "05/26"
+			},
+			{
 				"slug": "unimag-ux",
 				"title": "Rediseño de Programación Académica",
 				"description": "Transformando un sistema universitario de nivel empresarial en una experiencia moderna, accesible y utilizable que apoya la toma de decisiones.",
-				"link": "https://figma.com",
-				"imageSrc": "logo/calendar.webp",
+				"imageSrc": "logo/photos.webp",
 				"images": ["01.png", "02.png", "03.png", "04.png", "05.png"],
-				"tags": ["Figma", "Investigación", "UX", "Accesibilidad"],
+				"tags": [
+					"Figma",
+					"Investigación",
+					"UX",
+					"Accesibilidad",
+					"React",
+					"TypeScript",
+					"Tailwind",
+					"Vite"
+				],
 				"featured": true,
 				"date": "03/26"
 			},
@@ -46,7 +77,7 @@
 			{
 				"slug": "truenavi",
 				"title": "Navegación para Personas con Discapacidad Visual",
-				"description": "Aplicaación móvil accesible con retroalimentación de voz en tiempo real, diseñada para ayudar a usuarios con discapacidad visual a navegar en entornos urbanos.",
+				"description": "Aplicación móvil accesible con retroalimentación de voz en tiempo real, diseñada para ayudar a usuarios con discapacidad visual a navegar en entornos urbanos.",
 				"link": "https://github.com/dejesusbg/truenavi",
 				"imageSrc": "logo/maps.webp",
 				"images": ["01.jpg", "02.jpg", "03.png", "04.png", "05.png", "06.png"],
@@ -69,8 +100,6 @@
 				"slug": "ecommerce",
 				"title": "Tienda de Microservicios",
 				"description": "Sistema construido con arquitectura de microservicios, que incluye gestión de pedidos, inventario, pagos y procesamiento, con caché y seguridad en API Gateway.",
-				"imageSrc": "logo/files.webp",
-				"images": ["01.png", "02.png", "03.png", "04.png", "05.png", "06.png"],
 				"link": "https://github.com/dejesusbg/ecommerce",
 				"tags": [
 					"Spring Boot",
@@ -84,7 +113,6 @@
 					"Grafana",
 					"Prometheus"
 				],
-				"featured": true,
 				"date": "02/25"
 			},
 			{
@@ -99,12 +127,9 @@
 				"slug": "mangifera",
 				"title": "Clasificador de Mangos con IA",
 				"description": "Modelos de machine learning para la clasificación automática de la madurez de mangos, optimizando procesos agrícolas.",
-				"imageSrc": "logo/photos.webp",
-				"images": ["01.png", "02.png", "03.png", "04.png"],
 				"link": "https://github.com/dejesusbg/mangifera",
 				"tags": ["Python", "TensorFlow", "scikit-learn", "Keras"],
 				"stat": "Precisión superior al 95%",
-				"featured": true,
 				"date": "10/24"
 			},
 			{
