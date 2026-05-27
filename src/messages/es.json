@@ -20,7 +20,7 @@
 				"slug": "wade",
 				"title": "Agente Inteligente para Escritorio",
 				"description": "Asistente contextual enfocado en la privacidad que aparece justo cuando el usuario lo necesita, basado en el contexto del sistema y con solo presionar una tecla.",
-				"link": "getwade.netlify.app",
+				"link": "https://getwade.netlify.app/",
 				"imageSrc": "logo/pages.webp",
 				"images": [],
 				"tags": [
