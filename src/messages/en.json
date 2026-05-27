@@ -20,7 +20,7 @@
 				"slug": "wade",
 				"title": "AI-Native Desktop Agent",
 				"description": "A privacy-first, local-first contextual assistant that appears exactly when the user needs it, based on system context and all with a single keystroke.",
-				"link": "getwade.netlify.app",
+				"link": "https://getwade.netlify.app/",
 				"imageSrc": "logo/pages.webp",
 				"images": [],
 				"tags": [
