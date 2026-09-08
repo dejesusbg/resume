@@ -1,0 +1,112 @@
+{
+  "about": {
+    "name": "# <img src='./me.png' alt='Foto de perfil' class='pfp' /> <a href='/' target='_self'>Ricardo <br/> Barrios</a> <img src='./logo/maps.webp' alt='Logo de Mapas' class='logo' /> <img src='./logo/pages.webp' alt='Logo de Páginas' class='logo' /> <img src='./logo/photos.webp' alt='Logo de Fotos' class='logo' />",
+    "title": "Ingeniero Full Stack",
+    "description": "Me apasiona construir experiencias que ayuden a otros.",
+    "manifest": "¿Quién ayuda a construir el futuro? Ese soy yo, un ingeniero colombiano obsesionado por crear aplicaciones escalables y de alto rendimiento que disminuyan la brecha entre un diseño elegante y una arquitectura sólida.\n\nMe desenvuelvo entre el código y la experiencia de usuario, mediante proyectos que funcionan y *destacan*.\n\nActualmente, soy pasante de investigación UX en la [Unimagdalena](https://www.unimagdalena.edu.co/), mientras termino Ingeniería de Sistemas y trabajo en retos freelance o personales.\n\n¿Por qué solo programar cuando se pueden cambiar vidas?\n\nDesde un [agente local para escritorio](https://getwade.netlify.app/) usando LLMs, hasta una app de [navegación para personas con ceguera](https://github.com/dejesusbg/truenavi), construyo soluciones que impactan realmente.\n\nEscríbeme si necesitas apoyo con Figma, React, TypeScript, Rust, Python, TensorFlow o Docker.\n\nMe enfoco en hacer código limpio y duradero.\n\nYa sea un [sitio corporativo moderno](https://rdingnova.com.co/) o un [gestor de hábitos offline](https://auraby.netlify.app/), busco crear herramientas que enganchen a los usuarios y aporten valor.\n\nCada línea de código es una oportunidad para mejorar el mundo.\n\nComo pasatiempos, me <span id=\"song\">[pierdo en la música](https://open.spotify.com/track/3siwsiaEoU4Kuuc9WKMUy5)</span>, hago ejercicio o me sumerjo en lo último de la tecnología.\n\n¿Qué es un desarrollador sin curiosidad?\n\n¿Para qué seguir la curva si puedes *adelantarte* a ella?\n\nEl mundo tech avanza rápido.\n\nYo avanzo *aún más rápido*.\n\n¿Estás listo para construir algo grande?\n\n[Hagámoslo realidad.](./resume.pdf)"
+  },
+  "layout": {
+    "book": "Contáctame",
+    "archive": "Ver todos los proyectos",
+    "projects": "Todos los proyectos",
+    "table": [
+      "Año",
+      "Proyecto",
+      "Etiquetas",
+      "Enlace"
+    ],
+    "source": "Código fuente",
+    "demo": "Demo en vivo",
+    "credits": "Esbozado en [Papel](https://es.wikipedia.org/wiki/Papel) y codificado en [Visual Studio Code](https://code.visualstudio.com/) por su servidor. Construido con [Next.js](https://nextjs.org/) y [Tailwind CSS](https://tailwindcss.com/), desplegado con [Netlify](https://www.netlify.com/). Todo el texto está en las tipografías [Inter](https://rsms.me/inter/) e [Instrument](https://fonts.adobe.com/fonts/instrument-serif)."
+  },
+  "projects": [
+    {
+      "title": "Agente Inteligente para Escritorio",
+      "description": "Asistente contextual enfocado en la privacidad que aparece justo cuando el usuario lo necesita, basado en el contexto del sistema y con solo presionar una tecla."
+    },
+    {
+      "title": "Rediseño de Programación Académica",
+      "description": "Transformando un sistema universitario de nivel empresarial en una experiencia moderna, accesible y utilizable que apoya la toma de decisiones."
+    },
+    {
+      "title": "Ecoasistente Inteligente",
+      "description": "Robot falso hecho con cartón reciclado, botellas de plástico y una pantalla vieja de teléfono, que proporciona datos curiosos sobre sostenibilidad.",
+      "stat": "Admirado por estudiantes"
+    },
+    {
+      "title": "Cortos Brainrot",
+      "description": "Generador de videos a partir de un JSON simple, mejorando guiones de voz en off, creando fondos y música.",
+      "stat": "Generación en menos de 3 minutos"
+    },
+    {
+      "title": "Navegación para Personas con Discapacidad Visual",
+      "description": "Aplicación móvil accesible con retroalimentación de voz en tiempo real, diseñada para ayudar a usuarios con discapacidad visual a navegar en entornos urbanos."
+    },
+    {
+      "title": "Tienda de Microservicios",
+      "description": "Sistema construido con arquitectura de microservicios, que incluye gestión de pedidos, inventario, pagos y procesamiento, con caché y seguridad en API Gateway."
+    },
+    {
+      "title": "Sitio Corporativo de Ingeniería",
+      "description": "Página web rápida, moderna y de fácil manejo para INGNOVA SAS, mejorando su presencia en línea.",
+      "stat": "Primer resultado en Google"
+    },
+    {
+      "title": "Clasificador de Mangos con IA",
+      "description": "Modelos de machine learning para la clasificación automática de la madurez de mangos, optimizando procesos agrícolas.",
+      "stat": "Precisión superior al 95%"
+    },
+    {
+      "title": "Wordflow Bot",
+      "description": "Un script de automatización divertido que ingresa palabras válidas para un juego en línea."
+    },
+    {
+      "title": "Métodos Bioinspirados",
+      "description": "Resolución del Problema del Viajero (TSP) utilizando algoritmos bioinspirados."
+    },
+    {
+      "title": "Registro de Hábitos - Aura",
+      "description": "PWA para el seguimiento de hábitos, con soporte sin conexión y funciones de gamificación para motivar a los usuarios."
+    },
+    {
+      "title": "Software de Seguimiento Educativo",
+      "description": "Plataforma de aprendizaje que permite a docentes y padres monitorear el progreso y notas escolares."
+    },
+    {
+      "title": "Picas y Fijas",
+      "description": "Un juego basado en web con estilo Material Design 3."
+    },
+    {
+      "title": "Librería de Colores - Monet",
+      "description": "Generador de paletas de colores personalizables de Material You con soporte completo para Tailwind V3, ayudando a los desarrolladores a crear interfaces hermosas."
+    },
+    {
+      "title": "Votación Electrónica - Acme",
+      "description": "Sistema de elecciones escolares con autenticación segura y conteo de resultados en tiempo real."
+    },
+    {
+      "title": "Análisis Descendente Recursivo",
+      "description": "Evalua expresiones aritméticas con paréntesis y precedencia de operadores."
+    },
+    {
+      "title": "Plataforma de Educación Legal",
+      "description": "Sistema para que estudiantes de derecho ofrezcan recursos legales y materiales de estudio."
+    },
+    {
+      "title": "Autómata Finito Determinista",
+      "description": "Autómata simple para expresiones numéricas y números romanos."
+    },
+    {
+      "title": "Data Structures",
+      "description": "Estructuras de datos y algoritmos con implementaciones prácticas."
+    },
+    {
+      "title": "Aplicación de Notas",
+      "description": "Simple y rápida aplicación de toma de notas con Material Design 3, modo oscuro y soporte offline."
+    },
+    {
+      "title": "Componentes MD3",
+      "description": "Framework ligero de Material Design 3 con temas dinámicos y componentes responsivos."
+    }
+  ]
+}

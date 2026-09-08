@@ -22,7 +22,5 @@ export interface Messages {
 		demo: string;
 		credits: string;
 	};
-	data: {
-		projects: LocalizedProject[];
-	};
+	projects: LocalizedProject[];
 }

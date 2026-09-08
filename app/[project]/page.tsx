@@ -12,9 +12,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ projec
 	const { project } = await params;
 
 	const tLayout = await getTranslations('layout');
-	const tData = await getTranslations('data');
+	const t = await getTranslations();
 
-	const projects = mergeProjects((await tData.raw('projects')) || []);
+	const projects = mergeProjects((await t.raw('projects')) || []);
 	const projectData = projects.find((p) => p.slug === project);
 
 	if (!projectData) return notFound();

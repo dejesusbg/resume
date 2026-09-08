@@ -40,9 +40,9 @@ const About = () => {
 
 const Projects = () => {
 	const tLayout = useTranslations('layout');
-	const tData = useTranslations('data');
+	const t = useTranslations();
 
-	const projects = mergeProjects(tData.raw('projects'));
+	const projects = mergeProjects(t.raw('projects'));
 	const featuredProjects = projects.filter((project) => project.featured);
 
 	return (

@@ -7,10 +7,10 @@ import { useTranslations } from 'next-intl';
 
 const ProjectsTable = () => {
 	const tLayout = useTranslations('layout');
-	const tData = useTranslations('data');
+	const t = useTranslations();
 
 	const headers: string[] = tLayout.raw('table');
-	const projects = mergeProjects(tData.raw('projects'));
+	const projects = mergeProjects(t.raw('projects'));
 
 	const sortedProjects = [...projects].sort((a, b) => {
 		const [monthA, yearA] = a.date.split('/');
