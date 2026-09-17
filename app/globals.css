@@ -150,7 +150,7 @@
 	}
 
 	h1 {
-		@apply font-serif text-ebony font-bold text-7xl sm:text-8xl md:text-9xl lg:text-[144px];
+		@apply text-ebony font-bold text-7xl sm:text-8xl md:text-9xl lg:text-[144px];
 	}
 
 	h2 {
