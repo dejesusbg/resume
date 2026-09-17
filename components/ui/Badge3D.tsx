@@ -1,19 +1,104 @@
 'use client';
 import clsx from 'clsx';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+
+// Pixel geometry measured directly from public/tag-card-face.png (the card's
+// baked 2304x2304 back-panel texture): the old "1,227,203 FLIPS" text's ink
+// bounding box was x 1541-1914, y 299-336, padded here to fully erase its
+// anti-aliasing before drawing the live count in its place.
+const ERASE_RECT = { x: 1521, y: 279, width: 413, height: 78 };
+const BACK_PANEL_BG = 'rgb(99, 66, 239)'; // --color-periw, sampled from the texture
+const TEXT_RIGHT_EDGE = 1914;
+const TEXT_TOP = 288; // 96px in the 1x design, exported at the texture's 3x scale
+const FONT_SIZE = 42; // 14px in the 1x design, exported at the texture's 3x scale
+
+// Resolves a token's actual rendered value via a throwaway element, since
+// --color-frost and --font-mono are theme tokens (color-mix()/next/font's
+// generated family), not literal values a canvas fillStyle/font can guess.
+const resolveComputedStyle = (className: string, read: (style: CSSStyleDeclaration) => string) => {
+	const probe = document.createElement('span');
+	probe.className = className;
+	probe.style.position = 'absolute';
+	probe.style.visibility = 'hidden';
+	document.body.appendChild(probe);
+	const value = read(getComputedStyle(probe));
+	document.body.removeChild(probe);
+	return value;
+};
+
+const patchViewCount = async (modelViewer: any) => {
+	const res = await fetch('/api/views', { cache: 'no-store' });
+	const { count } = (await res.json()) as { count: number };
+
+	const fontFamily = resolveComputedStyle('font-mono', (s) => s.fontFamily);
+	// --color-frost is a color-mix() token; Chromium serializes its computed
+	// value as an oklab() string, not rgb(), so it's passed straight through
+	// to canvas (which accepts any valid CSS <color>) rather than hand-parsed.
+	const frostColor = resolveComputedStyle('text-frost', (s) => s.color);
+
+	const image = new Image();
+	image.crossOrigin = 'anonymous';
+	await new Promise((resolve, reject) => {
+		image.onload = resolve;
+		image.onerror = reject;
+		image.src = '/tag-card-face.png';
+	});
+
+	const canvas = document.createElement('canvas');
+	canvas.width = image.width;
+	canvas.height = image.height;
+	const ctx = canvas.getContext('2d')!;
+	ctx.drawImage(image, 0, 0);
+
+	ctx.fillStyle = BACK_PANEL_BG;
+	ctx.fillRect(ERASE_RECT.x, ERASE_RECT.y, ERASE_RECT.width, ERASE_RECT.height);
+
+	await document.fonts.ready;
+	ctx.font = `${FONT_SIZE}px ${fontFamily}`;
+	ctx.fillStyle = frostColor;
+	ctx.globalAlpha = 0.8;
+	ctx.textAlign = 'right';
+	ctx.textBaseline = 'top';
+	ctx.fillText(`${count.toLocaleString('en-US')} VIEWS`, TEXT_RIGHT_EDGE, TEXT_TOP);
+	ctx.globalAlpha = 1;
+
+	const texture = await modelViewer.createTexture(canvas.toDataURL('image/png'));
+	const [material] = modelViewer.model.materials;
+	material.pbrMetallicRoughness.baseColorTexture.setTexture(texture);
+};
 
 /* Simplified from badge3d/src/App.js — drag-to-orbit only, no flip button,
    matching the static mockup's badge slot. @google/model-viewer registers a
    custom element at module scope, so it's imported on mount rather than at
    the top of the file to keep this out of the server render. */
 const Badge3D = ({ className }: { className?: string }) => {
+	const ref = useRef<any>(null);
+	const patched = useRef(false);
+
 	useEffect(() => {
 		import('@google/model-viewer');
+	}, []);
+
+	useEffect(() => {
+		const modelViewer = ref.current;
+		if (!modelViewer) return;
+
+		const handleLoad = () => {
+			if (patched.current) return;
+			patched.current = true;
+			// Leave the original baked "1,227,203 FLIPS" texture showing on any failure
+			// (no Netlify Blobs context in plain `next dev`, network hiccup, etc).
+			patchViewCount(modelViewer).catch(() => {});
+		};
+
+		modelViewer.addEventListener('load', handleLoad);
+		return () => modelViewer.removeEventListener('load', handleLoad);
 	}, []);
 
 	return (
 		<div className={clsx('relative', className)}>
 			<model-viewer
+				ref={ref}
 				src="/tag.glb"
 				alt="ID card"
 				camera-controls

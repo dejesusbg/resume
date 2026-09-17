@@ -29,7 +29,7 @@ const Hero = () => {
 						</a>
 					</div>
 				</div>
-				<Badge3D className="w-full max-w-2/5 aspect-[2/3] shrink-0" />
+				<Badge3D className="w-full max-w-1/3 aspect-[2/3] shrink-0" />
 			</Motion>
 			<ScrollCue label={tAbout('scrollCue')} className="hidden lg:flex" />
 		</Section>
