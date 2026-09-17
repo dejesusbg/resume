@@ -6,10 +6,8 @@ import { useEffect, useRef } from 'react';
 // baked 2304x2304 back-panel texture): the old "1,227,203 FLIPS" text's ink
 // bounding box was x 1541-1914, y 299-336, padded here to fully erase its
 // anti-aliasing before drawing the live count in its place.
-const ERASE_RECT = { x: 1521, y: 279, width: 413, height: 78 };
-const BACK_PANEL_BG = 'rgb(99, 66, 239)'; // --color-periw, sampled from the texture
-const TEXT_RIGHT_EDGE = 1914;
-const TEXT_TOP = 288; // 96px in the 1x design, exported at the texture's 3x scale
+const TEXT_RIGHT_EDGE = 1452; // right edge of the old "1,227,203 FLIPS" text
+const TEXT_TOP = 72; // 96px in the 1x design, exported at the texture's 3x scale
 const FONT_SIZE = 42; // 14px in the 1x design, exported at the texture's 3x scale
 
 // Resolves a token's actual rendered value via a throwaway element, since
@@ -41,7 +39,7 @@ const patchViewCount = async (modelViewer: any) => {
 	await new Promise((resolve, reject) => {
 		image.onload = resolve;
 		image.onerror = reject;
-		image.src = '/tag-card-face.png';
+		image.src = '/badge/texture.png';
 	});
 
 	const canvas = document.createElement('canvas');
@@ -50,11 +48,8 @@ const patchViewCount = async (modelViewer: any) => {
 	const ctx = canvas.getContext('2d')!;
 	ctx.drawImage(image, 0, 0);
 
-	ctx.fillStyle = BACK_PANEL_BG;
-	ctx.fillRect(ERASE_RECT.x, ERASE_RECT.y, ERASE_RECT.width, ERASE_RECT.height);
-
 	await document.fonts.ready;
-	ctx.font = `${FONT_SIZE}px ${fontFamily}`;
+	ctx.font = `450 ${FONT_SIZE}px ${fontFamily}`;
 	ctx.fillStyle = frostColor;
 	ctx.globalAlpha = 0.8;
 	ctx.textAlign = 'right';
@@ -88,7 +83,7 @@ const Badge3D = ({ className }: { className?: string }) => {
 			patched.current = true;
 			// Leave the original baked "1,227,203 FLIPS" texture showing on any failure
 			// (no Netlify Blobs context in plain `next dev`, network hiccup, etc).
-			patchViewCount(modelViewer).catch(() => {});
+			patchViewCount(modelViewer).catch(() => { });
 		};
 
 		modelViewer.addEventListener('load', handleLoad);
@@ -99,7 +94,7 @@ const Badge3D = ({ className }: { className?: string }) => {
 		<div className={clsx('relative', className)}>
 			<model-viewer
 				ref={ref}
-				src="/tag.glb"
+				src="/badge/tag.glb"
 				alt="ID card"
 				camera-controls
 				touch-action="pan-y"
@@ -113,6 +108,8 @@ const Badge3D = ({ className }: { className?: string }) => {
 				max-camera-orbit="auto 120deg auto"
 				style={{ width: '100%', height: '100%' }}
 				disable-zoom
+				disable-tap
+				auto-rotate
 			/>
 		</div>
 	);
