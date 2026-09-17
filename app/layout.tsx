@@ -1,5 +1,4 @@
 import Footer from '@/components/layout/Footer';
-import Header from '@/components/layout/Header';
 import Background from '@/components/ui/Background';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
@@ -51,7 +50,6 @@ export default async function RootLayout({
 			<body className={`${inter.className} antialiased`}>
 				<NextIntlClientProvider>
 					<Background />
-					<Header />
 					<main className="w-screen">
 						{children}
 						<Footer />
