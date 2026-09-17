@@ -14,8 +14,8 @@ const Hero = () => {
 	return (
 		<Section id="hero" className="flex flex-col justify-center max-h-svh min-h-svh">
 			<Motion className="flex flex-col items-center py-16 my-auto lg:flex-row lg:items-center lg:justify-between lg:py-0">
-				<div className="flex flex-col items-start w-full max-w-[527px] space-y-8 text-start">
-					<h1 className="!font-sans font-semibold leading-none text-4xl md:text-[64px]">{tAbout('greeting')}</h1>
+				<div className="flex flex-col items-start w-full max-w-1/2 space-y-8 text-start">
+					<h1 className="!font-sans font-semibold text-[40px] md:text-[64px]">{tAbout('greeting')}</h1>
 					<div className="flex flex-col space-y-2 text-lg md:text-2xl">
 						<span className="font-semibold">{tAbout('title')}</span>
 						<p className="font-light max-w-xs sm:max-w-lg lg:max-w-2xl">{tAbout('description')}</p>
@@ -29,7 +29,7 @@ const Hero = () => {
 						</a>
 					</div>
 				</div>
-				<Badge3D className="w-full max-w-1/3 aspect-[2/3] shrink-0" />
+				<Badge3D className="w-full max-w-2/5 aspect-[2/3] shrink-0" />
 			</Motion>
 			<ScrollCue label={tAbout('scrollCue')} className="hidden lg:flex" />
 		</Section>

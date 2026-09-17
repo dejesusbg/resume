@@ -37,7 +37,7 @@ const Header = () => {
 			className={`fixed top-0 z-50 flex w-screen border-b transition-colors duration-500 ${isScrolled ? 'border-misty bg-frost/75 backdrop-blur-md' : 'border-transparent bg-transparent'
 				}`}>
 			<nav className="flex items-center justify-center px-16 pt-8 pb-4 mx-auto">
-				<div className="flex flex-row items-start gap-[28.1px]">
+				<div className="flex flex-row items-start gap-8">
 					<NavLink href="/#projects" label={tLayout('nav.work')} />
 					<NavLink href="/archive" label={tLayout('nav.projects')} active={pathname === '/archive'} />
 					<NavLink href="/#about" label={tLayout('nav.about')} />

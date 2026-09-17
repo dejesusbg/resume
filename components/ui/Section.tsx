@@ -11,8 +11,7 @@ const Section = ({ children, id, className = '' }: SectionProps) => {
 	return (
 		<section
 			id={id}
-			style={{ maxWidth: layout.maxWidth, paddingInline: layout.gutter }}
-			className={clsx('mx-auto w-full not-first:mb-32 last:mb-8', className)}>
+			className={clsx('mx-auto w-full max-w-4/5 not-first:mb-32 last:mb-8', className)}>
 			{children}
 		</section>
 	);
