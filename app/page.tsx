@@ -1,4 +1,5 @@
 import Badge3D from '@/components/ui/Badge3D';
+import HeroActions from '@/components/layout/HeroActions';
 import { LinkArrowNext } from '@/components/ui/LinkArrow';
 import { mergeProjects } from '@/lib/data';
 import MarkdownRaw from '@/components/ui/MarkdownRaw';
@@ -12,26 +13,33 @@ const Hero = () => {
 	const tAbout = useTranslations('about');
 
 	return (
-		<Section id="hero" className="flex flex-col justify-center max-h-svh min-h-svh">
-			<Motion className="flex flex-col items-center py-16 my-auto lg:flex-row lg:items-center lg:justify-between lg:py-0">
-				<div className="flex flex-col items-start w-full max-w-1/2 space-y-8 text-start">
+		<Section id="hero" className="flex flex-col justify-center min-h-dvh lg:max-h-svh">
+			{/* Desktop View */}
+			<Motion className="hidden lg:flex my-auto lg:flex-row lg:items-center lg:justify-between py-0">
+				<div className="flex flex-col items-start w-full max-w-3/5 space-y-8 text-start">
+					<h1 className="font-semibold text-[64px]">{tAbout('greeting')}</h1>
+					<div className="flex flex-col space-y-2 text-2xl">
+						<span className="font-semibold">{tAbout('title')}</span>
+						<p className="font-light">{tAbout('description')}</p>
+					</div>
+					<HeroActions />
+				</div>
+				<Badge3D className="w-full max-w-2/5 aspect-[2/3] shrink-0" />
+			</Motion>
+			<ScrollCue label={tAbout('scrollCue')} className="hidden lg:flex" />
+			{/* Mobile View */}
+			<Motion className="flex lg:hidden flex-col-reverse py-28 my-auto lg:flex-row lg:items-center lg:justify-between lg:py-0">
+				<div className="flex flex-col items-start w-full max-w-3/5 space-y-8 text-start">
 					<h1 className="!font-sans font-semibold text-[40px] md:text-[64px]">{tAbout('greeting')}</h1>
 					<div className="flex flex-col space-y-2 text-lg md:text-2xl">
 						<span className="font-semibold">{tAbout('title')}</span>
 						<p className="font-light max-w-xs sm:max-w-lg lg:max-w-2xl">{tAbout('description')}</p>
 					</div>
-					<div className="flex justify-center">
-						<a
-							href="/archive"
-							className="font-semibold text-center cursor-pointer text-periw hocus:text-berry hover:underline hover:underline-offset-4">
-							See what I've built
-							<LinkArrowNext />
-						</a>
-					</div>
+					<HeroActions />
 				</div>
+				<ScrollCue label={tAbout('scrollCue')} className="flex lg:hidden" />
 				<Badge3D className="w-full max-w-2/5 aspect-[2/3] shrink-0" />
 			</Motion>
-			<ScrollCue label={tAbout('scrollCue')} className="hidden lg:flex" />
 		</Section>
 	);
 };

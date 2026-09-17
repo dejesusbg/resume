@@ -4,20 +4,13 @@
     "greeting": "Hola, soy Ricardo.",
     "title": "Ingeniero de Sistemas",
     "description": "Un ingeniero que diseña interfaces y construye IA.",
-    "cta": "Mira lo que he construido →",
+    "cta": "Mira lo que he construido",
     "scrollCue": "DESPLÁZATE ↓",
     "manifest": "¿Quién ayuda a construir el futuro? Ese soy yo, un ingeniero colombiano obsesionado por crear aplicaciones escalables y de alto rendimiento que disminuyan la brecha entre un diseño elegante y una arquitectura sólida.\n\nMe desenvuelvo entre el código y la experiencia de usuario, mediante proyectos que funcionan y *destacan*.\n\nActualmente, soy pasante de investigación UX en la [Unimagdalena](https://www.unimagdalena.edu.co/), mientras termino Ingeniería de Sistemas y trabajo en retos freelance o personales.\n\n¿Por qué solo programar cuando se pueden cambiar vidas?\n\nDesde un [agente local para escritorio](https://getwade.netlify.app/) usando LLMs, hasta una app de [navegación para personas con ceguera](https://github.com/dejesusbg/truenavi), construyo soluciones que impactan realmente.\n\nEscríbeme si necesitas apoyo con Figma, React, TypeScript, Rust, Python, TensorFlow o Docker.\n\nMe enfoco en hacer código limpio y duradero.\n\nYa sea un [sitio corporativo moderno](https://rdingnova.com.co/) o un [gestor de hábitos offline](https://auraby.netlify.app/), busco crear herramientas que enganchen a los usuarios y aporten valor.\n\nCada línea de código es una oportunidad para mejorar el mundo.\n\nComo pasatiempos, me <span id=\"song\">[pierdo en la música](https://open.spotify.com/track/3siwsiaEoU4Kuuc9WKMUy5)</span>, hago ejercicio o me sumerjo en lo último de la tecnología.\n\n¿Qué es un desarrollador sin curiosidad?\n\n¿Para qué seguir la curva si puedes *adelantarte* a ella?\n\nEl mundo tech avanza rápido.\n\nYo avanzo *aún más rápido*.\n\n¿Estás listo para construir algo grande?\n\n[Hagámoslo realidad.](./resume.pdf)"
   },
   "layout": {
-    "book": "Contáctame",
     "archive": "Ver todos los proyectos",
     "projects": "Todos los proyectos",
-    "nav": {
-      "work": "Trabajo",
-      "projects": "Proyectos",
-      "about": "Sobre mí",
-      "contact": "Contacto"
-    },
     "table": [
       "Año",
       "Proyecto",

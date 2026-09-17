@@ -17,15 +17,8 @@ export interface Messages {
 		manifest: string;
 	};
 	layout: {
-		book: string;
 		archive: string;
 		projects: string;
-		nav: {
-			work: string;
-			projects: string;
-			about: string;
-			contact: string;
-		};
 		table: string[];
 		source: string;
 		demo: string;
