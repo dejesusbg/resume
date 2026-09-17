@@ -1,56 +1,26 @@
 'use client';
-import { emojiLocale, languageLocale, locales } from '@/i18n/locale';
-import { useLocale, useTranslations } from 'next-intl';
-import { useRouter } from 'next/navigation';
-import { useEffect, useState, useTransition } from 'react';
-import { LuGithub, LuLanguages, LuLinkedin } from 'react-icons/lu';
+import clsx from 'clsx';
+import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
-const HeaderContainer = ({ children }: { children: React.ReactNode }) => {
+const NavLink = ({ href, label, active }: { href: string; label: string; active?: boolean }) => {
 	return (
-		<div className="flex border-2 rounded-full shadow border-misty bg-lilac backdrop-blur">
-			{children}
-		</div>
-	);
-};
-
-const LanguageButton = () => {
-	const locale = useLocale();
-	const router = useRouter();
-	const [isPending, startTransition] = useTransition();
-
-	const handleLocaleChange = (newLocale: string) => {
-		startTransition(() => {
-			document.cookie = `locale=${newLocale}; path=/; max-age=${60 * 60 * 24 * 365}`;
-			router.refresh();
-		});
-	};
-
-	return (
-		<HeaderContainer>
-			<button className="header-btn" tabIndex={-1}>
-				<label htmlFor="language" className="sr-only">
-					Language
-				</label>
-				<select
-					id="language"
-					value={locale}
-					onChange={(e: any) => handleLocaleChange(e.target.value)}
-					disabled={isPending}
-					className="absolute w-full h-full text-transparent cursor-pointer header-btn">
-					{locales.map((loc) => (
-						<option key={loc} value={loc}>
-							{`${emojiLocale[loc.toUpperCase()]} ${languageLocale[loc.toUpperCase()]}`}
-						</option>
-					))}
-				</select>
-				<LuLanguages size={20} />
-			</button>
-		</HeaderContainer>
+		<a
+			href={href}
+			aria-current={active ? 'page' : undefined}
+			className={clsx(
+				'text-sm leading-none tracking-tight whitespace-nowrap transition-colors duration-150',
+				active ? 'text-berry font-semibold underline underline-offset-4 px-0' : 'text-cloud hocus:text-berry px-[0.5px] hocus:font-semibold hocus:px-0 hocus:underline hocus:underline-offset-4 font-medium',
+			)}>
+			{label}
+		</a>
 	);
 };
 
 const Header = () => {
 	const tLayout = useTranslations('layout');
+	const pathname = usePathname();
 	const [isScrolled, setIsScrolled] = useState(false);
 
 	useEffect(() => {
@@ -64,37 +34,16 @@ const Header = () => {
 		<header
 			data-site-header
 			data-scrolled={isScrolled}
-			className={`fixed top-0 z-50 flex w-screen border-b transition-colors duration-500 ${
-				isScrolled ? 'border-misty bg-frost/75 backdrop-blur-md' : 'border-transparent bg-transparent'
-			}`}>
-			<div className="flex gap-2 mx-auto my-4">
-				<HeaderContainer>
-					<a
-						href="https://github.com/dejesusbg"
-						target="blank"
-						rel="noopener noreferer"
-						className="header-btn">
-						<LuGithub size={20} />
-						<span className="sr-only">Github</span>
-					</a>
-					<a
-						href="https://linkedin.com/in/dejesusbg"
-						target="blank"
-						rel="noopener noreferer"
-						className="header-btn">
-						<LuLinkedin size={20} />
-						<span className="sr-only">Linkedin</span>
-					</a>
-				</HeaderContainer>
-				<HeaderContainer>
-					<a
-						href="mailto:dejesusbg5@gmail.com?subject=Let's build something!"
-						className={'header-btn font-medium rounded-full leading-[100%] px-4'}>
-						{tLayout('book')}
-					</a>
-				</HeaderContainer>
-				<LanguageButton />
-			</div>
+			className={`fixed top-0 z-50 flex w-screen border-b transition-colors duration-500 ${isScrolled ? 'border-misty bg-frost/75 backdrop-blur-md' : 'border-transparent bg-transparent'
+				}`}>
+			<nav className="flex items-center justify-center px-16 pt-8 pb-4 mx-auto">
+				<div className="flex flex-row items-start gap-[28.1px]">
+					<NavLink href="/#projects" label={tLayout('nav.work')} />
+					<NavLink href="/archive" label={tLayout('nav.projects')} active={pathname === '/archive'} />
+					<NavLink href="/#about" label={tLayout('nav.about')} />
+					<NavLink href="mailto:dejesusbg5@gmail.com?subject=Let's build something!" label={tLayout('nav.contact')} />
+				</div>
+			</nav>
 		</header>
 	);
 };
