@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@google/model-viewer": "^4.3.1",
+    "@netlify/blobs": "^11.1.0",
     "eslint-config-next": "^16.2.6",
     "framer-motion": "^12.23.24",
     "next": "^16.2.6",
