@@ -164,6 +164,8 @@
 
 		&::picker(select) {
 			appearance: base-select;
+			position-area: block-end;
+			position-try-fallbacks: none;
 			@apply rounded-2xl bg-lilac backdrop-blur border-misty border-2 mt-2 shadow font-semibold;
 		}
 	}
