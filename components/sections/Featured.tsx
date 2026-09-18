@@ -1,0 +1,82 @@
+import Link, { Arrow } from '@/components/ui/Link';
+import Motion from '@/components/ui/Motion';
+import Section from '@/components/ui/Section';
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { StatTag, TechTag } from '@/components/ui/Tag';
+
+export interface Project {
+	title: string;
+	description: string;
+	tags: string[];
+	date: string;
+	stat?: string;
+	link?: string;
+	imageSrc?: string;
+	featured?: boolean;
+}
+
+const ProjectCard = ({ link, title, description, imageSrc, stat, tags, date }: Project) => {
+	return (
+		<li>
+			<a
+				{...(link ? { href: link, target: '_blank', rel: 'noreferrer noopener' } : {})}
+				data-project-card
+				className="flex flex-col justify-center px-4 py-4 space-y-4 border-2 md:justify-start md:flex-row md:space-x-4 rounded-2xl border-misty group hocus:shadow">
+				<div className="flex flex-col items-center space-y-2">
+					<Image
+						alt={title}
+						src={`${imageSrc}`}
+						className="drop-shadow min-w-[54px] max-w-[54px] group-hocus:brightness-105"
+						width={512}
+						height={512}
+						unoptimized
+					/>
+					<div className="text-xs font-medium tracking-wide text-cloud/80">{date}</div>
+				</div>
+				<div className="flex flex-col space-y-2 md:text-lg">
+					<span className="font-semibold text-center md:text-start text-periw group-hocus:text-berry group-hover:underline group-hover:underline-offset-4">
+						{title}
+						{link && <Arrow type="out" />}
+					</span>
+					<p className="leading-tight text-center md:text-start">{description}</p>
+					<ul className="flex flex-wrap justify-center gap-2 mt-2 md:justify-start">
+						{stat && <StatTag stat={stat} />}
+						{tags.map((tag, index) => (
+							<TechTag key={index} tech={tag} />
+						))}
+					</ul>
+				</div>
+			</a>
+		</li>
+	);
+};
+
+
+const Featured = () => {
+	const t = useTranslations('featured');
+
+	const projects = useTranslations().raw('projects') as Project[];
+	const featuredProjects = projects.filter((project) => project.featured);
+
+	const body = t('body');
+	const cta = t('cta');
+
+	return (
+		<Section id="featured" className="pt-[64px] pb-[72px] px-[6vw]">
+			<Motion className="flex flex-col my-auto space-y-6">
+				<p className="text-lg text-cloud/80">
+					{body}
+				</p>
+				<ul className="space-y-4" data-motion-stagger>
+					{featuredProjects.map((project, index) => (
+						<ProjectCard key={index} {...project} />
+					))}
+				</ul>
+				<Link href="/archive">{cta}</Link>
+			</Motion>
+		</Section>
+	);
+};
+
+export default Featured;
