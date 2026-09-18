@@ -1,97 +1,7 @@
-import Badge3D from '@/components/ui/Badge3D';
-import HeroActions from '@/components/layout/HeroActions';
-import { LinkArrowNext } from '@/components/ui/LinkArrow';
-import { mergeProjects } from '@/lib/data';
-import MarkdownRaw from '@/components/ui/MarkdownRaw';
-import Motion from '@/components/ui/Motion';
-import Image from 'next/image';
-import { ProjectCard } from '@/components/ui/Project';
-import { ScrollCue } from '@/components/ui/ScrollCue';
-import Section from '@/components/ui/Section';
-import { useTranslations } from 'next-intl';
-
-const Hero = () => {
-	const tAbout = useTranslations('about');
-
-	return (
-		<Section id="hero" className="">
-			<Motion className="flex flex-row items-center justify-between my-auto">
-				<div className="flex flex-col items-center w-full space-y-6 text-center lg:items-start lg:max-w-3/5 md:space-y-8 lg:text-start">
-					<h1 className="font-semibold text-[40px] md:text-[64px]">{tAbout('greeting')}</h1>
-					<div className="flex flex-col space-y-1 text-base md:space-y-2 md:text-2xl">
-						<span className="font-semibold">{tAbout('title')}</span>
-						<p className="font-light">{tAbout('description')}</p>
-					</div>
-					<HeroActions />
-				</div>
-				<Badge3D className="hidden lg:flex w-full max-w-2/5 aspect-[2/3] shrink-0" />
-			</Motion>
-			<ScrollCue label={tAbout('scrollCue')} fade />
-		</Section>
-	);
-};
-
-const About = () => {
-	const tAbout = useTranslations('about');
-	const tLayout = useTranslations('layout');
-
-	return (
-		<Section id="about">
-			<Motion className="flex flex-col my-auto">
-				<MarkdownRaw
-					classNames={{
-						p: 'text-ebony text-2xl text-center md:text-4xl leading-[150%]',
-						a: 'font-semibold text-periw hocus:text-berry hover:underline hover:underline-offset-4',
-					}}>
-					{tAbout.raw('manifest')}
-				</MarkdownRaw>
-				<div className="flex justify-center mt-8">
-					<a
-						href={tLayout('resumeUrl')}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="font-semibold text-center cursor-pointer text-periw hocus:text-berry hover:underline hover:underline-offset-4">
-						{tLayout('seeResume')}
-						<LinkArrowNext />
-					</a>
-				</div>
-			</Motion>
-
-			<ScrollCue
-				label={tLayout('projectsLead')} fadeInto='projects'
-			/>
-		</Section>
-	);
-};
-
-const Projects = () => {
-	const tLayout = useTranslations('layout');
-	const t = useTranslations();
-
-	const projects = mergeProjects(t.raw('projects'));
-	const featuredProjects = projects.filter((project) => project.featured);
-
-	return (
-		<Section id="projects">
-			<Motion className="flex flex-col">
-
-				<ul className="space-y-4" data-motion-stagger>
-					{featuredProjects.map((project, index) => (
-						<ProjectCard key={index} {...project} />
-					))}
-				</ul>
-				<div className="flex justify-center mt-8">
-					<a
-						href="/archive"
-						className="font-semibold text-center cursor-pointer text-periw hocus:text-berry hover:underline hover:underline-offset-4">
-						{tLayout('archive')}
-						<LinkArrowNext />
-					</a>
-				</div>
-			</Motion>
-		</Section>
-	);
-};
+import About from '@/components/sections/About';
+import BadgeSection from '@/components/sections/BadgeSection';
+import Hero from '@/components/sections/Hero';
+import Projects from '@/components/sections/Projects';
 
 export default function Home() {
 	return (
@@ -99,6 +9,7 @@ export default function Home() {
 			<Hero />
 			<About />
 			<Projects />
+			<BadgeSection />
 		</>
 	);
 }
