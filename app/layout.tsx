@@ -2,12 +2,11 @@ import Footer from '@/components/layout/Footer';
 import Background from '@/components/ui/Background';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { Geist_Mono, Instrument_Serif } from 'next/font/google';
+import { Geist_Mono } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
 
 const inter = localFont({ src: '../fonts/InterVariable.ttf' });
-const instrument = Instrument_Serif({ weight: '400', subsets: ['latin'] });
 const geist_mono = Geist_Mono({ weight: '400', subsets: ['latin'] });
 
 export const metadata: Metadata = {

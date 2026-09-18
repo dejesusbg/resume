@@ -29,7 +29,6 @@
 	--color-secondary-950: #7c2360;
 
 	--font-sans: 'Inter', sans-serif;
-	--font-serif: 'Instrument Serif', serif;
 	--font-mono: 'Geist Mono', monospace;
 	--font-weight-normal: 350;
 	--font-weight-medium: 450;
@@ -154,7 +153,7 @@
 	}
 
 	h2 {
-		@apply font-serif text-ebony font-bold text-center text-4xl text-balance sm:text-5xl md:text-6xl lg:text-7xl;
+		@apply text-ebony font-bold text-center text-4xl text-balance sm:text-5xl md:text-6xl lg:text-7xl;
 	}
 
 	select {
