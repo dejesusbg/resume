@@ -6,11 +6,13 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { LuGithub } from 'react-icons/lu';
 
-const ProjectCard = ({ slug, title, description, imageSrc, stat, tags, date }: ProjectProps) => {
+const ProjectCard = ({ link, title, description, imageSrc, stat, tags, date }: ProjectProps) => {
+	const CardWrapper = link ? 'a' : 'div';
+
 	return (
 		<li>
-			<a
-				href={`./${slug}`}
+			<CardWrapper
+				{...(link ? { href: link, target: '_blank', rel: 'noreferrer noopener' } : {})}
 				data-project-card
 				className="flex flex-col justify-center px-4 py-4 space-y-4 border-2 md:justify-start md:flex-row md:space-x-4 rounded-2xl border-misty group hocus:shadow">
 				<div className="flex flex-col items-center space-y-2">
@@ -27,7 +29,7 @@ const ProjectCard = ({ slug, title, description, imageSrc, stat, tags, date }: P
 				<div className="flex flex-col space-y-2 md:text-lg">
 					<span className="font-semibold text-center md:text-start text-periw">
 						{title}
-						<LinkArrowNext />
+						{link && <LinkArrowNext />}
 					</span>
 					<p className="leading-tight text-center md:text-start">{description}</p>
 					<ul className="flex flex-wrap justify-center gap-2 mt-2 md:justify-start">
@@ -37,7 +39,7 @@ const ProjectCard = ({ slug, title, description, imageSrc, stat, tags, date }: P
 						))}
 					</ul>
 				</div>
-			</a>
+			</CardWrapper>
 		</li>
 	);
 };

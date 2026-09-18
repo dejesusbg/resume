@@ -23,10 +23,6 @@
   },
   "projects": [
     {
-      "title": "Agente Inteligente para Escritorio",
-      "description": "Asistente contextual enfocado en la privacidad que aparece justo cuando el usuario lo necesita, basado en el contexto del sistema y con solo presionar una tecla."
-    },
-    {
       "title": "Rediseño de Programación Académica",
       "description": "Transformando un sistema universitario de nivel empresarial en una experiencia moderna, accesible y utilizable que apoya la toma de decisiones."
     },

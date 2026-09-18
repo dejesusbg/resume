@@ -23,12 +23,9 @@
   },
   "projects": [
     {
-      "title": "AI-Native Desktop Agent",
-      "description": "A privacy-first, local-first contextual assistant that appears exactly when the user needs it, based on system context and all with a single keystroke."
-    },
-    {
       "title": "Academic Scheduling Redesign",
-      "description": "Transforming an enterprise-level university system into a modern, accessible, usable experience that supports decision making."
+      "description": "Transforming an enterprise-level university system into a modern, accessible, usable experience that supports decision making.",
+      "stat": "Meritorious Honor Thesis"
     },
     {
       "title": "Ecological AI Assistant",

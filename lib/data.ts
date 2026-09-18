@@ -1,8 +1,6 @@
 export interface ProjectData {
-	slug?: string;
 	link?: string;
 	imageSrc?: string;
-	images?: string[];
 	tags: string[];
 	featured?: boolean;
 	date: string;
@@ -14,17 +12,16 @@ export interface LocalizedProject {
 	stat?: string;
 }
 
-export interface Project extends ProjectData, LocalizedProject {}
+export interface Project extends ProjectData, LocalizedProject { }
 
 export const projects: ProjectData[] = [
-	{ slug: 'wade', link: 'https://getwade.netlify.app/', imageSrc: 'logo/pages.webp', images: [], tags: ['Rust', 'TypeScript', 'Docker', 'Python', 'FastAPI', 'Neo4j', 'Tauri', 'React', 'Vite', 'Ollama CLI', 'Qwen AI'], featured: true, date: '05/26' },
-	{ slug: 'unimag-ux', imageSrc: 'logo/photos.webp', images: ['01.png', '02.png', '03.png', '04.png', '05.png'], tags: ['Figma', 'Research', 'UX', 'Accessibility', 'React', 'TypeScript', 'Tailwind', 'Vite'], featured: true, date: '03/26' },
+	{ link: 'https://hdl.handle.net/20.500.14923/25334', imageSrc: 'logo/pages.webp', tags: ['Figma', 'Research', 'UX', 'Accessibility', 'React', 'TypeScript', 'Tailwind'], featured: true, date: '03/26' },
 	{ link: 'https://github.com/dejesusbg/ecobot', tags: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Gemini API'], date: '10/25' },
 	{ link: 'https://github.com/dejesusbg/shorts', tags: ['Python', 'Docker', 'FFmpeg', 'Gemini API'], date: '09/25' },
-	{ slug: 'truenavi', link: 'https://github.com/dejesusbg/truenavi', imageSrc: 'logo/maps.webp', images: ['01.jpg', '02.jpg', '03.png', '04.png', '05.png', '06.png'], tags: ['React Native', 'Next.js', 'React', 'TypeScript', 'Tailwind', 'MongoDB', 'Node.js', 'Expo', 'Docker', 'Express'], featured: true, date: '03/25' },
-	{ slug: 'ecommerce', link: 'https://github.com/dejesusbg/ecommerce', tags: ['Spring Boot', 'Java', 'Docker', 'Keycloak', 'Netflix Eureka', 'Redis', 'PostgreSQL', 'MongoDB', 'Grafana', 'Prometheus'], date: '02/25' },
+	{ link: 'https://github.com/dejesusbg/truenavi', imageSrc: 'logo/maps.webp', tags: ['React Native', 'Next.js', 'React', 'TypeScript', 'Tailwind', 'MongoDB', 'Node.js', 'Expo', 'Docker', 'Express'], featured: true, date: '03/25' },
+	{ link: 'https://github.com/dejesusbg/ecommerce', tags: ['Spring Boot', 'Java', 'Docker', 'Keycloak', 'Netflix Eureka', 'Redis', 'PostgreSQL', 'MongoDB', 'Grafana', 'Prometheus'], date: '02/25' },
 	{ link: 'https://rdingnova.com.co/', tags: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Netlify', 'Decap CMS'], date: '02/25' },
-	{ slug: 'mangifera', link: 'https://github.com/dejesusbg/mangifera', tags: ['Python', 'TensorFlow', 'scikit-learn', 'Keras'], date: '10/24' },
+	{ link: 'https://github.com/dejesusbg/mangifera', imageSrc: 'logo/photos.webp', tags: ['Python', 'TensorFlow', 'scikit-learn', 'Keras'], featured: true, date: '10/24' },
 	{ link: 'https://github.com/dejesusbg/wordflow-bot', tags: ['JavaScript'], date: '10/24' },
 	{ link: 'https://github.com/dejesusbg/bioinsipired-tsp', tags: ['Python', 'NumPy'], date: '10/24' },
 	{ link: 'https://auraby.netlify.app', tags: ['React', 'JavaScript', 'CSS'], date: '08/24' },
