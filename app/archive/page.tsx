@@ -1,4 +1,4 @@
-import { LinkArrowBack } from '@/components/ui/LinkArrow';
+import ArrowLink from '@/components/ui/ArrowLink';
 import { mergeProjects } from '@/lib/data';
 import Motion from '@/components/ui/Motion';
 import { ProjectRow } from '@/components/ui/Project';
@@ -23,7 +23,7 @@ const ProjectsTable = () => {
 	});
 
 	return (
-		<table className="w-full text-left border-collapse">
+		<table className="w-full mb-24 text-left border-collapse">
 			<thead className="border-b-2 border-misty">
 				<tr>
 					<th className="p-4 text-sm font-semibold text-periw">{headers[0]}</th>
@@ -46,18 +46,12 @@ const ProjectsTable = () => {
 };
 
 export default function Archive() {
-	const tLayout = useTranslations('layout');
-
 	return (
 		<Section id="archive">
 			<Motion className="flex flex-col items-center pt-24 space-y-8">
-				<a
-					className="font-semibold text-center cursor-pointer text-periw focus:text-berry hover:underline hover:underline-offset-4"
-					href="/">
-					<LinkArrowBack />
-					Ricardo Barrios
-				</a>
-				<h2>{tLayout('projects')}</h2>
+				<ArrowLink href="/" direction="back">
+					Return from all projects
+				</ArrowLink>
 				<ProjectsTable />
 			</Motion>
 		</Section>
