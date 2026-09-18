@@ -1,4 +1,3 @@
-import Footer from '@/components/layout/Footer';
 import Background from '@/components/ui/Background';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
@@ -51,7 +50,6 @@ export default async function RootLayout({
 					<Background />
 					<main className="w-screen">
 						{children}
-						<Footer />
 					</main>
 				</NextIntlClientProvider>
 			</body>
