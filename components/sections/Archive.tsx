@@ -2,21 +2,11 @@ import Link from '@/components/ui/Link';
 import Motion from '@/components/ui/Motion';
 import Section from '@/components/ui/Section';
 import { StatTag, TechTag } from '@/components/ui/Tag';
+import { ProjectProps } from '@/i18n/locale';
 import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
 
-export interface Project {
-    title: string;
-    description: string;
-    tags: string[];
-    date: string;
-    stat?: string;
-    link?: string;
-    imageSrc?: string;
-    featured?: boolean;
-}
-
-const ProjectRow = ({ title, description, link, stat, tags, date }: Project) => {
+const ProjectRow = ({ title, description, link, stat, tags, date }: ProjectProps) => {
     const t = useTranslations('archive');
     const yearDisplay = '20' + date.split('/')[1];
 
@@ -57,7 +47,7 @@ const ProjectRow = ({ title, description, link, stat, tags, date }: Project) => 
 };
 
 const ProjectsTable = ({ columns }: { columns: string[] }) => {
-    const projects = useTranslations().raw('projects') as Project[];
+    const projects = useTranslations().raw('projects') as ProjectProps[];
 
     const sortedProjects = [...projects].sort((a, b) => {
         const [monthA, yearA] = a.date.split('/');

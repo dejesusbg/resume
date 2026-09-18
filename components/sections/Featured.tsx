@@ -4,19 +4,9 @@ import Section from '@/components/ui/Section';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { StatTag, TechTag } from '@/components/ui/Tag';
+import { ProjectProps } from '@/i18n/locale';
 
-export interface Project {
-	title: string;
-	description: string;
-	tags: string[];
-	date: string;
-	stat?: string;
-	link?: string;
-	imageSrc?: string;
-	featured?: boolean;
-}
-
-const ProjectCard = ({ link, title, description, imageSrc, stat, tags, date }: Project) => {
+const ProjectCard = ({ link, title, description, imageSrc, stat, tags, date }: ProjectProps) => {
 	return (
 		<li>
 			<a
@@ -56,7 +46,7 @@ const ProjectCard = ({ link, title, description, imageSrc, stat, tags, date }: P
 const Featured = () => {
 	const t = useTranslations('featured');
 
-	const projects = useTranslations().raw('projects') as Project[];
+	const projects = useTranslations().raw('projects') as ProjectProps[];
 	const featuredProjects = projects.filter((project) => project.featured);
 
 	const body = t('body');

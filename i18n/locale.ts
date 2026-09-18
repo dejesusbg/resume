@@ -1,28 +1,50 @@
-import type { LocalizedProject } from '@/lib/data';
-
 export const locales = ['en', 'es'];
 export const defaultLocale = 'en';
 
-export const emojiLocale: Record<string, string> = { EN: '🇬🇧', ES: '🇨🇴' };
-export const languageLocale: Record<string, string> = { EN: 'English', ES: 'Español' };
+export interface CredentialProps {
+	title: string;
+	institution: string;
+	logo: string;
+}
 
-export interface Messages {
-	about: {
-		name: string;
-		greeting: string;
-		title: string;
-		description: string;
+export interface ProjectProps {
+	title: string;
+	description: string;
+	stat?: string;
+	link?: string;
+	imageSrc?: string;
+	tags: string[];
+	featured?: boolean;
+	date: string;
+}
+
+export interface MessagesProps {
+	hero: {
+		texture: string;
+		model: string;
 		cta: string;
-		scrollCue: string;
-		manifest: string;
 	};
-	layout: {
-		archive: string;
-		projects: string;
-		table: string[];
+	about: {
+		body: string;
+		credentials: CredentialProps[];
+		resume: string;
+		cta: string;
+	};
+	featured: {
+		body: string;
+		cta: string;
+	};
+	footer: {
+		back: string;
+		title: string;
+		body: string;
+		language: string;
+		code: string;
+	};
+	archive: {
+		columns: string[];
 		source: string;
 		demo: string;
-		credits: string;
 	};
-	projects: LocalizedProject[];
+	projects: ProjectProps[];
 }

@@ -2,8 +2,8 @@
 import Motion from '@/components/ui/Motion';
 import Section from '@/components/ui/Section';
 import { useTranslations } from 'next-intl';
-import MarkdownRaw from '../ui/MarkdownRaw';
-import Link from '../ui/Link';
+import MarkdownRaw from '@/components/ui/MarkdownRaw';
+import Link from '@/components/ui/Link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useTransition } from 'react';
 
@@ -26,7 +26,6 @@ const LanguageToggle = ({ newLocale, text }: { newLocale: string; text: string }
 		</div>
 	);
 }
-
 
 const Footer = () => {
 	const pathname = usePathname();

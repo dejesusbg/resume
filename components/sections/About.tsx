@@ -2,14 +2,9 @@ import Link from '@/components/ui/Link';
 import MarkdownRaw from '@/components/ui/MarkdownRaw';
 import Motion from '@/components/ui/Motion';
 import Section from '@/components/ui/Section';
+import { CredentialProps } from '@/i18n/locale';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-
-interface CredentialProps {
-	title: string;
-	institution: string;
-	logo: string;
-}
 
 const Credential = ({ data }: { data: CredentialProps }) => {
 	return <div className="flex flex-row gap-2.5 items-center">
