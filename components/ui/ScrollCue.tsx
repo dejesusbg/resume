@@ -6,35 +6,28 @@ import { useEffect, useRef } from 'react';
 interface ScrollCueProps {
 	label: string;
 	className?: string;
-	align?: 'center' | 'start';
 	fade?: boolean;
-	fadeInto?: string;
 }
 
-export const ScrollCue = ({ label, className, align = 'center', fade, fadeInto }: ScrollCueProps) => {
-	const targetRef = useRef<HTMLElement | null>(null);
+export const ScrollCue = ({ label, className, fade }: ScrollCueProps) => {
+	const cueRef = useRef<HTMLDivElement>(null);
+	const sectionRef = useRef<HTMLElement | null>(null);
 
 	useEffect(() => {
-		if (fadeInto) targetRef.current = document.getElementById(fadeInto);
-	}, [fadeInto]);
-
-	const { scrollY } = useScroll();
-	const pageOpacity = useTransform(scrollY, [0, 240], [1, 0]);
+		sectionRef.current = cueRef.current?.closest('section') ?? null;
+	}, []);
 
 	const { scrollYProgress } = useScroll({
-		target: fadeInto ? (targetRef as React.RefObject<HTMLElement>) : undefined,
-		offset: ['start end', 'start center'],
+		target: sectionRef as React.RefObject<HTMLElement>,
+		offset: ['end end', 'end start'],
 	});
-	const targetOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+	const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
 
 	return (
 		<motion.div
-			style={fade ? { opacity: pageOpacity } : fadeInto ? { opacity: targetOpacity } : undefined}
-			className={clsx(
-				'flex flex-col py-6',
-				align === 'start' ? 'items-start text-left' : 'items-center text-center',
-				className,
-			)}>
+			ref={cueRef}
+			style={fade ? { opacity } : undefined}
+			className={clsx('flex flex-col items-center py-6 text-center', className)}>
 			<span className="font-mono text-sm font-semibold leading-none tracking-tight uppercase select-none whitespace-nowrap text-cloud/64">
 				{label}
 			</span>
