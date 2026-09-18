@@ -6,9 +6,9 @@ import { useEffect, useRef } from 'react';
 // baked 2304x2304 back-panel texture): the old "1,227,203 FLIPS" text's ink
 // bounding box was x 1541-1914, y 299-336, padded here to fully erase its
 // anti-aliasing before drawing the live count in its place.
-const TEXT_RIGHT_EDGE = 1452; // right edge of the old "1,227,203 FLIPS" text
-const TEXT_TOP = 72; // 96px in the 1x design, exported at the texture's 3x scale
-const FONT_SIZE = 42; // 14px in the 1x design, exported at the texture's 3x scale
+const TEXT_RIGHT_EDGE = 1936; // right edge of the old "1,227,203 FLIPS" text
+const TEXT_TOP = 96; // 96px in the 1x design, exported at the texture's 3x scale
+const FONT_SIZE = 56; // 14px in the 1x design, exported at the texture's 3x scale
 
 // Resolves a token's actual rendered value via a throwaway element, since
 // --color-frost and --font-mono are theme tokens (color-mix()/next/font's

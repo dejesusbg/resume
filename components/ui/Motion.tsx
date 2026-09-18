@@ -10,9 +10,9 @@ interface MotionProps extends React.ComponentProps<typeof motion.div> {
 const Motion = ({ children, className, focus, ...props }: MotionProps) => {
 	return (
 		<motion.div
-			initial={{ opacity: focus ? 0.5 : 0, filter: 'blur(4px)', y: 20 }}
+			initial={{ opacity: focus ? 0.5 : 0, filter: 'blur(4px)', y: 32 }}
 			whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
-			viewport={{ once: true, margin: '-100px -100px' }}
+			viewport={{ once: true, amount: 0.2 }}
 			transition={{ duration: motionTokens.reveal.duration, ease: motionTokens.reveal.ease }}
 			className={clsx('flex', className)}
 			{...props}>

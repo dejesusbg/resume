@@ -1,16 +1,30 @@
 {
   "about": {
-    "name": "# <img src='/me.png' alt='Profile Picture' class='pfp' /> <a href='/' target='_self'>Ricardo <br/> Barrios</a> <img src='/logo/maps.webp' alt='Maps Logo' class='logo' /> <img src='/logo/pages.webp' alt='Pages Logo' class='logo' /> <img src='/logo/photos.webp' alt='Photos Logo' class='logo' />",
     "greeting": "Hi, I'm Ricardo.",
     "title": "Systems Engineer",
     "description": "An engineer who designs interfaces and AI.",
     "cta": "See what I've built",
-    "scrollCue": "SCROLL ↓",
-    "manifest": "Who's building the future of tech? That's me, a Colombian engineer obsessed with crafting scalable, high-performance apps that fill the gap between elegant design and robust architecture.\n\nI live where code meets UX, delivering projects that work & *shine*.\n\nCurrently as a UX Research Intern at [Universidad del Magdalena](https://www.unimagdalena.edu.co/), I'm finishing my Systems Engineering degree while tackling freelance and personal passion challenges.\n\nWhy just code when you can change lives?\n\nFrom a [privacy-first desktop agent](https://getwade.netlify.app/) using temporal knowledge graphs and LLMs to a [blind-first navigation app](https://github.com/dejesusbg/truenavi), I build solutions that make a real impact.\n\nReach out if you need an expert hand with Figma, React, TypeScript, Rust, Python, TensorFlow, or Docker.\n\nI'm all about clean architecture and code that lasts.\n\nWhether it's a [modern corporate site](https://rdingnova.com.co/) or an [offline-first habit tracker](https://auraby.netlify.app/), creating tools that engage users and deliver value.\n\nEvery line of code is a chance to make things better.\n\nIn my spare time, I'm <span id=\"song\">[lost in music](https://open.spotify.com/track/3siwsiaEoU4Kuuc9WKMUy5)</span>, exercising, or diving into the latest tech.\n\nWhat's a developer without curiosity?\n\nWhy follow the curve when you can stay *ahead* of it?\n\nThe tech world moves fast.\n\nI move *faster*.\n\nReady to build the next big thing?\n\n[Let's make it happen.](./resume.pdf)"
+    "scrollCue": "Scroll ↓",
+    "manifest": "I learned to [code](https://en.wikipedia.org/wiki/Web_development) just to build websites, and now [understanding](https://en.wikipedia.org/wiki/User_experience) how [people and machines behave](https://wikipedia.org/wiki/Mechanistic_interpretability) is the part I'm best at.",
+    "education": [
+      {
+        "degree": "Systems Engineering",
+        "school": "Universidad del Magdalena",
+        "logo": "/unimag.png"
+      },
+      {
+        "degree": "AI Engineering Fundamentals",
+        "school": "Anthropic Claude Academy",
+        "logo": "/claude.png"
+      }
+    ]
   },
   "layout": {
     "archive": "View Full Project Archive",
+    "seeResume": "See Full Résumé",
+    "resumeUrl": "/Resume_Ricardo_Barrios.pdf",
     "projects": "All Projects",
+    "projectsLead": "So, what do you want to see?",
     "table": [
       "Year",
       "Project",
@@ -19,7 +33,7 @@
     ],
     "source": "Source code",
     "demo": "Live demo",
-    "credits": "Loosely sketched on [Paper](https://en.wikipedia.org/wiki/Paper) and coded in [Visual Studio Code](https://code.visualstudio.com/) by yours truly. Built with [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/), deployed with [Netlify](https://www.netlify.com/). All text is set in the [Inter](https://rsms.me/inter/) and [Instrument](https://fonts.adobe.com/fonts/instrument-serif) typefaces."
+    "credits": "Loosely designed in [Figma](https://figma.com) and coded in [Visual Studio Code](https://code.visualstudio.com/) and [Claude Code](https://claude.ai/) by yours truly. Built with [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/), deployed with [Netlify](https://www.netlify.com/). All text is set in the [Inter](https://rsms.me/inter/) typeface."
   },
   "projects": [
     {

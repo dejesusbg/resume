@@ -1,4 +1,5 @@
 import Background from '@/components/ui/Background';
+import ScrollWidthObserver from '@/components/ui/ScrollWidthObserver';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { Geist_Mono } from 'next/font/google';
@@ -48,7 +49,8 @@ export default async function RootLayout({
 			<body className={`${inter.className} antialiased`}>
 				<NextIntlClientProvider>
 					<Background />
-					<main className="w-screen">
+					<ScrollWidthObserver />
+					<main>
 						{children}
 					</main>
 				</NextIntlClientProvider>

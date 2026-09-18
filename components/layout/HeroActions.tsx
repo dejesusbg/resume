@@ -3,7 +3,7 @@ import { emojiLocale, languageLocale, locales } from '@/i18n/locale';
 import { useLocale, useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { useId, useTransition } from 'react';
-import { LuGithub, LuLanguages, LuLinkedin } from 'react-icons/lu';
+import { LuGithub, LuInbox, LuLanguages, LuLinkedin, LuMail, LuMessagesSquare } from 'react-icons/lu';
 
 const HeaderContainer = ({ children }: { children: React.ReactNode }) => {
 	return (
@@ -55,7 +55,7 @@ const HeroActions = () => {
 		<div className="flex gap-2">
 			<HeaderContainer>
 				<a
-					href="mailto:dejesusbg5@gmail.com?subject=Let's build something!"
+					href="#projects"
 					className="header-btn font-medium rounded-full leading-[100%] px-4">
 					{tAbout('cta')}
 				</a>
@@ -76,6 +76,14 @@ const HeroActions = () => {
 					className="header-btn">
 					<LuLinkedin size={20} />
 					<span className="sr-only">Linkedin</span>
+				</a>
+				<a
+					href="mailto:dejesusbg5@gmail.com"
+					target="blank"
+					rel="noopener noreferer"
+					className="header-btn">
+					<LuMail size={20} />
+					<span className="sr-only">Email</span>
 				</a>
 			</HeaderContainer>
 			<LanguageButton />

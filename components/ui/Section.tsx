@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import { layout } from '@/lib/tokens';
 
 interface SectionProps {
 	children: React.ReactNode;
@@ -7,13 +6,15 @@ interface SectionProps {
 	className?: string;
 }
 
-const Section = ({ children, id, className = '' }: SectionProps) => {
+const Section = ({ children, id }: SectionProps) => {
 	return (
 		<section
 			id={id}
-			className={clsx('mx-auto w-full max-w-4/5 not-first:mb-32 last:mb-8', className)}>
+			className=
+			'mx-auto w-full flex flex-col justify-center h-svh max-h-svh max-w-[var(--section-max-w)] transition-[max-width] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]'
+		>
 			{children}
-		</section>
+		</section >
 	);
 };
 

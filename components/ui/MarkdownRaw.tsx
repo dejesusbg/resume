@@ -22,6 +22,7 @@ const MarkdownRaw = ({ children, classNames }: MarkdownProps) => {
 				a: ({ node, ...props }) => (
 					<a className={classNames?.a} target="_blank" rel="noopener noreferrer" {...props} />
 				),
+				em: ({ node, ...props }) => <em className={classNames?.em} {...props} />,
 				img: ({ node, ...props }) => (
 					<Image
 						className={clsx({
