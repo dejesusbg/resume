@@ -1,13 +1,12 @@
 import Background from '@/components/ui/Background';
-import ScrollWidthObserver from '@/components/ui/ScrollWidthObserver';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { Geist_Mono } from 'next/font/google';
+import { Instrument_Serif } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
 
 const inter = localFont({ src: '../fonts/InterVariable.ttf' });
-const geist_mono = Geist_Mono({ weight: '400', subsets: ['latin'] });
+const instrument_serif = Instrument_Serif({ weight: '400', subsets: ['latin'] });
 
 export const metadata: Metadata = {
 	metadataBase: new URL('https://dejesusbg.netlify.app/'),
@@ -49,7 +48,6 @@ export default async function RootLayout({
 			<body className={`${inter.className} antialiased`}>
 				<NextIntlClientProvider>
 					<Background />
-					<ScrollWidthObserver />
 					<main>
 						{children}
 					</main>

@@ -29,11 +29,12 @@
 	--color-secondary-950: #7c2360;
 
 	--font-sans: 'Inter', sans-serif;
-	--font-mono: 'Geist Mono', monospace;
+	--font-serif: 'Instrument Serif', serif;
 	--font-weight-normal: 350;
 	--font-weight-medium: 450;
 	--tracking-normal: 0.008em;
 	--tracking-tight: -0.01em;
+	--tracking-tighter: -0.02em;
 }
 
 @theme inline {
@@ -95,10 +96,6 @@
 	[data-project-card]:nth-child(even):focus-visible {
 		transform: translateY(-4px) rotate(0.35deg);
 	}
-
-	.header-btn {
-		@apply flex items-center justify-center p-2.5 text-cloud hocus:text-berry rounded-full;
-	}
 }
 
 @keyframes reveal-in {
@@ -132,20 +129,15 @@
 
 	html {
 		@apply scroll-smooth;
-		--section-max-w: 75%;
-	}
-
-	#hero {
-		--section-max-w: 80%;
-	}
-
-	html.scrolled #hero {
-		--section-max-w: 75%;
 	}
 
 	body {
-		@apply w-screen gap-4 overflow-x-hidden font-sans font-normal leading-relaxed tracking-tight bg-frost text-cloud selection:bg-blush selection:text-berry;
+		@apply gap-4 overflow-x-hidden font-sans font-normal leading-relaxed tracking-tight w-dvw bg-frost text-cloud selection:bg-blush selection:text-berry;
 		font-feature-settings: 'cv01', 'cv02', 'cv06', 'cv11';
+	}
+
+	main {
+		@apply flex flex-col items-center;
 	}
 
 	a,
@@ -153,20 +145,11 @@
 		@apply transition-all duration-150 ease-in-out;
 	}
 
-	model-viewer :focus-visible,
 	:focus-visible {
 		@apply transition-all duration-150 ease-in-out outline-none ring-4 ring-periw;
 	}
 
-	h1 {
-		@apply text-ebony font-bold text-7xl sm:text-8xl md:text-9xl lg:text-[144px];
-	}
-
-	h2 {
-		@apply text-4xl font-bold text-center text-ebony text-balance sm:text-5xl md:text-6xl lg:text-7xl;
-	}
-
-	select {
+	/* 	select {
 		& {
 			appearance: base-select;
 		}
@@ -194,5 +177,5 @@
 		&::checkmark {
 			@apply mr-1;
 		}
-	}
+	} */
 }
