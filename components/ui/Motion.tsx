@@ -1,13 +1,16 @@
 'use client';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
-import { motion as motionTokens } from '@/lib/tokens';
 
 interface MotionProps extends React.ComponentProps<typeof motion.div> {
 	focus?: boolean;
 }
 
 const Motion = ({ children, className, focus, ...props }: MotionProps) => {
+	const motionTokens = {
+		reveal: { duration: 0.6, ease: [0.34, 1.35, 0.5, 1] as [number, number, number, number] },
+	};
+
 	return (
 		<motion.div
 			initial={{ opacity: focus ? 0.5 : 0, filter: 'blur(4px)', y: 32 }}

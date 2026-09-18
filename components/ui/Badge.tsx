@@ -2,17 +2,18 @@
 import clsx from 'clsx';
 import { useEffect, useRef } from 'react';
 
-// Pixel geometry measured directly from public/tag-card-face.png (the card's
-// baked 2304x2304 back-panel texture): the old "1,227,203 FLIPS" text's ink
-// bounding box was x 1541-1914, y 299-336, padded here to fully erase its
-// anti-aliasing before drawing the live count in its place.
-const TEXT_RIGHT_EDGE = 1936; // right edge of the old "1,227,203 FLIPS" text
-const TEXT_TOP = 96; // 96px in the 1x design, exported at the texture's 3x scale
-const FONT_SIZE = 56; // 14px in the 1x design, exported at the texture's 3x scale
+interface Badge {
+	className?: string;
+	textureSrc: string;
+	tagSrc: string
+}
 
-// Resolves a token's actual rendered value via a throwaway element, since
-// --color-frost and --font-mono are theme tokens (color-mix()/next/font's
-// generated family), not literal values a canvas fillStyle/font can guess.
+// 4x scale
+const TEXT_RIGHT_EDGE = 1936;
+const TEXT_TOP = 96;
+const FONT_SIZE = 56;
+
+// Resolves a token's actual rendered value
 const resolveComputedStyle = (className: string, read: (style: CSSStyleDeclaration) => string) => {
 	const probe = document.createElement('span');
 	probe.className = className;
@@ -24,14 +25,12 @@ const resolveComputedStyle = (className: string, read: (style: CSSStyleDeclarati
 	return value;
 };
 
-const patchViewCount = async (modelViewer: any) => {
+// Patches the model-viewer instance to render the view count on the badge's texture
+const patchViewCount = async (modelViewer: any, textureSrc: string) => {
 	const res = await fetch('/api/views', { cache: 'no-store' });
 	const { count } = (await res.json()) as { count: number };
 
 	const fontFamily = resolveComputedStyle('font-mono', (s) => s.fontFamily);
-	// --color-frost is a color-mix() token; Chromium serializes its computed
-	// value as an oklab() string, not rgb(), so it's passed straight through
-	// to canvas (which accepts any valid CSS <color>) rather than hand-parsed.
 	const frostColor = resolveComputedStyle('text-frost', (s) => s.color);
 
 	const image = new Image();
@@ -39,7 +38,7 @@ const patchViewCount = async (modelViewer: any) => {
 	await new Promise((resolve, reject) => {
 		image.onload = resolve;
 		image.onerror = reject;
-		image.src = '/badge/texture.png';
+		image.src = textureSrc;
 	});
 
 	const canvas = document.createElement('canvas');
@@ -62,11 +61,7 @@ const patchViewCount = async (modelViewer: any) => {
 	material.pbrMetallicRoughness.baseColorTexture.setTexture(texture);
 };
 
-/* Simplified from badge3d/src/App.js — drag-to-orbit only, no flip button,
-   matching the static mockup's badge slot. @google/model-viewer registers a
-   custom element at module scope, so it's imported on mount rather than at
-   the top of the file to keep this out of the server render. */
-const Badge3D = ({ className }: { className?: string }) => {
+const Badge = ({ className, textureSrc, tagSrc }: Badge) => {
 	const ref = useRef<any>(null);
 	const patched = useRef(false);
 
@@ -81,9 +76,7 @@ const Badge3D = ({ className }: { className?: string }) => {
 		const handleLoad = () => {
 			if (patched.current) return;
 			patched.current = true;
-			// Leave the original baked "1,227,203 FLIPS" texture showing on any failure
-			// (no Netlify Blobs context in plain `next dev`, network hiccup, etc).
-			patchViewCount(modelViewer).catch(() => { });
+			patchViewCount(modelViewer, textureSrc).catch(() => { });
 		};
 
 		modelViewer.addEventListener('load', handleLoad);
@@ -94,7 +87,7 @@ const Badge3D = ({ className }: { className?: string }) => {
 		<div className={clsx('relative', className)}>
 			<model-viewer
 				ref={ref}
-				src="/badge/tag.glb"
+				src={tagSrc}
 				alt="ID card"
 				camera-controls
 				touch-action="pan-y"
@@ -115,4 +108,4 @@ const Badge3D = ({ className }: { className?: string }) => {
 	);
 };
 
-export default Badge3D;
+export default Badge;

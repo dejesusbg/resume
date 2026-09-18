@@ -11,7 +11,7 @@ const Section = ({ children, id, className }: SectionProps) => {
 		<section
 			id={id}
 			className={clsx(
-				'relative mx-auto w-full flex flex-col justify-start min-h-svh h-fit lg:h-svh max-w-[var(--section-max-w)] transition-[max-width] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]',
+				'w-full flex flex-col h-fit max-w-[1080px] m-0-auto',
 				className,
 			)}>
 			{children}
