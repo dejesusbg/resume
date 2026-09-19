@@ -51,6 +51,7 @@ const Featured = () => {
 
 	const body = t('body');
 	const cta = t('cta');
+	const contact = t('contact');
 
 	return (
 		<Section id="featured" className="pt-[64px] pb-[72px] px-[6vw]">
@@ -63,7 +64,10 @@ const Featured = () => {
 						<ProjectCard key={index} {...project} />
 					))}
 				</ul>
-				<Link href="/archive">{cta}</Link>
+				<div className="flex flex-row items-center justify-center gap-6">
+					<Link href="#contact" type='down'>{contact}</Link>
+					<Link href="/archive">{cta}</Link>
+				</div>
 			</Motion>
 		</Section>
 	);
