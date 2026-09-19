@@ -9,21 +9,18 @@ interface LinkProps {
 	className?: string;
 	type?: ArrowType;
 	external?: boolean;
-	styleOnly?: boolean;
 }
 
 const Arrow = ({ type }: { type: ArrowType }) => {
+	if (type === 'none') return null;
+	if (type === 'repo') return <LuGithub className="inline-block ml-1.5" size={14} />
+
 	const rotation = {
 		next: 'rotate-[45deg]',
 		back: '-rotate-[135deg]',
 		out: 'rotate-[0deg]',
-		down: 'rotate-[135deg]',
-		repo: '!hidden',
-		none: '!hidden',
+		down: 'rotate-[135deg]'
 	}[type];
-
-	if (type === 'none') return null;
-	if (type === 'repo') return <LuGithub className="inline-block ml-1.5" size={14} />
 
 	return (
 		<svg
@@ -40,15 +37,7 @@ const Arrow = ({ type }: { type: ArrowType }) => {
 	);
 };
 
-const Link = ({ href, children, className, type = 'next', external, styleOnly }: LinkProps) => {
-	if (styleOnly) {
-		return (
-			<span className={clsx('font-semibold text-center cursor-pointer text-periw hocus:text-berry', className)}>
-				{children}
-			</span>
-		);
-	}
-
+const Link = ({ href, children, className, type = 'next', external }: LinkProps) => {
 	return (
 		<a
 			href={href}
