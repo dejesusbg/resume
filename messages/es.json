@@ -1,11 +1,11 @@
 {
     "hero": {
-        "texture": "/texture.png",
-        "model": "/tag.glb",
-        "cta": "Mira lo que he construido"
+        "texture": "/textura.png",
+        "model": "/etiqueta.glb",
+        "cta": "Mira lo que he hecho"
     },
     "about": {
-        "body": "Aprendí a [programar](https://en.wikipedia.org/wiki/Web_development) solo para construir sitios web, y ahora [comprender](https://en.wikipedia.org/wiki/User_experience) cómo se comportan [las personas y las máquinas](https://wikipedia.org/wiki/Mechanistic_interpretability) es la parte de la [ingeniería](https://en.wikipedia.org/wiki/Engineering) que mejor se me da.",
+        "body": "Aprendí a [programar](https://es.wikipedia.org/wiki/Desarrollo_web) solo para construir sitios web, y ahora [comprender](https://es.wikipedia.org/wiki/Experiencia_de_usuario) el comportamiento de [personas y máquinas](https://transformer-circuits.pub/2026/workspace/) es la parte de la [ingeniería](https://es.wikipedia.org/wiki/Ingeniería_de_software) que mejor se me da.",
         "credentials": [
             {
                 "title": "Ingeniería de Sistemas",
@@ -13,27 +13,28 @@
                 "logo": "/unimagdalena.png"
             },
             {
-                "title": "Fundamentos de Ingeniería de IA",
-                "institution": "Anthropic Claude Academy",
+                "title": "Ingeniería de IA con Anthropic",
+                "institution": "Claude Academy",
                 "logo": "/claude.png"
             }
         ],
-        "resume": "/Resume_Ricardo_Barrios.pdf",
+        "resume": "/Curriculum_Ricardo_Barrios.pdf",
         "cta": "Ver currículum completo"
     },
     "featured": {
-        "body": "Entonces, ¿qué quieres ver?",
-        "cta": "Ver el archivo completo de proyectos"
+        "body": "Entonces, ¿qué deseas ver?",
+        "cta": "Ver archivo completo",
+        "contact": "Contactarme"
     },
     "footer": {
-        "back": "Volver a inicio",
-        "title": "Si has leído esto hasta aquí, di algo ;)",
-        "body": "Estoy abierto a oportunidades en [producto](https://en.wikipedia.org/wiki/Product_management) e [ingeniería](https://en.wikipedia.org/wiki/Software_engineering), y a que me convenzan de lo contrario. Siempre disponible para [misiones secundarias](https://en.wikipedia.org/wiki/Start_up).",
+        "back": "Volver al inicio",
+        "title": "Si has llegado hasta por acá, di algo ;)",
+        "body": "Estoy abierto a roles de [producto](https://es.wikipedia.org/wiki/Gestión_de_productos) e [inteligencia artificial](https://es.wikipedia.org/wiki/Inteligencia_artificial), pero puedes convencerme de cualquier [side quest](https://es.wikipedia.org/wiki/Empresa_emergente).",
         "language": "Cambiar a inglés",
         "code": "en"
     },
     "archive": {
-        "table": [
+        "columns": [
             "Año",
             "Proyecto",
             "Tecnologías",
@@ -45,25 +46,25 @@
     "projects": [
         {
             "title": "Rediseño de Programación Académica",
-            "description": "Transformando un sistema universitario de nivel empresarial en una experiencia moderna, accesible y usable que apoya la toma de decisiones.",
+            "description": "Rediseñé un sistema universitario de programación académica para más de 14 mil estudiantes y logré un puntaje de usabilidad que casi ningún software alcanza.",
             "stat": "Tesis de honor meritoria",
             "link": "https://hdl.handle.net/20.500.14923/25334",
             "imageSrc": "/pages.webp",
             "tags": [
                 "Figma",
                 "Investigación",
-                "UX",
+                "Usabilidad",
                 "Accesibilidad",
-                "React",
-                "TypeScript",
-                "Tailwind"
+                "Evaluación Heurística",
+                "WCAG",
+                "UX"
             ],
             "featured": true,
             "date": "03/26"
         },
         {
             "title": "Asistente de IA Ecológico",
-            "description": "Robot falso hecho con cartón reciclado, botellas de plástico y la pantalla de un teléfono antiguo, que ofrece datos verbales sobre sostenibilidad.",
+            "description": "Un robot hecho de cartón, botellas de plástico y la pantalla de un celular viejo, que enseña sobre reciclaje y lo pone en práctica.",
             "stat": "Admirado por estudiantes",
             "link": "https://github.com/dejesusbg/ecobot",
             "tags": [
@@ -77,7 +78,7 @@
         },
         {
             "title": "Shorts Brainrot",
-            "description": "Generador de videos a partir de un JSON simple, que mejora guiones de voz en off y crea fondos y música.",
+            "description": "Le das un archivo JSON y te devuelve un corto terminado: guion, narración, escenas y música, listo.",
             "stat": "Generación en menos de 3 minutos",
             "link": "https://github.com/dejesusbg/shorts",
             "tags": [
@@ -90,7 +91,7 @@
         },
         {
             "title": "Aplicación de Navegación para Personas con Discapacidad Visual",
-            "description": "Aplicación móvil accesible con retroalimentación de voz en tiempo real, diseñada para ayudar a personas con discapacidad visual a navegar por entornos urbanos.",
+            "description": "Navegación guiada por voz para personas con discapacidad visual, construida para funcionar en un campus universitario real.",
             "link": "https://github.com/dejesusbg/truenavi",
             "imageSrc": "/maps.webp",
             "tags": [
@@ -110,7 +111,7 @@
         },
         {
             "title": "Tienda de Microservicios",
-            "description": "Sistema construido con arquitectura de microservicios, con gestión y procesamiento de pedidos, inventario y pagos, además de caché y seguridad en la API Gateway.",
+            "description": "Un backend de e-commerce con servicios de producto, pedidos, inventario y pagos, con caché y seguridad en el API gateway.",
             "link": "https://github.com/dejesusbg/ecommerce",
             "tags": [
                 "Spring Boot",
@@ -128,7 +129,7 @@
         },
         {
             "title": "Sitio Web Corporativo de Ingeniería",
-            "description": "Sitio web rápido, moderno y administrable para INGNOVA SAS, que mejora su presencia en línea.",
+            "description": "El primer sitio web de INGNOVA SAS, tan moderno y sencillo que hasta ellos mismos lo actualizan.",
             "stat": "Primer resultado en Google",
             "link": "https://rdingnova.com.co/",
             "tags": [
@@ -143,7 +144,7 @@
         },
         {
             "title": "Clasificador de Mangos con IA",
-            "description": "Modelos de aprendizaje automático para clasificar automáticamente la madurez de los mangos y ayudar a optimizar los procesos agrícolas.",
+            "description": "Modelos de visión por computadora que distinguen un mango maduro de uno verde, optimizando así los procesos agrícolas.",
             "stat": "Más del 95% de precisión",
             "link": "https://github.com/dejesusbg/mangifera",
             "imageSrc": "/photos.webp",
@@ -158,7 +159,7 @@
         },
         {
             "title": "Wordflow Bot",
-            "description": "Un divertido script de automatización que envía palabras válidas para un juego en línea.",
+            "description": "Un script que juega un juego de palabras en línea por ti, ya que perder no es una opción.",
             "link": "https://github.com/dejesusbg/wordflow-bot",
             "tags": [
                 "JavaScript"
@@ -167,7 +168,7 @@
         },
         {
             "title": "TSP Bioinspirado",
-            "description": "Resolución del Problema del Viajante utilizando algoritmos bioinspirados.",
+            "description": "El Problema del Viajante con algoritmos basados en colonias de hormigas.",
             "link": "https://github.com/dejesusbg/bioinsipired-tsp",
             "tags": [
                 "Python",
@@ -177,7 +178,7 @@
         },
         {
             "title": "Seguimiento de Hábitos Aura",
-            "description": "PWA para el seguimiento de hábitos, con soporte sin conexión y funciones de gamificación que mejoran la motivación y el progreso de los usuarios.",
+            "description": "Un rastreador de hábitos que funciona sin conexión y convierte tus rachas en puntos, para no saltarse ni un día.",
             "link": "https://auraby.netlify.app",
             "tags": [
                 "React",
@@ -188,7 +189,7 @@
         },
         {
             "title": "Software de Seguimiento Educativo",
-            "description": "Plataforma de aprendizaje que permite a docentes y padres supervisar el progreso escolar y las calificaciones.",
+            "description": "Una plataforma en la que docentes y padres pueden conocer las notas y el progreso de un estudiante.",
             "tags": [
                 "Spring Boot",
                 "Java",
@@ -201,7 +202,7 @@
         },
         {
             "title": "Picas y Fijas",
-            "description": "Juego web con un estilo basado en Material Design 3.",
+            "description": "El clásico juego de adivinar números, ahora con Material Design 3.",
             "link": "https://github.com/dejesusbg/bulls-and-cows",
             "tags": [
                 "JavaScript",
@@ -213,7 +214,7 @@
         },
         {
             "title": "Biblioteca de Paletas de Monet",
-            "description": "Biblioteca de paletas de colores personalizables de Material You con compatibilidad completa con Tailwind V3, para ayudar a los desarrolladores a crear interfaces atractivas.",
+            "description": "Una librería de paletas de color para Material You en Tailwind V3.",
             "link": "https://github.com/dejesusbg/monet",
             "tags": [
                 "TypeScript",
@@ -225,7 +226,7 @@
         },
         {
             "title": "Sistema de Votación Electrónica",
-            "description": "Sistema de elecciones escolares con autenticación segura y recuento de resultados en tiempo real.",
+            "description": "Sistema para elecciones escolares con autenticación segura y resultados en vivo.",
             "link": "https://github.com/dejesusbg/acme-voting",
             "tags": [
                 "PHP",
@@ -237,7 +238,7 @@
         },
         {
             "title": "Parser de Descenso Recursivo",
-            "description": "Parser de expresiones aritméticas que utiliza notación posfija e infija.",
+            "description": "Parser para expresiones aritméticas usando notación posfija e infija.",
             "link": "https://github.com/dejesusbg/rdparser",
             "tags": [
                 "Java"
@@ -246,7 +247,7 @@
         },
         {
             "title": "Plataforma de Educación Jurídica",
-            "description": "Plataforma que permite a estudiantes de derecho ofrecer recursos legales y materiales de estudio.",
+            "description": "Una plataforma donde estudiantes de derecho comparten materiales de estudio y recursos legales.",
             "tags": [
                 "Flask",
                 "Python",
@@ -258,7 +259,7 @@
         },
         {
             "title": "Autómata Finito Determinista",
-            "description": "Autómata finito determinista simple para expresiones numéricas y números romanos.",
+            "description": "Un AFD simple para expresiones numéricas y números romanos.",
             "link": "https://github.com/dejesusbg/dfautomaton",
             "tags": [
                 "Java"
@@ -277,7 +278,7 @@
         },
         {
             "title": "Aplicación de Notas Sencilla",
-            "description": "Aplicación rápida para tomar notas, con Material Design 3, modo oscuro y soporte PWA sin conexión.",
+            "description": "App de notas sin conexión, con Material Design y modo oscuro.",
             "link": "https://notes-mui.netlify.app/",
             "tags": [
                 "JavaScript",
@@ -289,7 +290,7 @@
         },
         {
             "title": "Componentes MD3",
-            "description": "Framework ligero de Material Design 3 con temas dinámicos y componentes responsivos.",
+            "description": "Un framework ligero de Material Design 3 con temas dinámicos, antes de que Google publicara el suyo.",
             "link": "https://github.com/dejesusbg/md3",
             "tags": [
                 "JavaScript",
