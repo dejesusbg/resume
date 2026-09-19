@@ -1,4 +1,24 @@
 {
+  "meta": {
+    "title": "Ricardo Barrios",
+    "description": "Ricardo Barrios is a systems engineer from Colombia focused on UX research and applied machine learning. Explore his projects, résumé and contact details.",
+    "short": "Systems engineer focused on UX research and applied ML, building helpful digital experiences.",
+    "jobTitle": "Systems Engineer",
+    "alt": "Ricardo Barrios, systems engineer focused on UX research and applied machine learning",
+    "archiveTitle": "Projects",
+    "archiveDescription": "A complete archive of Ricardo Barrios' projects: AI tools, web apps, accessibility, algorithms and academic software, with source code and live demos.",
+    "keywords": [
+      "Ricardo Barrios",
+      "dejesusbg",
+      "systems engineer",
+      "UX research",
+      "applied machine learning",
+      "software developer",
+      "full stack",
+      "portfolio",
+      "Colombia"
+    ]
+  },
   "hero": {
     "alt": "Interactive 3D ID badge for Ricardo Barrios García, UX Research + Applied ML (@dejesusbg). Front side shows photo and primary role details. Back side reads: Loosely sketched in Figma and coded in Visual Studio Code by yours truly. Built with Next.js and Tailwind CSS, deployed with Netlify. All text is set in the Inter and Instrument Serif typefaces.",
     "texture": "/texture.png",

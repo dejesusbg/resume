@@ -18,11 +18,26 @@ export interface ProjectProps {
 	date: string;
 }
 
+export interface MetaProps {
+	title: string;
+	description: string;
+	short: string;
+	jobTitle: string;
+	alt: string;
+	archiveTitle: string;
+	archiveDescription: string;
+	keywords: string[];
+}
+
 export interface MessagesProps {
+	meta: MetaProps;
 	hero: {
+		alt: string;
 		texture: string;
 		model: string;
 		cta: string;
+		language: string;
+		code: string;
 	};
 	about: {
 		body: string;
@@ -33,13 +48,13 @@ export interface MessagesProps {
 	featured: {
 		body: string;
 		cta: string;
+		contact: string;
 	};
 	footer: {
 		back: string;
 		title: string;
 		body: string;
-		language: string;
-		code: string;
+		scroll: string;
 	};
 	archive: {
 		columns: string[];

@@ -1,4 +1,24 @@
 {
+    "meta": {
+        "title": "Ricardo Barrios",
+        "description": "Ricardo Barrios es ingeniero de sistemas de Colombia enfocado en UX research y machine learning aplicado. Explora sus proyectos, currículum y datos de contacto.",
+        "short": "Ingeniero de sistemas enfocado en UX research y ML aplicado, creando experiencias digitales útiles.",
+        "jobTitle": "Ingeniero de Sistemas",
+        "alt": "Ricardo Barrios, ingeniero de sistemas enfocado en UX research y machine learning aplicado",
+        "archiveTitle": "Proyectos",
+        "archiveDescription": "Archivo completo de proyectos de Ricardo Barrios: herramientas de IA, aplicaciones web, accesibilidad, algoritmos y software académico, con código fuente y demos.",
+        "keywords": [
+            "Ricardo Barrios",
+            "dejesusbg",
+            "ingeniero de sistemas",
+            "UX research",
+            "machine learning aplicado",
+            "desarrollador de software",
+            "full stack",
+            "portafolio",
+            "Colombia"
+        ]
+    },
     "hero": {
         "alt": "Carnet de identificación 3D interactivo de Ricardo Barrios García, UX Research + Applied ML (@dejesusbg). El frente muestra su foto de perfil y detalles de rol. El reverso dice: Inició como un prototipo en Figma y lo programé usando Visual Studio Code. Está construido con Next.js, Tailwind CSS y desplegado en Netlify. Todo usa las tipografías Inter e Instrument Serif.",
         "texture": "/textura.png",
