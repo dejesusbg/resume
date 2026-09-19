@@ -1,6 +1,6 @@
 'use client';
 import clsx from 'clsx';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface Badge {
 	className?: string;
@@ -64,6 +64,7 @@ const patchViewCount = async (modelViewer: any, textureSrc: string) => {
 const Badge = ({ className, textureSrc, tagSrc }: Badge) => {
 	const ref = useRef<any>(null);
 	const patched = useRef(false);
+	const [loaded, setLoaded] = useState(false);
 
 	useEffect(() => {
 		import('@google/model-viewer');
@@ -74,6 +75,7 @@ const Badge = ({ className, textureSrc, tagSrc }: Badge) => {
 		if (!modelViewer) return;
 
 		const handleLoad = () => {
+			setLoaded(true);
 			if (patched.current) return;
 			patched.current = true;
 			patchViewCount(modelViewer, textureSrc).catch(() => { });
@@ -85,6 +87,13 @@ const Badge = ({ className, textureSrc, tagSrc }: Badge) => {
 
 	return (
 		<div className={clsx('relative', className)}>
+			<div
+				aria-hidden
+				className={clsx(
+					'absolute inset-0 rounded-2xl bg-misty transition-opacity duration-500 ease-out',
+					loaded ? 'opacity-0' : 'opacity-100 animate-pulse'
+				)}
+			/>
 			<model-viewer
 				ref={ref}
 				src={tagSrc}
@@ -99,11 +108,20 @@ const Badge = ({ className, textureSrc, tagSrc }: Badge) => {
 				camera-orbit="12.5deg 80deg 100%"
 				min-camera-orbit="auto 60deg auto"
 				max-camera-orbit="auto 120deg auto"
-				style={{ width: '100%', height: '100%' }}
+				style={{
+					width: '100%',
+					height: '100%',
+					opacity: loaded ? 1 : 0,
+					filter: loaded ? 'blur(0px)' : 'blur(8px)',
+					transform: loaded ? 'translateY(0)' : 'translateY(16px)',
+					transition: 'opacity 0.6s cubic-bezier(0.34,1.35,0.5,1), filter 0.6s cubic-bezier(0.34,1.35,0.5,1), transform 0.6s cubic-bezier(0.34,1.35,0.5,1)',
+					'--poster-color': 'transparent',
+				}}
 				disable-zoom
 				disable-tap
-				auto-rotate
-			/>
+				auto-rotate>
+				<div slot="progress-bar" style={{ display: 'none' }} />
+			</model-viewer>
 		</div>
 	);
 };
