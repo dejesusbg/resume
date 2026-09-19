@@ -39,13 +39,13 @@ export async function generateMetadata(): Promise<Metadata> {
 			siteName: 'Ricardo Barrios',
 			locale: ogLocale,
 			alternateLocale: locale === 'es' ? 'en_US' : 'es_CO',
-			images: [{ url: '/thumbnail.png', width: 1169, height: 589, alt: t('alt') }],
+			images: [{ url: t('thumbnail'), width: 1200, height: 630, alt: t('alt') }],
 		},
 		twitter: {
 			card: 'summary_large_image',
 			title,
 			description: t('short'),
-			images: [{ url: '/thumbnail.png', alt: t('alt') }],
+			images: [{ url: t('thumbnail'), alt: t('alt') }],
 		},
 	};
 }
@@ -63,7 +63,7 @@ export default async function RootLayout({
 		name: 'Ricardo Barrios García',
 		alternateName: 'dejesusbg',
 		url: siteUrl,
-		image: `${siteUrl}/thumbnail.png`,
+		image: new URL(t('thumbnail'), siteUrl).href,
 		jobTitle: t('jobTitle'),
 		description: t('short'),
 		email: 'mailto:dejesusbg5@gmail.com',

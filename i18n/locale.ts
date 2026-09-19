@@ -27,6 +27,7 @@ export interface MetaProps {
 	archiveTitle: string;
 	archiveDescription: string;
 	keywords: string[];
+	thumbnail: string;
 }
 
 export interface MessagesProps {
