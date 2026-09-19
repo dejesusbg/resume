@@ -5,7 +5,7 @@
     "cta": "See what I've built"
   },
   "about": {
-    "body": "I learned to [code](https://en.wikipedia.org/wiki/Web_development) just to build websites, and now [understanding](https://en.wikipedia.org/wiki/User_experience) how [people and machines behave](https://wikipedia.org/wiki/Mechanistic_interpretability) is the part of [engineering](https://en.wikipedia.org/wiki/Engineering) I'm best at.",
+    "body": "I learned to [code](https://en.wikipedia.org/wiki/Web_development) just to build websites, and now [understanding](https://en.wikipedia.org/wiki/User_experience) how [people and machines](https://transformer-circuits.pub/2026/workspace/) behave is the part of [engineering](https://en.wikipedia.org/wiki/Software_engineering) I'm best at.",
     "credentials": [
       {
         "title": "Systems Engineering",
@@ -13,22 +13,23 @@
         "logo": "/unimagdalena.png"
       },
       {
-        "title": "AI Engineering Fundamentals",
-        "institution": "Anthropic Claude Academy",
+        "title": "AI Engineering with Anthropic",
+        "institution": "Claude Academy",
         "logo": "/claude.png"
       }
     ],
     "resume": "/Resume_Ricardo_Barrios.pdf",
-    "cta": "View Full Résumé"
+    "cta": "View full résumé"
   },
   "featured": {
     "body": "So, what do you want to see?",
-    "cta": "View Full Project Archive"
+    "cta": "View full archive",
+    "contact": "Contact me"
   },
   "footer": {
-    "back": "Back to home",
+    "back": "Back to Home",
     "title": "If you've read this far, say something ;)",
-    "body": "Open to [product](https://en.wikipedia.org/wiki/Product_management) and [engineering](https://en.wikipedia.org/wiki/Software_engineering) roles, and being convinced otherwise. Always up for [side quests](https://en.wikipedia.org/wiki/Start_up).",
+    "body": "Open to [product](https://en.wikipedia.org/wiki/Product_management) and [machine learning](https://en.wikipedia.org/wiki/Machine_learning) roles, and being convinced otherwise. Always up for [side quests](https://en.wikipedia.org/wiki/Start_up).",
     "language": "Switch to Spanish",
     "code": "es"
   },
@@ -45,25 +46,25 @@
   "projects": [
     {
       "title": "Academic Scheduling Redesign",
-      "description": "Transforming an enterprise-level university system into a modern, accessible, usable experience that supports decision making.",
+      "description": "Redesigned a university scheduling system for more than 14k students and hit a usability score most software never reaches.",
       "stat": "Meritorious Honor Thesis",
       "link": "https://hdl.handle.net/20.500.14923/25334",
       "imageSrc": "/pages.webp",
       "tags": [
         "Figma",
         "Research",
-        "UX",
+        "Usability",
         "Accessibility",
-        "React",
-        "TypeScript",
-        "Tailwind"
+        "Heuristic Evaluation",
+        "WCAG",
+        "UX"
       ],
       "featured": true,
       "date": "03/26"
     },
     {
       "title": "Ecological AI Assistant",
-      "description": "Fake robot made with recycled cardboard, plastic bottles, and an old phone screen, providing verbal sustainability facts.",
+      "description": "A robot built from cardboard, plastic bottles, and an old phone screen, lecturing students about recycling and meaning it.",
       "stat": "Admired by students",
       "link": "https://github.com/dejesusbg/ecobot",
       "tags": [
@@ -77,8 +78,8 @@
     },
     {
       "title": "Shorts Brainrot",
-      "description": "Video generator from a simple JSON, upgrading voiceover scripts, creating backgrounds & music.",
-      "stat": "<3 min generation",
+      "description": "Feed it a JSON file, get a finished short back: script, voiceover, backgrounds and music, done.",
+      "stat": "Under 3 min generation",
       "link": "https://github.com/dejesusbg/shorts",
       "tags": [
         "Python",
@@ -90,7 +91,7 @@
     },
     {
       "title": "Blind-First Navigation App",
-      "description": "Accessible mobile app with real-time voice feedback, designed to assist visually impaired users in navigating urban environments.",
+      "description": "Voice-guided navigation for visually impaired users, built with a 4-person team to work on a real university campus.",
       "link": "https://github.com/dejesusbg/truenavi",
       "imageSrc": "/maps.webp",
       "tags": [
@@ -110,7 +111,7 @@
     },
     {
       "title": "Microservices Store",
-      "description": "System built with microservices architecture, featuring order, inventory, payment management and processing, with API gateway caching and security.",
+      "description": "An e-commerce backend split into product, order, inventory, and payment services, with API gateway caching and security.",
       "link": "https://github.com/dejesusbg/ecommerce",
       "tags": [
         "Spring Boot",
@@ -128,7 +129,7 @@
     },
     {
       "title": "Engineering Corporate Website",
-      "description": "Fast, modern, and content-managed website for INGNOVA SAS, improving its online presence.",
+      "description": "INGNOVA's first website, built to rank first on Google and easy enough to update it themselves.",
       "stat": "Top Google result",
       "link": "https://rdingnova.com.co/",
       "tags": [
@@ -143,7 +144,7 @@
     },
     {
       "title": "AI-Powered Mango Classifier",
-      "description": "Machine learning models for automated mango ripeness classification, helping optimize agricultural processes.",
+      "description": "Computer vision models that tell a ripe mango from an unripe one, optimising agricultural processes.",
       "stat": "95%+ accuracy",
       "link": "https://github.com/dejesusbg/mangifera",
       "imageSrc": "/photos.webp",
@@ -158,7 +159,7 @@
     },
     {
       "title": "Wordflow Bot",
-      "description": "A silly automation script that submits valid words for an online game.",
+      "description": "A script that plays an online word game for you, because losing is not an option.",
       "link": "https://github.com/dejesusbg/wordflow-bot",
       "tags": [
         "JavaScript"
@@ -167,7 +168,7 @@
     },
     {
       "title": "Bioinspired TSP",
-      "description": "Solving the Traveling Salesman Problem using bioinspired algorithms.",
+      "description": "The Traveling Salesman Problem, solved with algorithms borrowed from ant colonies.",
       "link": "https://github.com/dejesusbg/bioinsipired-tsp",
       "tags": [
         "Python",
@@ -177,7 +178,7 @@
     },
     {
       "title": "Aura Habit Tracking",
-      "description": "PWA for habit tracking, offering offline support and gamification features to enhance user motivation and progress.",
+      "description": "A habit tracker that works offline and turns your streaks into points, so you don't miss a day.",
       "link": "https://auraby.netlify.app",
       "tags": [
         "React",
@@ -188,7 +189,7 @@
     },
     {
       "title": "Educational Tracking Software",
-      "description": "Learning platform that enables teachers and parents to monitor school progress and grades.",
+      "description": "A platform where teachers and parents can see a student's grades and progress in one place.",
       "tags": [
         "Spring Boot",
         "Java",
@@ -201,7 +202,7 @@
     },
     {
       "title": "Bulls & Cows",
-      "description": "A web-based game with a Material Design 3 style.",
+      "description": "The classic number-guessing game, rebuilt with a Material Design 3 look.",
       "link": "https://github.com/dejesusbg/bulls-and-cows",
       "tags": [
         "JavaScript",
@@ -213,7 +214,7 @@
     },
     {
       "title": "Monet Palette Library",
-      "description": "Library for customizable Material You colour palettes with full Tailwind V3 support, helping developers create beautiful UIs.",
+      "description": "A colour palette library for Material You with Tailwind V3 support.",
       "link": "https://github.com/dejesusbg/monet",
       "tags": [
         "TypeScript",
@@ -225,7 +226,7 @@
     },
     {
       "title": "Electronic Voting System",
-      "description": "School election system with secure authentication and real-time results tallying.",
+      "description": "School election system with secure authentication and live results, so nobody can cheat.",
       "link": "https://github.com/dejesusbg/acme-voting",
       "tags": [
         "PHP",
@@ -246,7 +247,7 @@
     },
     {
       "title": "Legal Education Platform",
-      "description": "Platform to allow law students offer legal resources and study materials.",
+      "description": "A platform where law students share study materials and legal resources.",
       "tags": [
         "Flask",
         "Python",
@@ -267,7 +268,7 @@
     },
     {
       "title": "Data Structures",
-      "description": "Data structures & algorithms with practical implementations.",
+      "description": "Core data structures & algorithms with practical implementations.",
       "link": "https://github.com/dejesusbg/data-structures",
       "tags": [
         "Java",
@@ -277,7 +278,7 @@
     },
     {
       "title": "Simple Notes App",
-      "description": "Fast note-taking app with Material Design 3, dark mode, and offline PWA support.",
+      "description": "Offline note-taking app with Material Design 3 and dark mode.",
       "link": "https://notes-mui.netlify.app/",
       "tags": [
         "JavaScript",
@@ -289,7 +290,7 @@
     },
     {
       "title": "MD3 Components",
-      "description": "Lightweight Material Design 3 framework with dynamic theme and responsive components.",
+      "description": "A lightweight Material Design 3 framework with dynamic theming, before Google published theirs.",
       "link": "https://github.com/dejesusbg/md3",
       "tags": [
         "JavaScript",
