@@ -1,5 +1,6 @@
 {
   "hero": {
+    "alt": "Interactive 3D ID badge for Ricardo Barrios García, UX Research + Applied ML (@dejesusbg). Front side shows photo and primary role details. Back side reads: Loosely sketched in Figma and coded in Visual Studio Code by yours truly. Built with Next.js and Tailwind CSS, deployed with Netlify. All text is set in the Inter and Instrument Serif typefaces.",
     "texture": "/texture.png",
     "model": "/tag.glb",
     "cta": "See what I've built",

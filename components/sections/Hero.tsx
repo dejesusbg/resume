@@ -28,7 +28,7 @@ const LanguageToggle = ({ newLocale, text }: { newLocale: string; text: string }
 const Hero = () => {
 	const t = useTranslations('hero');
 
-	const badgeProps = { textureSrc: t('texture'), tagSrc: t('model') };
+	const badgeProps = { textureSrc: t('texture'), tagSrc: t('model'), alt: t('alt') };
 	const cta = t('cta');
 	const toggleProps = { newLocale: t('code'), text: t('language') };
 
@@ -36,7 +36,7 @@ const Hero = () => {
 		<Section id="hero" className='min-h-dvh'>
 			<Motion className="flex flex-col items-center justify-between my-auto">
 				<Badge className="w-full max-h-[80vh] aspect-[2/3] shrink-0" {...badgeProps} />
-				<div className="flex justify-center flex-wrap mt-8 gap-6 px-3">
+				<div className="flex flex-wrap justify-center gap-6 px-3 mt-8">
 					<Link href="#featured" type="down">{cta}</Link>
 					<LanguageToggle {...toggleProps} />
 				</div>

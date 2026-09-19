@@ -5,7 +5,8 @@ import { useEffect, useRef, useState } from 'react';
 interface Badge {
 	className?: string;
 	textureSrc: string;
-	tagSrc: string
+	tagSrc: string;
+	alt: string;
 }
 
 // 4x scale
@@ -61,7 +62,7 @@ const patchViewCount = async (modelViewer: any, textureSrc: string) => {
 	material.pbrMetallicRoughness.baseColorTexture.setTexture(texture);
 };
 
-const Badge = ({ className, textureSrc, tagSrc }: Badge) => {
+const Badge = ({ className, textureSrc, tagSrc, alt }: Badge) => {
 	const ref = useRef<any>(null);
 	const patched = useRef(false);
 	const [loaded, setLoaded] = useState(false);
@@ -97,7 +98,7 @@ const Badge = ({ className, textureSrc, tagSrc }: Badge) => {
 			<model-viewer
 				ref={ref}
 				src={tagSrc}
-				alt="ID card"
+				alt={alt}
 				camera-controls
 				touch-action="pan-y"
 				exposure="1"
