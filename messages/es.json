@@ -32,8 +32,7 @@
         "back": "Volver al inicio",
         "title": "Si has llegado hasta por acá, di algo ;)",
         "body": "Estoy abierto a roles de [producto](https://es.wikipedia.org/wiki/Gestión_de_productos) e [inteligencia artificial](https://es.wikipedia.org/wiki/Inteligencia_artificial), pero puedes convencerme de cualquier [side quest](https://es.wikipedia.org/wiki/Empresa_emergente).",
-        "language": "Cambiar a inglés",
-        "code": "en"
+        "scroll": "Ir hacia arriba"
     },
     "archive": {
         "columns": [

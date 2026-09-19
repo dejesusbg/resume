@@ -4,28 +4,7 @@ import Section from '@/components/ui/Section';
 import { useTranslations } from 'next-intl';
 import MarkdownRaw from '@/components/ui/MarkdownRaw';
 import Link from '@/components/ui/Link';
-import { usePathname, useRouter } from 'next/navigation';
-import { useTransition } from 'react';
-
-const LanguageToggle = ({ newLocale, text }: { newLocale: string; text: string }) => {
-	const router = useRouter();
-	const [_, startTransition] = useTransition();
-
-	const handleLocaleChange = () => {
-		startTransition(() => {
-			document.cookie = `locale=${newLocale}; path=/; max-age=${60 * 60 * 24 * 365}`;
-			router.refresh();
-		});
-	};
-
-	return (
-		<div className="flex items-center justify-center pb-0.5" onClick={() => handleLocaleChange()}>
-			<Link className="text-sm" type="none">
-				{text}
-			</Link>
-		</div>
-	);
-}
+import { usePathname } from 'next/navigation';
 
 const Footer = () => {
 	const pathname = usePathname();
@@ -34,8 +13,10 @@ const Footer = () => {
 	const back = t('back');
 	const title = t('title');
 	const body = t('body');
-	const toggleProps = { newLocale: t('code'), text: t('language') };
+	const scroll = t('scroll');
+
 	const showBackLink = pathname !== '/';
+	const showScrollToTopLink = pathname === '/';
 
 	return (
 		<footer>
@@ -52,11 +33,9 @@ const Footer = () => {
 							}}>
 							{body}</MarkdownRaw>
 					</div>
-					<div className="flex flex-row flex-wrap items-center justify-center gap-6 pt-7">
+					<div className="flex flex-row flex-wrap items-center justify-center gap-6 mt-7 px-3">
 						{showBackLink && (
-							<Link href="/" className="text-sm" type="back">
-								{back}
-							</Link>
+							<Link href="/" className="text-sm" type="back" reverse>{back}</Link>
 						)}
 						<Link href="https://github.com/dejesusbg" className="text-sm" type="out" external>
 							GitHub
@@ -67,7 +46,9 @@ const Footer = () => {
 						<Link href="mailto:dejesusbg5@gmail.com" className="text-sm" type="out" external>
 							Email
 						</Link>
-						<LanguageToggle {...toggleProps} />
+						{showScrollToTopLink && (
+							<Link href="#hero" className="text-sm" type="up">{scroll}</Link>
+						)}
 					</div>
 				</Motion>
 			</Section >
