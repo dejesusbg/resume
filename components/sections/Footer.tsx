@@ -19,7 +19,7 @@ const LanguageToggle = ({ newLocale, text }: { newLocale: string; text: string }
 	};
 
 	return (
-		<div className="flex items-center justify-center" onClick={() => handleLocaleChange()}>
+		<div className="flex items-center justify-center pb-0.5" onClick={() => handleLocaleChange()}>
 			<Link className="text-sm" type="none">
 				{text}
 			</Link>
