@@ -17,7 +17,7 @@ const ProjectRow = ({ title, description, link, stat, tags, date }: ProjectProps
         const linkText = isGithub ? t('source') : t('demo');
 
         return <div className={clsx("text-sm", { 'sm:hidden block': isHidden, 'sm:block hidden': !isHidden })}>
-            <Link type={isGithub ? 'repo' : 'out'} >{linkText}</Link>
+            <Link href={link} type={isGithub ? 'repo' : 'out'} >{linkText}</Link>
         </div>
     };
 
