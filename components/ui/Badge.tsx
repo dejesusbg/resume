@@ -90,8 +90,8 @@ const Badge = ({ className, textureSrc, tagSrc }: Badge) => {
 			<div
 				aria-hidden
 				className={clsx(
-					'absolute inset-0 rounded-2xl bg-misty transition-opacity duration-500 ease-out',
-					loaded ? 'opacity-0' : 'opacity-100 animate-pulse'
+					'absolute inset-0 rounded-2xl bg-frost transition-opacity duration-500 ease-out',
+					loaded && 'opacity-0'
 				)}
 			/>
 			<model-viewer
