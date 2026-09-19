@@ -2,7 +2,9 @@
   "hero": {
     "texture": "/texture.png",
     "model": "/tag.glb",
-    "cta": "See what I've built"
+    "cta": "See what I've built",
+    "language": "Español",
+    "code": "es"
   },
   "about": {
     "body": "I learned to [code](https://en.wikipedia.org/wiki/Web_development) just to build websites, and now [understanding](https://en.wikipedia.org/wiki/User_experience) how [people and machines](https://transformer-circuits.pub/2026/workspace/) behave is the part of [engineering](https://en.wikipedia.org/wiki/Software_engineering) I'm best at.",

@@ -2,7 +2,9 @@
     "hero": {
         "texture": "/textura.png",
         "model": "/etiqueta.glb",
-        "cta": "Mira lo que he hecho"
+        "cta": "Mira lo que he hecho",
+        "language": "English",
+        "code": "en"
     },
     "about": {
         "body": "Aprendí a [programar](https://es.wikipedia.org/wiki/Desarrollo_web) solo para construir sitios web, y ahora [comprender](https://es.wikipedia.org/wiki/Experiencia_de_usuario) el comportamiento de [personas y máquinas](https://transformer-circuits.pub/2026/workspace/) es la parte de la [ingeniería](https://es.wikipedia.org/wiki/Ingeniería_de_software) que mejor se me da.",
