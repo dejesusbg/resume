@@ -46,8 +46,8 @@
     },
     "projects": [
         {
-            "title": "Rediseño de Programación Académica",
-            "description": "Rediseñé un sistema universitario de programación académica para más de 14 mil estudiantes y logré un puntaje de usabilidad que casi ningún software alcanza.",
+            "title": "Sistema de Programación Académica",
+            "description": "Rediseñé un sistema universitario de programación académica para más de 14 mil estudiantes y logré un puntaje de usabilidad de 81 que casi ningún software alcanza.",
             "stat": "Tesis de honor meritoria",
             "link": "https://hdl.handle.net/20.500.14923/25334",
             "imageSrc": "/pages.webp",
@@ -56,7 +56,7 @@
                 "Investigación",
                 "Usabilidad",
                 "Accesibilidad",
-                "Evaluación Heurística",
+                "Heurísticas",
                 "WCAG",
                 "UX"
             ],

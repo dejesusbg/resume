@@ -47,7 +47,7 @@
   "projects": [
     {
       "title": "Academic Scheduling Redesign",
-      "description": "Redesigned a university scheduling system for more than 14k students and hit a usability score most software never reaches.",
+      "description": "Redesigned a university scheduling system for more than 14k students and hit a usability score of 81 that most software never reaches.",
       "stat": "Meritorious Honor Thesis",
       "link": "https://hdl.handle.net/20.500.14923/25334",
       "imageSrc": "/pages.webp",
