@@ -1,6 +1,7 @@
 import Background from '@/components/ui/Background';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { Instrument_Serif } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
@@ -8,44 +9,77 @@ import './globals.css';
 const inter = localFont({ src: '../fonts/InterVariable.ttf' });
 const instrument_serif = Instrument_Serif({ weight: '400', subsets: ['latin'] });
 
-export const metadata: Metadata = {
-	metadataBase: new URL('https://dejesusbg.netlify.app/'),
-	title: 'Ricardo Barrios',
-	description:
-		'Ricardo Barrios is a systems engineer and software developer that loves to build experiences that help others.',
-	keywords:
-		'Ricardo Barrios, dejesusbg, software developer, systems engineer, web developer, ux design, full stack developer, colombia',
-	openGraph: {
-		title: 'Ricardo Barrios',
-		description: 'Systems engineer & software developer building helpful digital experiences..',
-		type: 'website',
-		url: 'https://dejesusbg.netlify.app.com',
-		siteName: 'Ricardo Barrios',
-		images: [
-			{
-				url: '/thumbnail.png',
-				width: 1169,
-				height: 589,
-				alt: 'Ricardo Barrios - Software Developer',
-			},
-		],
-	},
-	twitter: {
-		card: 'summary_large_image',
-		title: 'Ricardo Barrios',
-		description: 'Systems engineer & software developer building helpful digital experiences.',
-		images: ['/thumbnail.png'],
-	},
+const siteUrl = 'https://dejesusbg.netlify.app';
+
+export const viewport: Viewport = {
+	themeColor: '#f0e6fb',
 };
+
+export async function generateMetadata(): Promise<Metadata> {
+	const locale = await getLocale();
+	const t = await getTranslations('meta');
+	const title = t('title');
+	const description = t('description');
+	const ogLocale = locale === 'es' ? 'es_CO' : 'en_US';
+
+	return {
+		metadataBase: new URL(siteUrl),
+		title: { default: title, template: `%s — Ricardo Barrios` },
+		description,
+		keywords: t.raw('keywords') as string[],
+		authors: [{ name: 'Ricardo Barrios', url: siteUrl }],
+		creator: 'Ricardo Barrios',
+		alternates: { canonical: '/' },
+		robots: { index: true, follow: true },
+		openGraph: {
+			title,
+			description: t('short'),
+			type: 'website',
+			url: '/',
+			siteName: 'Ricardo Barrios',
+			locale: ogLocale,
+			alternateLocale: locale === 'es' ? 'en_US' : 'es_CO',
+			images: [{ url: '/thumbnail.png', width: 1169, height: 589, alt: t('alt') }],
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title,
+			description: t('short'),
+			images: [{ url: '/thumbnail.png', alt: t('alt') }],
+		},
+	};
+}
 
 export default async function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+	const locale = await getLocale();
+	const t = await getTranslations('meta');
+	const jsonLd = {
+		'@context': 'https://schema.org',
+		'@type': 'Person',
+		name: 'Ricardo Barrios García',
+		alternateName: 'dejesusbg',
+		url: siteUrl,
+		image: `${siteUrl}/thumbnail.png`,
+		jobTitle: t('jobTitle'),
+		description: t('short'),
+		email: 'mailto:dejesusbg5@gmail.com',
+		nationality: 'Colombian',
+		alumniOf: { '@type': 'CollegeOrUniversity', name: 'Universidad del Magdalena' },
+		knowsAbout: ['UX research', 'Machine learning', 'Software engineering', 'Web development'],
+		sameAs: ['https://github.com/dejesusbg', 'https://www.linkedin.com/in/dejesusbg'],
+	};
+
 	return (
-		<html lang="en">
+		<html lang={locale}>
 			<body className={`${inter.className} antialiased`}>
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
+				/>
 				<NextIntlClientProvider>
 					<Background />
 					<main>
