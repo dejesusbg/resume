@@ -9,10 +9,10 @@ interface Badge {
 	alt: string;
 }
 
-// 4x scale
-const TEXT_RIGHT_EDGE = 1936;
-const TEXT_TOP = 96;
-const FONT_SIZE = 56;
+// 2x scale
+const TEXT_RIGHT_EDGE = 968;
+const TEXT_TOP = 48;
+const FONT_SIZE = 28;
 
 // Resolves a token's actual rendered value
 const resolveComputedStyle = (className: string, read: (style: CSSStyleDeclaration) => string) => {

@@ -22,7 +22,7 @@
     },
     "hero": {
         "alt": "Carnet de identificación 3D interactivo de Ricardo Barrios García, UX Research + Applied ML (@dejesusbg). El frente muestra su foto de perfil y detalles de rol. El reverso dice: Inició como un prototipo en Figma y lo programé usando Visual Studio Code. Está construido con Next.js, Tailwind CSS y desplegado en Netlify. Todo usa las tipografías Inter e Instrument Serif.",
-        "texture": "/textura.png",
+        "texture": "/textura.webp",
         "model": "/etiqueta.glb",
         "cta": "Mira lo que he hecho",
         "language": "English",
