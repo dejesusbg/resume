@@ -33,6 +33,7 @@ export interface MetaProps {
 export interface MessagesProps {
 	meta: MetaProps;
 	hero: {
+		skip: string;
 		alt: string;
 		texture: string;
 		model: string;
