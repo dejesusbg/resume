@@ -64,9 +64,9 @@ const Featured = () => {
 						<ProjectCard key={index} {...project} />
 					))}
 				</ul>
-				<div className="flex flex-row flex-wrap items-center justify-center gap-8 px-8">
-					<Link href="#contact" type='down'>{contact}</Link>
+				<div className="flex flex-col items-center justify-center gap-6 mt-2 sm:flex-row sm:gap-8">
 					<Link href="/archive">{cta}</Link>
+					<Link href="#contact" type='down'>{contact}</Link>
 				</div>
 			</Motion>
 		</Section>
