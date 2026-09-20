@@ -193,7 +193,7 @@
         {
             "title": "TSP Bioinspirado",
             "description": "El Problema del Viajante con algoritmos basados en colonias de hormigas.",
-            "link": "https://github.com/dejesusbg/bioinsipired-tsp",
+            "link": "https://github.com/dejesusbg/bioinspired-tsp",
             "tags": [
                 "Python",
                 "NumPy"

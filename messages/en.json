@@ -193,7 +193,7 @@
     {
       "title": "Bioinspired TSP",
       "description": "The Traveling Salesman Problem, solved with algorithms borrowed from ant colonies.",
-      "link": "https://github.com/dejesusbg/bioinsipired-tsp",
+      "link": "https://github.com/dejesusbg/bioinspired-tsp",
       "tags": [
         "Python",
         "NumPy"
