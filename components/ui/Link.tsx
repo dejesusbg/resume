@@ -34,7 +34,7 @@ const Link = ({ href, children, onClick, className, type = 'next', reverse = fal
 
 	if (onClick && !href) {
 		return (
-			<button className={sharedClassName} onClick={onClick} aria-label={children} type="button">
+			<button className={sharedClassName} onClick={onClick} type="button">
 				{children}
 				<Icon type={type} />
 			</button>
@@ -44,7 +44,6 @@ const Link = ({ href, children, onClick, className, type = 'next', reverse = fal
 	return (
 		<a
 			href={href}
-			aria-label={children}
 			className={sharedClassName}
 			{...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
 		>
