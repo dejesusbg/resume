@@ -66,9 +66,35 @@ const Badge = ({ className, textureSrc, tagSrc, alt }: Badge) => {
 	const ref = useRef<any>(null);
 	const patched = useRef(false);
 	const [loaded, setLoaded] = useState(false);
+	const [focusVisible, setFocusVisible] = useState(false);
 
 	useEffect(() => {
 		import('@google/model-viewer');
+	}, []);
+
+	// CSS :focus-visible doesn't work in shadow DOM, so we have to listen for focus events and apply a class manually
+	useEffect(() => {
+		let cancelled = false;
+		let shadowRoot: ShadowRoot | null = null;
+
+		const handleFocusIn = (event: Event) => {
+			setFocusVisible((event.target as Element).matches?.(':focus-visible') ?? false);
+		};
+		const handleFocusOut = () => setFocusVisible(false);
+
+		customElements.whenDefined('model-viewer').then(() => {
+			if (cancelled) return;
+			shadowRoot = ref.current?.shadowRoot ?? null;
+			if (!shadowRoot) return;
+			shadowRoot.addEventListener('focusin', handleFocusIn);
+			shadowRoot.addEventListener('focusout', handleFocusOut);
+		});
+
+		return () => {
+			cancelled = true;
+			shadowRoot?.removeEventListener('focusin', handleFocusIn);
+			shadowRoot?.removeEventListener('focusout', handleFocusOut);
+		};
 	}, []);
 
 	useEffect(() => {
@@ -91,7 +117,7 @@ const Badge = ({ className, textureSrc, tagSrc, alt }: Badge) => {
 			<div
 				aria-hidden
 				className={clsx(
-					'absolute inset-0 rounded-2xl bg-frost transition-opacity duration-500 ease-out',
+					'absolute inset-0 rounded-2xl bg-lilac transition-opacity duration-500 ease-out',
 					loaded && 'opacity-0'
 				)}
 			/>
@@ -99,6 +125,7 @@ const Badge = ({ className, textureSrc, tagSrc, alt }: Badge) => {
 				ref={ref}
 				src={tagSrc}
 				alt={alt}
+				className={clsx(focusVisible && 'transition-all duration-150 ease-in-out outline-none ring-4 ring-periw')}
 				camera-controls
 				touch-action="pan-y"
 				exposure="1"
