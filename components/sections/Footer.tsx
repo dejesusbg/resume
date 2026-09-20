@@ -33,9 +33,9 @@ const Footer = () => {
 							}}>
 							{body}</MarkdownRaw>
 					</div>
-					<div className="flex flex-row flex-wrap items-center justify-center gap-6 mt-7 px-6">
+					<div className="flex flex-row flex-wrap items-center justify-center gap-6 px-6 mt-6">
 						{showBackLink && (
-							<Link href="/" className="text-sm" type="back" reverse>{back}</Link>
+							<Link href="/" className="hidden text-sm sm:flex" type="back" reverse>{back}</Link>
 						)}
 						<Link href="https://github.com/dejesusbg" className="text-sm" type="out" external>
 							GitHub
@@ -46,6 +46,9 @@ const Footer = () => {
 						<Link href="mailto:dejesusbg5@gmail.com" className="text-sm" type="out" external>
 							Email
 						</Link>
+						{showBackLink && (
+							<Link href="/" className="flex text-sm sm:hidden " type="back" reverse>{back}</Link>
+						)}
 						{showScrollToTopLink && (
 							<Link href="#hero" className="text-sm" type="up">{scroll}</Link>
 						)}
