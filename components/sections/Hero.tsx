@@ -37,7 +37,7 @@ const Hero = () => {
 		<Section id="hero" className='min-h-dvh'>
 			<Link href="#about" className="transition left-8 top-6 absolute -translate-y-16 focus:translate-y-0 z-10" type="down">{skip}</Link>
 			<Motion className="flex flex-col items-center justify-between my-auto">
-				<Badge className="w-full max-h-[80vh] aspect-[2/3] shrink-0" {...badgeProps} />
+				<Badge className="w-full max-h-[80vh] aspect-[3/5] shrink-0" {...badgeProps} />
 				<div className="flex flex-wrap justify-center gap-8 px-8 mt-8">
 					<Link href="#featured" type="down">{cta}</Link>
 					<LanguageToggle {...toggleProps} />
