@@ -42,23 +42,26 @@ export interface MessagesProps {
 		code: string;
 	};
 	about: {
+		heading: string;
 		body: string;
 		credentials: CredentialProps[];
 		resume: string;
 		cta: string;
 	};
 	featured: {
+		heading: string;
 		body: string;
 		cta: string;
 		contact: string;
 	};
 	footer: {
-		back: string;
-		title: string;
+		heading: string;
 		body: string;
+		back: string;
 		scroll: string;
 	};
 	archive: {
+		heading: string;
 		columns: string[];
 		source: string;
 		demo: string;

@@ -25,10 +25,10 @@ const ProjectCard = ({ link, title, description, imageSrc, stat, tags, date }: P
 					<div className="text-xs font-medium tracking-wide text-cloud/80">{date}</div>
 				</div>
 				<div className="flex flex-col space-y-2 md:text-lg">
-					<span className="font-semibold text-center md:text-start text-periw group-hocus:text-berry group-hover:underline group-hover:underline-offset-4">
+					<h3 className="font-semibold text-center md:text-start text-periw group-hocus:text-berry group-hover:underline group-hover:underline-offset-4">
 						{title}
 						{link && <Icon type="out" />}
-					</span>
+					</h3>
 					<p className="leading-tight text-center md:text-start">{description}</p>
 					<ul className="flex flex-wrap justify-center gap-2 mt-2 md:justify-start">
 						{stat && <StatTag stat={stat} />}
@@ -49,13 +49,15 @@ const Featured = () => {
 	const projects = useTranslations().raw('projects') as ProjectProps[];
 	const featuredProjects = projects.filter((project) => project.featured);
 
+	const heading = t('heading');
 	const body = t('body');
 	const cta = t('cta');
 	const contact = t('contact');
 
 	return (
-		<Section id="featured" className="pt-[64px] pb-[72px] px-[6vw]">
+		<Section id="featured" className="pt-[64px] pb-[72px] px-[6vw]" aria-labelledby="featured-heading">
 			<Motion className="flex flex-col my-auto space-y-6">
+				<h2 id="featured-heading" className="sr-only">{heading}</h2>
 				<p className="text-lg text-cloud/80">
 					{body}
 				</p>

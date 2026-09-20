@@ -27,7 +27,7 @@ const ProjectRow = ({ title, description, link, stat, tags, date }: ProjectProps
                 <div className="text-xs font-medium tracking-wide text-cloud/80">{yearDisplay}</div>
             </td>
             <td className="flex flex-col gap-4 p-4 text-sm">
-                <div className="font-semibold leading-[120%]">{title}</div>
+                <h2 className="font-semibold leading-[120%]">{title}</h2>
                 <p className="font-normal sm:max-w-sm">{description}</p>
                 <ProjectLink isHidden={true} />
             </td>
@@ -84,11 +84,13 @@ const ProjectsTable = ({ columns }: { columns: string[] }) => {
 
 export default function Archive() {
     const t = useTranslations('archive');
+    const heading = t('heading');
     const columns = t.raw('columns') as string[];
 
     return (
-        <Section id="archive" className="px-[6vw]">
+        <Section id="archive" className="px-[6vw]" aria-labelledby="archive-heading">
             <Motion className="flex flex-col items-center pt-24 space-y-8">
+                <h1 id="archive-heading" className="sr-only">{heading}</h1>
                 <ProjectsTable columns={columns} />
             </Motion>
         </Section>

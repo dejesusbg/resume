@@ -10,21 +10,21 @@ const Footer = () => {
 	const pathname = usePathname();
 	const t = useTranslations('footer');
 
-	const back = t('back');
-	const title = t('title');
+	const heading = t('heading');
 	const body = t('body');
+	const back = t('back');
 	const scroll = t('scroll');
 
 	const showBackLink = pathname !== '/';
 	const showScrollToTopLink = pathname === '/';
 
 	return (
-		<footer>
-			<Section id="contact" className="pt-[149px] pb-[160px] px-[6vw]">
+		<footer role="contentinfo">
+			<Section id="contact" className="pt-[149px] pb-[160px] px-[6vw]" aria-labelledby="contact-heading">
 				<Motion className="flex flex-col items-center justify-center my-auto space-y-4">
-					<span className="font-serif text-ebony text-4xl md:text-5xl lg:text-6xl text-center tracking-tighter leading-[110%]">
-						{title}
-					</span>
+					<h2 id="contact-heading" className="font-serif text-ebony text-4xl md:text-5xl lg:text-6xl text-center tracking-tighter leading-[110%]">
+						{heading}
+					</h2>
 					<div className="pb-2.5">
 						<MarkdownRaw
 							classNames={{

@@ -30,6 +30,7 @@
     "code": "es"
   },
   "about": {
+    "heading": "About",
     "body": "I learned to [code](https://en.wikipedia.org/wiki/Web_development) just to build websites, and now [understanding](https://en.wikipedia.org/wiki/User_experience) how [people and machines](https://transformer-circuits.pub/2026/workspace/) behave is the part of [engineering](https://en.wikipedia.org/wiki/Software_engineering) I'm best at.",
     "credentials": [
       {
@@ -47,17 +48,19 @@
     "cta": "View full résumé"
   },
   "featured": {
+    "heading": "Featured projects",
     "body": "So, what do you want to see?",
     "cta": "View full archive",
     "contact": "Contact me"
   },
   "footer": {
-    "back": "Back to home",
-    "title": "If you've read this far, say something ;)",
+    "heading": "If you've read this far, say something ;)",
     "body": "Open to [product](https://en.wikipedia.org/wiki/Product_management) and [machine learning](https://en.wikipedia.org/wiki/Machine_learning) roles, and being convinced otherwise. Always up for [side quests](https://en.wikipedia.org/wiki/Start_up).",
+    "back": "Back to home",
     "scroll": "Scroll to top"
   },
   "archive": {
+    "heading": "Project archive",
     "columns": [
       "Year",
       "Project",

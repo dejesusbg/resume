@@ -23,14 +23,16 @@ const Credential = ({ data }: { data: CredentialProps }) => {
 const About = () => {
 	const t = useTranslations('about');
 
+	const heading = t('heading');
 	const body = t('body');
 	const credentials = t.raw('credentials');
 	const resume = t('resume');
 	const cta = t('cta');
 
 	return (
-		<Section id="about" className="pt-[200px] pb-[120px] px-[6vw]">
+		<Section id="about" className="pt-[200px] pb-[120px] px-[6vw]" aria-labelledby="about-heading">
 			<Motion className="flex flex-col items-center justify-between my-auto space-y-[52px]">
+				<h2 id="about-heading" className="sr-only">{heading}</h2>
 				<MarkdownRaw
 					classNames={{
 						p: 'text-ebony text-xl md:text-2xl lg:text-3xl text-center leading-[162%]',
