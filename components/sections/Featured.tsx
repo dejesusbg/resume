@@ -64,7 +64,7 @@ const Featured = () => {
 						<ProjectCard key={index} {...project} />
 					))}
 				</ul>
-				<div className="flex flex-row flex-wrap items-center justify-center gap-6 px-3">
+				<div className="flex flex-row flex-wrap items-center justify-center gap-8 px-8">
 					<Link href="#contact" type='down'>{contact}</Link>
 					<Link href="/archive">{cta}</Link>
 				</div>

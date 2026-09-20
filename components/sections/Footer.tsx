@@ -33,7 +33,7 @@ const Footer = () => {
 							}}>
 							{body}</MarkdownRaw>
 					</div>
-					<div className="flex flex-row flex-wrap items-center justify-center gap-6 mt-7 px-3">
+					<div className="flex flex-row flex-wrap items-center justify-center gap-6 mt-7 px-6">
 						{showBackLink && (
 							<Link href="/" className="text-sm" type="back" reverse>{back}</Link>
 						)}
