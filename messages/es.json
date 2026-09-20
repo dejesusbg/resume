@@ -22,7 +22,7 @@
     },
     "hero": {
         "skip": "Saltar al contenido",
-        "alt": "Carnet de identificación 3D interactivo de Ricardo Barrios García, UX Research + Applied ML (@dejesusbg). El frente muestra su foto de perfil y detalles de rol. El reverso dice: Inició como un prototipo en Figma y lo programé usando Visual Studio Code. Está construido con Next.js, Tailwind CSS y desplegado en Netlify. Todo usa las tipografías Inter e Instrument Serif.",
+        "alt": "Carnet de identificación 3D interactivo de Ricardo Barrios García, UX Research + Applied ML (@dejesusbg), basado en Colombia. El frente muestra su foto de perfil y detalles de rol. El reverso dice: Inició como un prototipo en Figma y lo programé usando Visual Studio Code. Está construido con Next.js, Tailwind CSS y desplegado en Netlify. Todo usa las tipografías Inter e Instrument Serif.",
         "texture": "/textura.webp",
         "model": "/etiqueta.glb",
         "cta": "Mira lo que he hecho",
@@ -54,7 +54,7 @@
     "footer": {
         "back": "Volver al inicio",
         "title": "Si has llegado hasta por acá, di algo ;)",
-        "body": "Estoy abierto a roles de [producto](https://es.wikipedia.org/wiki/Gestión_de_productos) e [inteligencia artificial](https://es.wikipedia.org/wiki/Inteligencia_artificial), pero puedes convencerme de cualquier [side quest](https://es.wikipedia.org/wiki/Empresa_emergente).",
+        "body": "Estoy abierto a roles de [producto](https://es.wikipedia.org/wiki/Gestión_de_productos) y [machine learning](https://es.wikipedia.org/wiki/Aprendizaje_automático), pero puedes convencerme de cualquier [side quest](https://es.wikipedia.org/wiki/Empresa_emergente).",
         "scroll": "Ir hacia arriba"
     },
     "archive": {
@@ -70,8 +70,8 @@
     "projects": [
         {
             "title": "Sistema de Programación Académica",
-            "description": "Rediseñé un sistema universitario de programación académica para más de 14 mil estudiantes y logré un puntaje de usabilidad de 81 que casi ningún software alcanza.",
-            "stat": "Tesis de honor meritoria",
+            "description": "Rediseñé un sistema universitario de programación académica para 30+ programas de pregrado y logré un puntaje de usabilidad de 81 que casi ningún software alcanza.",
+            "stat": "Tesis de grado meritoria",
             "link": "https://hdl.handle.net/20.500.14923/25334",
             "imageSrc": "/pages.webp",
             "tags": [
@@ -168,8 +168,8 @@
         },
         {
             "title": "Clasificador de Mangos con IA",
-            "description": "Modelos de visión por computadora que distinguen un mango maduro de uno verde, optimizando así los procesos agrícolas.",
-            "stat": "Más del 95% de precisión",
+            "description": "Modelos de visión por computadora que distinguen un mango maduro de uno podrido, optimizando así los procesos agrícolas.",
+            "stat": "~99% de precisión",
             "link": "https://github.com/dejesusbg/mangifera",
             "imageSrc": "/photos.webp",
             "tags": [

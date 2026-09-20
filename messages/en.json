@@ -22,7 +22,7 @@
   },
   "hero": {
     "skip": "Skip to content",
-    "alt": "Interactive 3D ID badge for Ricardo Barrios García, UX Research + Applied ML (@dejesusbg). Front side shows photo and primary role details. Back side reads: Loosely sketched in Figma and coded in Visual Studio Code by yours truly. Built with Next.js and Tailwind CSS, deployed with Netlify. All text is set in the Inter and Instrument Serif typefaces.",
+    "alt": "Interactive 3D ID badge for Ricardo Barrios García, UX Research + Applied ML (@dejesusbg), based in Colombia. Front side shows photo and primary role details. Back side reads: Loosely sketched in Figma and coded in Visual Studio Code by yours truly. Built with Next.js and Tailwind CSS, deployed with Netlify. All text is set in the Inter and Instrument Serif typefaces.",
     "texture": "/texture.webp",
     "model": "/tag.glb",
     "cta": "See what I've built",
@@ -70,8 +70,8 @@
   "projects": [
     {
       "title": "Academic Scheduling Redesign",
-      "description": "Redesigned a university scheduling system for more than 14k students and hit a usability score of 81 that most software never reaches.",
-      "stat": "Meritorious Honor Thesis",
+      "description": "Redesigned a university scheduling system for 30+ undergraduate programs and hit a usability score of 81 that most software never reaches.",
+      "stat": "Meritorious Research Thesis",
       "link": "https://hdl.handle.net/20.500.14923/25334",
       "imageSrc": "/pages.webp",
       "tags": [
@@ -168,8 +168,8 @@
     },
     {
       "title": "AI-Powered Mango Classifier",
-      "description": "Computer vision models that tell a ripe mango from an unripe one, optimising agricultural processes.",
-      "stat": "95%+ accuracy",
+      "description": "Computer vision models that tell a ripe mango from a rotten one, optimising agricultural processes.",
+      "stat": "~99% accuracy",
       "link": "https://github.com/dejesusbg/mangifera",
       "imageSrc": "/photos.webp",
       "tags": [
