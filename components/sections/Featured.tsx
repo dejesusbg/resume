@@ -1,4 +1,4 @@
-import Link, { Arrow } from '@/components/ui/Link';
+import Link, { Icon } from '@/components/ui/Link';
 import Motion from '@/components/ui/Motion';
 import Section from '@/components/ui/Section';
 import { useTranslations } from 'next-intl';
@@ -27,7 +27,7 @@ const ProjectCard = ({ link, title, description, imageSrc, stat, tags, date }: P
 				<div className="flex flex-col space-y-2 md:text-lg">
 					<span className="font-semibold text-center md:text-start text-periw group-hocus:text-berry group-hover:underline group-hover:underline-offset-4">
 						{title}
-						{link && <Arrow type="out" />}
+						{link && <Icon type="out" />}
 					</span>
 					<p className="leading-tight text-center md:text-start">{description}</p>
 					<ul className="flex flex-wrap justify-center gap-2 mt-2 md:justify-start">

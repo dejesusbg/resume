@@ -19,8 +19,8 @@ const LanguageToggle = ({ newLocale, text }: { newLocale: string; text: string }
 	};
 
 	return (
-		<div className="flex items-center justify-center pb-0.5" onClick={() => handleLocaleChange()}>
-			<Link type="globe" reverse>{text}</Link>
+		<div lang={newLocale}>
+			<Link type="globe" onClick={() => handleLocaleChange()} reverse>{text}</Link>
 		</div>
 	);
 }
