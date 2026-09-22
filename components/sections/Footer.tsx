@@ -20,7 +20,7 @@ const Footer = () => {
 
 	return (
 		<footer role="contentinfo">
-			<Section id="contact" className="pt-[149px] pb-[160px] px-[6vw]" aria-labelledby="contact-heading">
+			<Section id="contact" className="pt-[150px] pb-[160px] px-[6vw]" aria-labelledby="contact-heading">
 				<Motion className="flex flex-col items-center justify-center my-auto space-y-4">
 					<h2 id="contact-heading" className="font-serif text-ebony text-4xl md:text-5xl lg:text-6xl text-center tracking-tighter leading-[110%]">
 						{heading}

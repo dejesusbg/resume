@@ -5,6 +5,7 @@ import { getLocale, getTranslations } from 'next-intl/server';
 import { Instrument_Serif } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
+import Webring from '@/components/ui/Webring';
 
 const inter = localFont({ src: '../fonts/InterVariable.ttf' });
 const instrument_serif = Instrument_Serif({ weight: '400', subsets: ['latin'] });
@@ -85,6 +86,7 @@ export default async function RootLayout({
 					<main>
 						{children}
 					</main>
+					<Webring />
 				</NextIntlClientProvider>
 			</body>
 		</html>
