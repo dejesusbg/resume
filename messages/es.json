@@ -72,6 +72,17 @@
     },
     "projects": [
         {
+            "title": "Páramo Ring",
+            "description": "Pequeño webring para builders colombianos, a la antigua.",
+            "link": "https://github.com/dejesusbg/paramo-ring",
+            "tags": [
+                "JavaScript",
+                "GitHub Actions",
+                "Claude Code"
+            ],
+            "date": "09/26"
+        },
+        {
             "title": "Sistema de Programación Académica",
             "description": "Rediseñé un sistema universitario de programación académica para 30+ programas de pregrado y logré un puntaje de usabilidad de 81 que casi ningún software alcanza.",
             "stat": "Tesis de grado meritoria",

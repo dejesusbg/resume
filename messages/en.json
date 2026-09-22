@@ -72,6 +72,17 @@
   },
   "projects": [
     {
+      "title": "Páramo Ring",
+      "description": "Tiny webring for Colombian builders, the old-web way.",
+      "link": "https://github.com/dejesusbg/paramo-ring",
+      "tags": [
+        "JavaScript",
+        "GitHub Actions",
+        "Claude Code"
+      ],
+      "date": "09/26"
+    },
+    {
       "title": "Academic Scheduling Redesign",
       "description": "Redesigned a university scheduling system for 30+ undergraduate programs and hit a usability score of 81 that most software never reaches.",
       "stat": "Meritorious Research Thesis",
