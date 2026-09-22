@@ -132,7 +132,7 @@
 	}
 
 	body {
-		@apply gap-4 overflow-x-hidden font-sans font-normal leading-relaxed tracking-tight w-dvw bg-frost text-cloud selection:bg-blush selection:text-berry;
+		@apply relative gap-4 overflow-x-hidden font-sans font-normal leading-relaxed tracking-tight w-dvw bg-frost text-cloud selection:bg-blush selection:text-berry;
 		font-feature-settings: 'cv01', 'cv02', 'cv06', 'cv11';
 	}
 

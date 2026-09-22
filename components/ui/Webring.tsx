@@ -16,7 +16,7 @@ const Webring = () => {
 	}, []);
 
 	return (
-		<div className="fixed right-6 bottom-6">
+		<div className="absolute bottom-0 right-0 z-50 flex justify-center w-full p-6 md:justify-end">
 			<div data-paramoring={SLUG} />
 		</div>
 	);
