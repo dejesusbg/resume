@@ -55,7 +55,7 @@
     },
     "footer": {
         "heading": "Si has llegado hasta por acá, di algo ;)",
-        "body": "Estoy abierto a roles de [producto](https://es.wikipedia.org/wiki/Gestión_de_productos) y [machine learning](https://es.wikipedia.org/wiki/Aprendizaje_automático), pero puedes convencerme de cualquier [side quest](https://es.wikipedia.org/wiki/Empresa_emergente).",
+        "body": "Estoy abierto a roles de [user research](https://es.wikipedia.org/wiki/Experiencia_de_usuario) y [machine learning](https://es.wikipedia.org/wiki/Machine_learning), pero puedes convencerme de cualquier [side quest](https://es.wikipedia.org/wiki/Empresa_emergente).",
         "back": "Volver al inicio",
         "scroll": "Ir hacia arriba"
     },
@@ -81,6 +81,23 @@
                 "Claude Code"
             ],
             "date": "09/26"
+        },
+        {
+            "title": "Asistente Proactivo Contextual",
+            "description": "Un asistente en la barra de menú que solo interrumpe cuando el modelo sabe que estás atascado, a diferencia de lo que solía hacer Clippy.",
+            "stat": "En progreso",
+            "link": "https://github.com/dejesusbg/wade",
+            "imageSrc": "/photos.webp",
+            "tags": [
+                "Swift",
+                "SwiftUI",
+                "Python",
+                "MLX",
+                "Interpretabilidad",
+                "MCP"
+            ],
+            "featured": true,
+            "date": "05/26"
         },
         {
             "title": "Sistema de Programación Académica",
@@ -185,14 +202,12 @@
             "description": "Modelos de visión por computadora que distinguen un mango maduro de uno podrido, optimizando así los procesos agrícolas.",
             "stat": "~99% de precisión",
             "link": "https://github.com/dejesusbg/mangifera",
-            "imageSrc": "/photos.webp",
             "tags": [
                 "Python",
                 "TensorFlow",
                 "scikit-learn",
                 "Keras"
             ],
-            "featured": true,
             "date": "10/24"
         },
         {
@@ -280,6 +295,16 @@
             "link": "https://github.com/dejesusbg/rdparser",
             "tags": [
                 "Java"
+            ],
+            "date": "05/23"
+        },
+        {
+            "title": "Base de Datos de Periódico",
+            "description": "La base de datos de El Tiempo, recreada desde cero en PostgreSQL.",
+            "link": "https://github.com/amezquitam/ElTiempoDB",
+            "tags": [
+                "PostgreSQL",
+                "PL/pgSQL"
             ],
             "date": "05/23"
         },

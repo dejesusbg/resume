@@ -55,7 +55,7 @@
   },
   "footer": {
     "heading": "If you've read this far, say something ;)",
-    "body": "Open to [product](https://en.wikipedia.org/wiki/Product_management) and [machine learning](https://en.wikipedia.org/wiki/Machine_learning) roles, and being convinced otherwise. Always up for [side quests](https://en.wikipedia.org/wiki/Start_up).",
+    "body": "Open to [user research](https://en.wikipedia.org/wiki/User_experience) and [machine learning](https://en.wikipedia.org/wiki/Machine_learning) roles, and being convinced otherwise. Always up for [side quests](https://en.wikipedia.org/wiki/Start_up).",
     "back": "Back to home",
     "scroll": "Scroll to top"
   },
@@ -81,6 +81,23 @@
         "Claude Code"
       ],
       "date": "09/26"
+    },
+    {
+      "title": "Proactive Contextual Assistant",
+      "description": "A menu-bar assistant that only speaks up when the model knows you're stuck, unlike Clippy.",
+      "stat": "In progress",
+      "link": "https://github.com/dejesusbg/wade",
+      "imageSrc": "/photos.webp",
+      "tags": [
+        "Swift",
+        "SwiftUI",
+        "Python",
+        "MLX",
+        "Interpretability",
+        "MCP"
+      ],
+      "featured": true,
+      "date": "05/26"
     },
     {
       "title": "Academic Scheduling Redesign",
@@ -185,14 +202,12 @@
       "description": "Computer vision models that tell a ripe mango from a rotten one, optimising agricultural processes.",
       "stat": "~99% accuracy",
       "link": "https://github.com/dejesusbg/mangifera",
-      "imageSrc": "/photos.webp",
       "tags": [
         "Python",
         "TensorFlow",
         "scikit-learn",
         "Keras"
       ],
-      "featured": true,
       "date": "10/24"
     },
     {
@@ -280,6 +295,16 @@
       "link": "https://github.com/dejesusbg/rdparser",
       "tags": [
         "Java"
+      ],
+      "date": "05/23"
+    },
+    {
+      "title": "Newspaper Database",
+      "description": "El Tiempo's database, rebuilt from scratch in PostgreSQL.",
+      "link": "https://github.com/amezquitam/ElTiempoDB",
+      "tags": [
+        "PostgreSQL",
+        "PL/pgSQL"
       ],
       "date": "05/23"
     },
