@@ -32,6 +32,7 @@ export async function generateMetadata(): Promise<Metadata> {
 		creator: 'Ricardo Barrios',
 		alternates: { canonical: '/' },
 		robots: { index: true, follow: true },
+		verification: { google: 'vqx-Wti_1o3syLsn9gCEvCMAQoDXVuNF9b60hPtMiZc' },
 		openGraph: {
 			title,
 			description: t('short'),
