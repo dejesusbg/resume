@@ -1,25 +1,21 @@
+import { sortByDate } from '@/components/sections/Archive';
 import Link from '@/components/ui/Link';
 import Motion from '@/components/ui/Motion';
 import Section from '@/components/ui/Section';
 import { StatTag, TechTag } from '@/components/ui/Tag';
-import { ProjectProps } from '@/i18n/locale';
+import { CertificationProps } from '@/i18n/locale';
 import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
 
-const ProjectRow = ({ title, description, link, stat, tags, date }: ProjectProps) => {
-    const t = useTranslations('archive');
+const CertificationRow = ({ title, description, issuer, tags, link, date }: CertificationProps) => {
+    const t = useTranslations('certificationsPage');
     const yearDisplay = '20' + date.split('/')[1];
 
-    const ProjectLink = ({ isHidden }: { isHidden: boolean }) => {
-        if (!link) return null;
-
-        const isGithub = link.includes('github.com');
-        const linkText = isGithub ? t('source') : t('demo');
-
-        return <div className={clsx("text-sm", { 'sm:hidden block': isHidden, 'sm:block hidden': !isHidden })}>
-            <Link href={link} type={isGithub ? 'repo' : 'out'} >{linkText}</Link>
+    const VerifyLink = ({ isHidden }: { isHidden: boolean }) => (
+        <div className={clsx("text-sm", { 'sm:hidden block': isHidden, 'sm:block hidden': !isHidden })}>
+            <Link href={link} type="out" external>{t('verify')}</Link>
         </div>
-    };
+    );
 
     return (
         <tr className="border-b-2 border-misty last:border-none">
@@ -29,38 +25,26 @@ const ProjectRow = ({ title, description, link, stat, tags, date }: ProjectProps
             <td className="flex flex-col gap-4 p-4 text-sm">
                 <h2 className="font-semibold leading-[120%]">{title}</h2>
                 <p className="font-normal sm:max-w-sm">{description}</p>
-                <ProjectLink isHidden={true} />
+                <VerifyLink isHidden={true} />
             </td>
             <td className="hidden p-4 align-top lg:table-cell">
                 <ul className="flex flex-wrap gap-2">
-                    {stat && <StatTag stat={stat} />}
+                    <StatTag stat={issuer} />
                     {tags.map((tag, index) => (
                         <TechTag key={index} tech={tag} />
                     ))}
                 </ul>
             </td>
             <td className="hidden p-4 align-top sm:table-cell">
-                <ProjectLink isHidden={false} />
+                <VerifyLink isHidden={false} />
             </td>
         </tr>
     );
 };
 
-export const sortByDate = <T extends { date: string }>(items: T[]) => {
-    return [...items].sort((a, b) => {
-        const [monthA, yearA] = a.date.split('/');
-        const [monthB, yearB] = b.date.split('/');
-
-        const dateA = `20${yearA}-${monthA.padStart(2, '0')}`;
-        const dateB = `20${yearB}-${monthB.padStart(2, '0')}`;
-
-        return new Date(dateB).getTime() - new Date(dateA).getTime();
-    });
-};
-
-const ProjectsTable = ({ columns }: { columns: string[] }) => {
-    const projects = useTranslations().raw('projects') as ProjectProps[];
-    const sortedProjects = sortByDate(projects);
+const CertificationsTable = ({ columns }: { columns: string[] }) => {
+    const certifications = useTranslations().raw('certifications') as CertificationProps[];
+    const sortedCertifications = sortByDate(certifications);
 
     return (
         <table className="w-full text-left border-collapse">
@@ -77,24 +61,24 @@ const ProjectsTable = ({ columns }: { columns: string[] }) => {
                 </tr>
             </thead>
             <tbody data-motion-stagger>
-                {sortedProjects.map((project, index) => (
-                    <ProjectRow key={index} {...project} />
+                {sortedCertifications.map((certification, index) => (
+                    <CertificationRow key={index} {...certification} />
                 ))}
             </tbody>
         </table>
     );
 };
 
-export default function Archive() {
-    const t = useTranslations('archive');
+export default function Certifications() {
+    const t = useTranslations('certificationsPage');
     const heading = t('heading');
     const columns = t.raw('columns') as string[];
 
     return (
-        <Section id="archive" className="px-[6vw]" aria-labelledby="archive-heading">
+        <Section id="certifications" className="px-[6vw]" aria-labelledby="certifications-heading">
             <Motion className="flex flex-col items-center pt-24 space-y-8">
-                <h1 id="archive-heading" className="sr-only">{heading}</h1>
-                <ProjectsTable columns={columns} />
+                <h1 id="certifications-heading" className="sr-only">{heading}</h1>
+                <CertificationsTable columns={columns} />
             </Motion>
         </Section>
     );

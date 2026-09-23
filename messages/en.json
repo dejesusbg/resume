@@ -7,6 +7,8 @@
     "alt": "Ricardo Barrios, systems engineer focused on UX research and applied machine learning",
     "archiveTitle": "Projects",
     "archiveDescription": "A complete archive of Ricardo Barrios' projects: AI tools, web apps, accessibility, algorithms and academic software, with source code and live demos.",
+    "certificationsTitle": "Certifications",
+    "certificationsDescription": "Ricardo Barrios' certifications in AI engineering, Claude and Model Context Protocol, each with a link to verify it.",
     "keywords": [
       "Ricardo Barrios",
       "dejesusbg",
@@ -69,6 +71,16 @@
     ],
     "source": "Source code",
     "demo": "Live demo"
+  },
+  "certificationsPage": {
+    "heading": "Certifications",
+    "columns": [
+      "Year",
+      "Certification",
+      "Tags",
+      "Link"
+    ],
+    "verify": "Verification"
   },
   "projects": [
     {
@@ -362,6 +374,74 @@
         "Material Design 3"
       ],
       "date": "12/21"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Introduction to Model Context Protocol",
+      "description": "Go past the basics of MCP with sampling, progress notifications, roots and transports, to build servers ready for production.",
+      "issuer": "Anthropic Academy",
+      "link": "https://academy.claude.com/verify/4c4c2edccf350a549de45e6dbdf48827",
+      "tags": [
+        "Python SDK",
+        "Sampling",
+        "Notifications",
+        "Roots",
+        "Transports"
+      ],
+      "date": "09/26"
+    },
+    {
+      "title": "Model Context Protocol: Advanced Topics",
+      "description": "Build applications on the Claude API, from prompt engineering and evaluation to tool use, retrieval and agentic workflows.",
+      "issuer": "Anthropic Academy",
+      "link": "https://academy.claude.com/verify/7179f39c9ec5af54d07cf78153a0b21b",
+      "tags": [
+        "Claude Code",
+        "Python SDK",
+        "Tools",
+        "Resources",
+        "Prompts"
+      ],
+      "date": "09/26"
+    },
+    {
+      "title": "Claude Code in Action",
+      "description": "Use Claude Code as a coding partner, extending it with custom commands, hooks and MCP servers, and wiring it into GitHub workflows.",
+      "issuer": "Anthropic Academy",
+      "link": "https://academy.claude.com/verify/fec10a4e56f7c74fab7fedc06316c3ef",
+      "tags": [
+        "Claude Code",
+        "Hooks",
+        "MCP",
+        "GitHub"
+      ],
+      "date": "08/26"
+    },
+    {
+      "title": "Building with the Claude API",
+      "description": "Build applications on the Claude API, from prompt engineering and evaluation to tool use, retrieval and agentic workflows.",
+      "issuer": "Anthropic Academy",
+      "link": "https://academy.claude.com/verify/433a83ed11c5f0b0ef4a11e1a77406de",
+      "tags": [
+        "Claude API",
+        "Tool Use",
+        "RAG",
+        "Prompt Engineering"
+      ],
+      "date": "08/26"
+    },
+    {
+      "title": "Claude Platform 101",
+      "description": "Get to know the Claude platform and how to work with it day to day, from writing good prompts to organising work in projects.",
+      "issuer": "Anthropic Academy",
+      "link": "https://academy.claude.com/verify/d2ea08b9419f06883f665d58996c4dfe",
+      "tags": [
+        "Claude",
+        "Prompting",
+        "Projects"
+      ],
+      "date": "08/26"
     }
   ]
 }

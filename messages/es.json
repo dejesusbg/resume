@@ -7,6 +7,8 @@
         "alt": "Ricardo Barrios, ingeniero de sistemas enfocado en UX research y machine learning aplicado",
         "archiveTitle": "Proyectos",
         "archiveDescription": "Archivo completo de proyectos de Ricardo Barrios: herramientas de IA, aplicaciones web, accesibilidad, algoritmos y software académico, con código fuente y demos.",
+        "certificationsTitle": "Certificaciones",
+        "certificationsDescription": "Certificaciones de Ricardo Barrios en ingeniería de IA, Claude y Model Context Protocol, cada una con su enlace de verificación.",
         "keywords": [
             "Ricardo Barrios",
             "dejesusbg",
@@ -69,6 +71,16 @@
         ],
         "source": "Código fuente",
         "demo": "Demo en vivo"
+    },
+    "certificationsPage": {
+        "heading": "Certificaciones",
+        "columns": [
+            "Año",
+            "Certificación",
+            "Temas",
+            "Enlace"
+        ],
+        "verify": "Verificación"
     },
     "projects": [
         {
@@ -362,6 +374,74 @@
                 "Material Design 3"
             ],
             "date": "12/21"
+        }
+    ],
+    "certifications": [
+        {
+            "title": "Introduction to Model Context Protocol",
+            "description": "Más allá de lo básico de MCP con sampling, notificaciones de progreso, roots y transportes, para construir servidores listos para producción.",
+            "issuer": "Anthropic Academy",
+            "link": "https://academy.claude.com/verify/4c4c2edccf350a549de45e6dbdf48827",
+            "tags": [
+                "Python SDK",
+                "Sampling",
+                "Notifications",
+                "Roots",
+                "Transports"
+            ],
+            "date": "09/26"
+        },
+        {
+            "title": "Model Context Protocol: Advanced Topics",
+            "description": "Construir aplicaciones sobre la API de Claude, desde prompt engineering y evaluación hasta tool use, recuperación de información y flujos agénticos.",
+            "issuer": "Anthropic Academy",
+            "link": "https://academy.claude.com/verify/7179f39c9ec5af54d07cf78153a0b21b",
+            "tags": [
+                "Claude Code",
+                "Python SDK",
+                "Tools",
+                "Resources",
+                "Prompts"
+            ],
+            "date": "09/26"
+        },
+        {
+            "title": "Claude Code in Action",
+            "description": "Usar Claude Code como compañero de programación, extendiéndolo con comandos personalizados, hooks y servidores MCP, e integrándolo en flujos de GitHub.",
+            "issuer": "Anthropic Academy",
+            "link": "https://academy.claude.com/verify/fec10a4e56f7c74fab7fedc06316c3ef",
+            "tags": [
+                "Claude Code",
+                "Hooks",
+                "MCP",
+                "GitHub"
+            ],
+            "date": "08/26"
+        },
+        {
+            "title": "Building with the Claude API",
+            "description": "Construir aplicaciones sobre la API de Claude, desde prompt engineering y evaluación hasta tool use, recuperación de información y flujos agénticos.",
+            "issuer": "Anthropic Academy",
+            "link": "https://academy.claude.com/verify/433a83ed11c5f0b0ef4a11e1a77406de",
+            "tags": [
+                "Claude API",
+                "Tool Use",
+                "RAG",
+                "Prompt Engineering"
+            ],
+            "date": "08/26"
+        },
+        {
+            "title": "Claude Platform 101",
+            "description": "Conocer la plataforma de Claude y cómo trabajar con ella en el día a día, desde escribir buenos prompts hasta organizar el trabajo en proyectos.",
+            "issuer": "Anthropic Academy",
+            "link": "https://academy.claude.com/verify/d2ea08b9419f06883f665d58996c4dfe",
+            "tags": [
+                "Claude",
+                "Prompting",
+                "Projects"
+            ],
+            "date": "08/26"
         }
     ]
 }

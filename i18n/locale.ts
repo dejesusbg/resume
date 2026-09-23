@@ -18,6 +18,15 @@ export interface ProjectProps {
 	date: string;
 }
 
+export interface CertificationProps {
+	title: string;
+	description: string;
+	issuer: string;
+	tags: string[];
+	link: string;
+	date: string;
+}
+
 export interface MetaProps {
 	title: string;
 	description: string;
@@ -26,6 +35,8 @@ export interface MetaProps {
 	alt: string;
 	archiveTitle: string;
 	archiveDescription: string;
+	certificationsTitle: string;
+	certificationsDescription: string;
 	keywords: string[];
 	thumbnail: string;
 }
@@ -66,5 +77,11 @@ export interface MessagesProps {
 		source: string;
 		demo: string;
 	};
+	certificationsPage: {
+		heading: string;
+		columns: string[];
+		verify: string;
+	};
 	projects: ProjectProps[];
+	certifications: CertificationProps[];
 }
