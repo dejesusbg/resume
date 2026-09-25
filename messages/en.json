@@ -29,7 +29,8 @@
     "model": "/tag.glb",
     "cta": "See what I've built",
     "language": "Español",
-    "code": "es"
+    "code": "es",
+    "loading": "Loading badge"
   },
   "about": {
     "heading": "About",

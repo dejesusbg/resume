@@ -31,7 +31,7 @@ const Hero = () => {
 
 	const heading = `${tMeta('title')} — ${tMeta('jobTitle')}`;
 	const skip = t('skip');
-	const badgeProps = { textureSrc: t('texture'), tagSrc: t('model'), alt: t('alt') };
+	const badgeProps = { textureSrc: t('texture'), tagSrc: t('model'), alt: t('alt'), loading: t('loading') };
 	const cta = t('cta');
 	const toggleProps = { newLocale: t('code'), text: t('language') };
 

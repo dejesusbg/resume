@@ -29,7 +29,8 @@
         "model": "/etiqueta.glb",
         "cta": "Mira lo que he hecho",
         "language": "English",
-        "code": "en"
+        "code": "en",
+        "loading": "Cargando credencial"
     },
     "about": {
         "heading": "Sobre mí",

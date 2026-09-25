@@ -2,11 +2,12 @@
 import clsx from 'clsx';
 import { useEffect, useRef, useState } from 'react';
 
-interface Badge {
+interface BadgeProps {
 	className?: string;
 	textureSrc: string;
 	tagSrc: string;
 	alt: string;
+	loading: string;
 }
 
 // 2x scale
@@ -62,10 +63,11 @@ const patchViewCount = async (modelViewer: any, textureSrc: string) => {
 	material.pbrMetallicRoughness.baseColorTexture.setTexture(texture);
 };
 
-const Badge = ({ className, textureSrc, tagSrc, alt }: Badge) => {
+const Badge = ({ className, textureSrc, tagSrc, alt, loading }: BadgeProps) => {
 	const ref = useRef<any>(null);
 	const patched = useRef(false);
 	const [loaded, setLoaded] = useState(false);
+	const [progress, setProgress] = useState(0);
 	const [focusVisible, setFocusVisible] = useState(false);
 
 	useEffect(() => {
@@ -108,19 +110,36 @@ const Badge = ({ className, textureSrc, tagSrc, alt }: Badge) => {
 			patchViewCount(modelViewer, textureSrc).catch(() => { });
 		};
 
+		const handleProgress = (event: Event) => {
+			setProgress((event as CustomEvent<{ totalProgress: number }>).detail.totalProgress);
+		};
+
 		modelViewer.addEventListener('load', handleLoad);
-		return () => modelViewer.removeEventListener('load', handleLoad);
+		modelViewer.addEventListener('progress', handleProgress);
+		return () => {
+			modelViewer.removeEventListener('load', handleLoad);
+			modelViewer.removeEventListener('progress', handleProgress);
+		};
 	}, []);
 
 	return (
 		<div className={clsx('relative', className)}>
 			<div
-				aria-hidden
+				role="progressbar"
+				aria-label={loading}
+				aria-valuemin={0}
+				aria-valuemax={100}
+				aria-valuenow={Math.round(progress * 100)}
+				aria-hidden={loaded}
 				className={clsx(
-					'absolute inset-0 rounded-2xl bg-lilac transition-opacity duration-500 ease-out',
+					'absolute inset-0 m-auto w-32 h-2 overflow-hidden rounded-full bg-lilac transition-opacity duration-500 ease-out pointer-events-none',
 					loaded && 'opacity-0'
-				)}
-			/>
+				)}>
+				<div
+					className="h-full rounded-full bg-lovie transition-[width] duration-300 ease-out"
+					style={{ width: `${Math.max(progress, 0.08) * 100}%` }}
+				/>
+			</div>
 			<model-viewer
 				ref={ref}
 				src={tagSrc}
@@ -140,9 +159,8 @@ const Badge = ({ className, textureSrc, tagSrc, alt }: Badge) => {
 					width: '100%',
 					height: '100%',
 					opacity: loaded ? 1 : 0,
-					filter: loaded ? 'blur(0px)' : 'blur(8px)',
 					transform: loaded ? 'translateY(0)' : 'translateY(16px)',
-					transition: 'opacity 0.6s cubic-bezier(0.34,1.35,0.5,1), filter 0.6s cubic-bezier(0.34,1.35,0.5,1), transform 0.6s cubic-bezier(0.34,1.35,0.5,1)',
+					transition: 'opacity 0.6s cubic-bezier(0.34,1.35,0.5,1), transform 0.6s cubic-bezier(0.34,1.35,0.5,1)',
 					'--poster-color': 'transparent',
 				}}
 				disable-zoom

@@ -51,6 +51,7 @@ export interface MessagesProps {
 		cta: string;
 		language: string;
 		code: string;
+		loading: string;
 	};
 	about: {
 		heading: string;
