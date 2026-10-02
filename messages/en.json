@@ -85,6 +85,22 @@
   },
   "projects": [
     {
+      "title": "Offline Money Tracker",
+      "description": "A money tracker that lives only on your phone, logs a peso in three taps, and finally answers where it all went.",
+      "stat": "Works offline",
+      "link": "https://dejesusbg-balance.netlify.app",
+      "tags": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Dexie",
+        "Workbox",
+        "Netlify",
+        "Claude Code"
+      ],
+      "date": "10/26"
+    },
+    {
       "title": "Páramo Ring",
       "description": "Tiny webring for Colombian builders, the old-web way.",
       "link": "https://github.com/dejesusbg/paramo-ring",

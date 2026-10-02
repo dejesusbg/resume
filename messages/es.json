@@ -84,6 +84,22 @@
         "verify": "Verificación"
     },
     "projects": [
+    {
+      "title": "Control de Dinero Sin Conexión",
+      "description": "Un control de dinero que vive solo en tu celular, anota un peso en tres toques y por fin responde a dónde se fue todo.",
+      "stat": "Funciona sin conexión",
+      "link": "https://dejesusbg-balance.netlify.app",
+      "tags": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Dexie",
+        "Workbox",
+        "Netlify",
+        "Claude Code"
+      ],
+      "date": "10/26"
+    },
         {
             "title": "Páramo Ring",
             "description": "Pequeño webring para builders colombianos, a la antigua.",
