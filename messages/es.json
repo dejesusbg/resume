@@ -86,7 +86,7 @@
     "projects": [
         {
             "title": "Recomendación de Canciones con Neurociencia",
-            "description": "Encuentra canciones similares teniendo en cuenta cómo reaccionaría el cerebro humano a ellas.",
+            "description": "Encuentra canciones similares teniendo en cuenta cómo el cerebro humano reaccionaría a ellas.",
             "stat": "5x menos artistas repetidos",
             "link": "https://github.com/dejesusbg/spotimind",
             "imageSrc": "/photos.webp",
