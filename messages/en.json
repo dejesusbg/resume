@@ -85,6 +85,24 @@
   },
   "projects": [
     {
+      "title": "Neuroscience Song Recommendations",
+      "description": "Matches songs by how the human brain would react to them, instead of relying on audio features.",
+      "stat": "5x fewer artist repeats",
+      "link": "https://github.com/dejesusbg/spotimind",
+      "imageSrc": "/photos.webp",
+      "tags": [
+        "Python",
+        "TRIBE v2",
+        "FastAPI",
+        "Next.js",
+        "Three.js",
+        "Gemini API",
+        "Claude Code"
+      ],
+      "featured": true,
+      "date": "10/26"
+    },
+    {
       "title": "Offline Money Tracker",
       "description": "A money tracker that lives only on your phone, logs a peso in three taps, and finally answers where it all went.",
       "stat": "Works offline",
@@ -115,17 +133,13 @@
       "title": "Proactive Contextual Assistant",
       "description": "A menu-bar assistant that only speaks up when the model knows you're stuck, unlike Clippy.",
       "stat": "In progress",
-      "link": "https://github.com/dejesusbg/wade",
-      "imageSrc": "/photos.webp",
       "tags": [
         "Swift",
-        "SwiftUI",
         "Python",
         "MLX",
         "Interpretability",
         "MCP"
       ],
-      "featured": true,
       "date": "05/26"
     },
     {

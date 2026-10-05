@@ -84,22 +84,40 @@
         "verify": "Verificación"
     },
     "projects": [
-    {
-      "title": "Control de Dinero Sin Conexión",
-      "description": "Un control de dinero que vive solo en tu celular, anota un peso en tres toques y por fin responde a dónde se fue todo.",
-      "stat": "Funciona sin conexión",
-      "link": "https://dejesusbg-balance.netlify.app",
-      "tags": [
-        "Next.js",
-        "React",
-        "TypeScript",
-        "Dexie",
-        "Workbox",
-        "Netlify",
-        "Claude Code"
-      ],
-      "date": "10/26"
-    },
+        {
+            "title": "Recomendación de Canciones con Neurociencia",
+            "description": "Encuentra canciones similares teniendo en cuenta cómo reaccionaría el cerebro humano a ellas.",
+            "stat": "5x menos artistas repetidos",
+            "link": "https://github.com/dejesusbg/spotimind",
+            "imageSrc": "/photos.webp",
+            "tags": [
+                "Python",
+                "TRIBE v2",
+                "FastAPI",
+                "Next.js",
+                "Three.js",
+                "Gemini API",
+                "Claude Code"
+            ],
+            "featured": true,
+            "date": "10/26"
+        },
+        {
+            "title": "Control de Dinero Sin Conexión",
+            "description": "Un control de dinero que vive solo en tu celular, anota un peso en tres toques y por fin responde a dónde se fue todo.",
+            "stat": "Funciona sin conexión",
+            "link": "https://dejesusbg-balance.netlify.app",
+            "tags": [
+                "Next.js",
+                "React",
+                "TypeScript",
+                "Dexie",
+                "Workbox",
+                "Netlify",
+                "Claude Code"
+            ],
+            "date": "10/26"
+        },
         {
             "title": "Páramo Ring",
             "description": "Pequeño webring para builders colombianos, a la antigua.",
@@ -115,17 +133,13 @@
             "title": "Asistente Proactivo Contextual",
             "description": "Un asistente en la barra de menú que solo interrumpe cuando el modelo sabe que estás atascado, a diferencia de lo que solía hacer Clippy.",
             "stat": "En progreso",
-            "link": "https://github.com/dejesusbg/wade",
-            "imageSrc": "/photos.webp",
             "tags": [
                 "Swift",
-                "SwiftUI",
                 "Python",
                 "MLX",
                 "Interpretabilidad",
                 "MCP"
             ],
-            "featured": true,
             "date": "05/26"
         },
         {
